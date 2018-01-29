@@ -1,0 +1,7 @@
+#surefire
+#Wed Sep 20 16:25:15 COT 2017
+maven.ext.class.path=C\:\\Program Files (x86)\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Ivan\\Desktop\\UAOIOT\\broker
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Ivan\\.m2\\repository
+basedir=C\:\\Users\\Ivan\\Desktop\\UAOIOT\\broker

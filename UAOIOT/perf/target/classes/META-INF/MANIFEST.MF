@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1505943222683
+Build-Jdk: 1.8.0_65
+Built-By: Ivan
+Bundle-Description: Moquette lightweight MQTT Broker
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt, http://w
+ ww.eclipse.org/org/documents/epl-v10.php
+Bundle-ManifestVersion: 2
+Bundle-Name: Moquette - performance tests
+Bundle-SymbolicName: io.moquette.performance
+Bundle-Version: 0.10.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: io.moquette.parser.netty.performance;version="0.10.0";us
+ es:="org.eclipse.paho.client.mqttv3"
+Import-Package: io.moquette.persistence;version="[0.10,1)",io.moquette.s
+ erver.config;version="[0.10,1)",io.moquette.spi;version="[0.10,1)",io.n
+ etty.bootstrap;version="[4.1,5)",io.netty.buffer;version="[4.1,5)",io.n
+ etty.channel;version="[4.1,5)",io.netty.channel.nio;version="[4.1,5)",i
+ o.netty.channel.socket;version="[4.1,5)",io.netty.channel.socket.nio;ve
+ rsion="[4.1,5)",io.netty.handler.codec.mqtt;version="[4.1,5)",io.netty.
+ handler.timeout;version="[4.1,5)",io.netty.util;version="[4.1,5)",io.ne
+ tty.util.concurrent;version="[4.1,5)",org.HdrHistogram,org.eclipse.jett
+ y.toolchain.perf,org.eclipse.paho.client.mqttv3;version="[1.1,2)",org.e
+ clipse.paho.client.mqttv3.persist;version="[1.1,2)",org.slf4j;version="
+ [1.7,2)"
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.3.0.201609221906

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\BrokerConstants.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\connections\IConnectionsManager.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\connections\MqttConnectionMetrics.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\connections\MqttSession.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\connections\MqttSubscription.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\AbstractInterceptHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\HazelcastInterceptHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\HazelcastMsg.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\InterceptHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\Interceptor.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptAbstractMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptAcknowledgedMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptConnectionLostMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptConnectMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptDisconnectMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptPublishMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptSubscribeMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\interception\messages\InterceptUnsubscribeMessage.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\logging\LoggingUtils.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\persistence\MemoryMessagesStore.java">
+<error line="97" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\persistence\MemorySessionStore.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\persistence\MemoryStorageService.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\persistence\PersistentSession.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\ClasspathResourceLoader.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\ConfigurationParser.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\FileResourceLoader.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\IConfig.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\IResourceLoader.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\MemoryConfig.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\config\ResourceLoaderConfig.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\ConnectionDescriptor.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\ConnectionDescriptorStore.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\Constants.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\DefaultMoquetteSslContextCreator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\HazelcastListener.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\AutoFlushHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\BugSnagErrorsHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\BytesMetrics.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\BytesMetricsCollector.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\BytesMetricsHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\DropWizardMetricsHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\MessageMetrics.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\MessageMetricsCollector.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\MessageMetricsHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\metrics\MQTTMessageLogger.java">
+<error line="34" severity="warning" message="unmaintainable Javadoc tags: @author, @version, or (non-Javadoc)" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\MoquetteIdleTimeoutHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\NettyAcceptor.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\NettyMQTTHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\netty\NettyUtils.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\Server.java">
+<error line="75" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="97" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\ServerAcceptor.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\server\ServerBackup.java">
+<error line="0" severity="warning" message="missing copyright header" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="1" severity="warning" message="Falta la declaración de paquete." source="com.puppycrawl.tools.checkstyle.checks.coding.PackageDeclarationCheck"/>
+<error line="73" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="167" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="184" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\ClientSession.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\IMatchingCondition.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\IMessagesStore.java">
+<error line="73" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="74" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="119" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="120" column="35" severity="warning" message="&apos;,&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\IMessaging.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\BrokerInterceptor.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\DebugUtils.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\InternalRepublisher.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\MessagesPublisher.java">
+<error line="41" column="5" severity="warning" message="Modificador &apos;public&apos; redundante." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="63" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="66" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="83" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\PersistentQueueMessageSender.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\ProtocolProcessor.java">
+<error line="184" severity="warning" message="two or more consecutive empty lines" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="481" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\ProtocolProcessorBootstrapper.java">
+<error line="222" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="235" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\Qos0PublishHandler.java">
+<error line="36" column="5" severity="warning" message="Modificador &apos;public&apos; redundante." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\Qos1PublishHandler.java">
+<error line="36" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="38" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="43" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="44" column="5" severity="warning" message="Modificador &apos;public&apos; redundante." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="52" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="62" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="70" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="72" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="74" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="83" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="86" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="91" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="107" severity="warning" message="trailing whitespace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\Qos2PublishHandler.java">
+<error line="48" column="5" severity="warning" message="Modificador &apos;public&apos; redundante." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\QosPublishHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\AcceptAllAuthenticator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\ACLFileParser.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\Authorization.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\AuthorizationsCollector.java">
+<error line="59" column="113" severity="warning" message="&apos;{&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="67" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\DBAuthenticatorMongoDB.java">
+<error line="51" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="59" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="60" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="62" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="77" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="91" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="92" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="105" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="111" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\DBAuthenticatorMySQL.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\DBAuthorizatorMongoDB.java">
+<error line="59" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="67" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="68" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="69" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="71" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="85" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="101" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\DBAuthorizatorMySQL.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\DenyAllAuthorizator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\FileAuthenticator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\PermitAllAuthorizator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\security\ResourceAuthenticator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\subscriptions\Subscription.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\subscriptions\SubscriptionsDirectory.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\subscriptions\Token.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\subscriptions\Topic.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\subscriptions\TreeNode.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\impl\Utils.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\ISessionsStore.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\IStore.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\ISubscriptionsStore.java">
+<error line="0" severity="warning" message="missing copyright header" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="43" severity="warning" message="two or more consecutive empty lines" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\MessageGUID.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\security\IAuthenticator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\security\IAuthorizator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\main\java\io\moquette\spi\security\ISslContextCreator.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\test\resources\._log4j.properties">
+<error line="0" severity="warning" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="0" severity="warning" message="missing copyright header" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="1" column="30" severity="warning" message="Archivo contiene caracteres de tabulación (este es el primer ejemplo)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\broker\src\test\resources\log4j.properties">
+<error line="0" severity="warning" message="missing copyright header" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+</file>
+</checkstyle>

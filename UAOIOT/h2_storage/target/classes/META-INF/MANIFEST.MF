@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1505943187395
+Build-Jdk: 1.8.0_65
+Built-By: Ivan
+Bundle-Description: Moquette lightweight MQTT Broker
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt, http://w
+ ww.eclipse.org/org/documents/epl-v10.php
+Bundle-ManifestVersion: 2
+Bundle-Name: Moquette - H2 storage
+Bundle-SymbolicName: io.moquette.h2-storage
+Bundle-Version: 0.10.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: io.moquette.persistence.h2;version="0.10.0";uses:="io.mo
+ quette.server.config,io.moquette.spi,io.moquette.spi.impl.subscriptions
+ ,org.h2.mvstore"
+Import-Package: io.moquette.persistence;version="[0.10,1)",io.moquette.s
+ erver.config;version="[0.10,1)",io.moquette.spi;version="[0.10,1)",io.m
+ oquette.spi.impl.subscriptions,org.h2.mvstore;version="[1.4,2)",org.slf
+ 4j;version="[1.7,2)"
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.3.0.201609221906

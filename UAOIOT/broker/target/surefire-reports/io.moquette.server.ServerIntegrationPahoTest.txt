@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: io.moquette.server.ServerIntegrationPahoTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 76.6 sec

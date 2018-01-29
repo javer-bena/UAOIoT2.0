@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\BenchmarkPublisher.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\BenchmarkSubscriber.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\LoopMQTTHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\NettyPublishReceiverHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\ProtocolDecodingServer.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\ProtocolPublishDecodingServer.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\PublishBomber.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\parser\netty\performance\PublishReceiverHandler.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\perf\src\main\java\io\moquette\spi\impl\subscriptions\PerformanceTest.java">
+</file>
+</checkstyle>

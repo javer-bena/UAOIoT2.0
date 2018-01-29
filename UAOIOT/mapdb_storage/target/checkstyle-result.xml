@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\src\main\java\io\moquette\persistence\mapdb\MapDBMessagesStore.java">
+<error line="81" column="48" severity="warning" message="&apos;(&apos; está seguido de espacios en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="88" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\src\main\java\io\moquette\persistence\mapdb\MapDBPersistentStore.java">
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\src\main\java\io\moquette\persistence\mapdb\MapDBSessionsStore.java">
+<error line="196" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="281" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="302" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="308" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>

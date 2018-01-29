@@ -1,0 +1,877 @@
+10:20:17,085 [main] WARN  Server 186  - Using default SSL context creator
+10:20:24,499 [main] WARN  Server 186  - Using default SSL context creator
+10:20:26,713 [main] WARN  Server 186  - Using default SSL context creator
+10:20:29,167 [main] WARN  Server 186  - Using default SSL context creator
+10:20:29,346 [nioEventLoopGroup-9-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+10:20:29,350 [nioEventLoopGroup-9-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+10:20:29,354 [nioEventLoopGroup-9-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+10:20:31,575 [main] WARN  Server 186  - Using default SSL context creator
+10:20:31,582 [nioEventLoopGroup-12-1] ERROR ProtocolProcessor 330  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+10:20:31,590 [nioEventLoopGroup-12-2] ERROR ProtocolProcessor 330  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+10:20:33,810 [main] WARN  Server 186  - Using default SSL context creator
+10:20:33,820 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:33,820 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:33,821 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:36,050 [main] WARN  Server 186  - Using default SSL context creator
+10:20:36,055 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:36,057 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:36,058 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:36,062 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+10:20:38,285 [main] WARN  Server 186  - Using default SSL context creator
+10:20:38,290 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:38,290 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:38,291 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:38,292 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+10:20:40,513 [main] WARN  Server 186  - Using default SSL context creator
+10:20:40,545 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:40,547 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:40,548 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:42,776 [main] WARN  Server 186  - Using default SSL context creator
+10:20:42,800 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:42,803 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:42,804 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:42,813 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+10:20:45,040 [main] WARN  Server 186  - Using default SSL context creator
+10:20:45,052 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:45,053 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:45,054 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:47,278 [main] WARN  Server 186  - Using default SSL context creator
+10:20:47,282 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:47,283 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+10:20:47,283 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+10:20:47,285 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+15:47:50,486 [main] ERROR DBAuthenticator 67  - Can't find driver 
+java.lang.ClassNotFoundException: 
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at io.moquette.spi.impl.security.DBAuthenticator.<init>(DBAuthenticator.java:62)
+	at io.moquette.spi.impl.security.DBAuthenticator.<init>(DBAuthenticator.java:40)
+	at io.moquette.spi.impl.ProtocolProcessorBootstrapper.init(ProtocolProcessorBootstrapper.java:128)
+	at io.moquette.server.Server.startServer(Server.java:182)
+	at io.moquette.server.Server.startServer(Server.java:162)
+	at io.moquette.server.Server.startServer(Server.java:146)
+	at io.moquette.server.ConfigurationClassLoaderTest.startServer(ConfigurationClassLoaderTest.java:42)
+	at io.moquette.server.ConfigurationClassLoaderTest.loadAuthenticator(ConfigurationClassLoaderTest.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+15:47:50,503 [main] WARN  Server 186  - Using default SSL context creator
+15:47:57,915 [main] WARN  Server 186  - Using default SSL context creator
+15:48:00,460 [main] WARN  Server 186  - Using default SSL context creator
+15:48:00,642 [nioEventLoopGroup-7-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+15:48:00,645 [nioEventLoopGroup-7-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+15:48:00,649 [nioEventLoopGroup-7-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+15:48:02,877 [main] WARN  Server 186  - Using default SSL context creator
+15:48:02,886 [nioEventLoopGroup-10-1] ERROR ProtocolProcessor 330  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+15:48:02,892 [nioEventLoopGroup-10-2] ERROR ProtocolProcessor 330  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+16:25:17,837 [main] WARN  Server 196  - Using default SSL context creator
+16:25:20,632 [main] WARN  Server 196  - Using default SSL context creator
+16:25:22,858 [main] WARN  Server 196  - Using default SSL context creator
+16:25:25,483 [main] WARN  Server 196  - Using default SSL context creator
+16:25:25,658 [nioEventLoopGroup-9-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:25:25,661 [nioEventLoopGroup-9-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:25:25,676 [nioEventLoopGroup-9-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:25:27,890 [main] WARN  Server 196  - Using default SSL context creator
+16:25:27,927 [nioEventLoopGroup-12-1] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+16:25:27,937 [nioEventLoopGroup-12-2] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+16:25:30,250 [main] WARN  Server 196  - Using default SSL context creator
+16:25:30,322 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:30,323 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:30,324 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:32,549 [main] WARN  Server 196  - Using default SSL context creator
+16:25:32,569 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:32,570 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:32,571 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:34,784 [main] WARN  Server 196  - Using default SSL context creator
+16:25:34,805 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:34,806 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:34,806 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:34,869 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:25:37,094 [main] WARN  Server 196  - Using default SSL context creator
+16:25:37,118 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:37,119 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:37,119 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:37,122 [nioEventLoopGroup-20-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:25:39,334 [main] WARN  Server 196  - Using default SSL context creator
+16:25:39,353 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:39,354 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:39,355 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:39,357 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:25:41,630 [main] WARN  Server 196  - Using default SSL context creator
+16:25:41,650 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:41,651 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:41,651 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:41,653 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:25:43,934 [main] WARN  Server 196  - Using default SSL context creator
+16:25:43,955 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:43,955 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:43,956 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:44,028 [nioEventLoopGroup-26-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:25:46,279 [main] WARN  Server 196  - Using default SSL context creator
+16:25:46,298 [nioEventLoopGroup-28-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:46,299 [nioEventLoopGroup-28-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:46,300 [nioEventLoopGroup-28-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:46,301 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:25:48,512 [main] WARN  Server 196  - Using default SSL context creator
+16:25:48,536 [nioEventLoopGroup-30-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:48,537 [nioEventLoopGroup-30-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:48,537 [nioEventLoopGroup-30-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:48,539 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:25:50,751 [main] WARN  Server 196  - Using default SSL context creator
+16:25:50,771 [nioEventLoopGroup-32-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:50,772 [nioEventLoopGroup-32-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:50,772 [nioEventLoopGroup-32-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:52,983 [main] WARN  Server 196  - Using default SSL context creator
+16:25:53,008 [nioEventLoopGroup-34-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:53,008 [nioEventLoopGroup-34-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:53,008 [nioEventLoopGroup-34-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:53,011 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:25:55,221 [main] WARN  Server 196  - Using default SSL context creator
+16:25:55,243 [nioEventLoopGroup-36-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:55,244 [nioEventLoopGroup-36-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:55,244 [nioEventLoopGroup-36-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:25:57,455 [main] WARN  Server 196  - Using default SSL context creator
+16:25:57,475 [nioEventLoopGroup-38-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:57,476 [nioEventLoopGroup-38-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:57,486 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=foo, qos=AT_MOST_ONCE, cleanSession=true
+16:25:59,792 [main] WARN  Server 196  - Using default SSL context creator
+16:25:59,814 [nioEventLoopGroup-40-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:59,815 [nioEventLoopGroup-40-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:25:59,816 [nioEventLoopGroup-40-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:26:03,034 [main] WARN  Server 196  - Using default SSL context creator
+16:26:03,257 [nioEventLoopGroup-42-1] ERROR MemorySessionStore 130  - Can't find the session for client <WillTestamentPublisher>
+16:26:03,258 [nioEventLoopGroup-42-1] ERROR MemorySessionStore 130  - Can't find the session for client <WillTestamentPublisher>
+16:26:03,258 [nioEventLoopGroup-42-1] ERROR MemorySessionStore 306  - Fooooooooo <WillTestamentPublisher>
+16:26:03,269 [nioEventLoopGroup-42-2] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:26:03,269 [nioEventLoopGroup-42-2] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:26:03,278 [nioEventLoopGroup-42-1] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=WillTestamentPublisher, cause=null, errorMessage=Se ha forzado la interrupción de una conexión existente por el host remoto
+16:26:03,280 [nioEventLoopGroup-42-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/will/test, qos=AT_MOST_ONCE, cleanSession=true
+16:26:09,820 [main] WARN  Server 196  - Using default SSL context creator
+16:26:19,098 [main] WARN  Server 196  - Using default SSL context creator
+16:26:19,124 [nioEventLoopGroup-44-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:26:19,126 [nioEventLoopGroup-44-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:26:19,126 [nioEventLoopGroup-44-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:26:19,135 [nioEventLoopGroup-46-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:26:19,136 [nioEventLoopGroup-46-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:26:19,136 [nioEventLoopGroup-46-1] ERROR MemorySessionStore 306  - Fooooooooo <Listener>
+16:26:19,410 [hz._hzInstance_2_dev.event-9] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Listener, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:26:26,110 [main] WARN  Server 196  - Using default SSL context creator
+16:26:35,315 [main] WARN  Server 196  - Using default SSL context creator
+16:26:35,339 [nioEventLoopGroup-48-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:26:35,340 [nioEventLoopGroup-48-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:26:35,341 [nioEventLoopGroup-48-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:26:35,354 [nioEventLoopGroup-50-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:26:35,354 [nioEventLoopGroup-50-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:26:35,355 [nioEventLoopGroup-50-1] ERROR MemorySessionStore 306  - Fooooooooo <Listener>
+16:26:35,420 [hz._hzInstance_4_dev.event-19] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Listener, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:26:41,068 [main] WARN  Server 196  - Using default SSL context creator
+16:26:49,269 [main] WARN  Server 196  - Using default SSL context creator
+16:26:49,296 [nioEventLoopGroup-52-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:26:49,297 [nioEventLoopGroup-52-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:26:49,298 [nioEventLoopGroup-52-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:26:49,308 [nioEventLoopGroup-54-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:26:49,308 [nioEventLoopGroup-54-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:26:49,309 [nioEventLoopGroup-54-1] ERROR MemorySessionStore 306  - Fooooooooo <Listener>
+16:26:49,317 [hz._hzInstance_6_dev.event-29] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Listener, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:26:53,755 [main] WARN  Server 196  - Using default SSL context creator
+16:26:53,785 [nioEventLoopGroup-56-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:26:53,791 [nioEventLoopGroup-56-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:26:53,806 [nioEventLoopGroup-56-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:26:53,807 [nioEventLoopGroup-56-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:26:53,808 [nioEventLoopGroup-56-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:26:53,892 [nioEventLoopGroup-56-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:26:53,904 [nioEventLoopGroup-56-4] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:26:53,975 [nioEventLoopGroup-56-5] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:26:56,284 [main] WARN  Server 196  - Using default SSL context creator
+16:26:56,315 [nioEventLoopGroup-58-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:26:56,315 [nioEventLoopGroup-58-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:26:56,330 [nioEventLoopGroup-58-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:26:56,331 [nioEventLoopGroup-58-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:26:56,331 [nioEventLoopGroup-58-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:26:56,457 [nioEventLoopGroup-58-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:26:58,789 [main] WARN  Server 196  - Using default SSL context creator
+16:26:58,814 [nioEventLoopGroup-60-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:26:58,814 [nioEventLoopGroup-60-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:26:58,815 [nioEventLoopGroup-60-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:26:58,842 [nioEventLoopGroup-60-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:01,054 [main] WARN  Server 196  - Using default SSL context creator
+16:27:01,083 [nioEventLoopGroup-62-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:01,083 [nioEventLoopGroup-62-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:01,084 [nioEventLoopGroup-62-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:27:03,294 [main] WARN  Server 196  - Using default SSL context creator
+16:27:03,322 [nioEventLoopGroup-64-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:03,323 [nioEventLoopGroup-64-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:03,336 [nioEventLoopGroup-64-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:27:03,337 [nioEventLoopGroup-64-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:27:03,337 [nioEventLoopGroup-64-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:27:03,450 [nioEventLoopGroup-64-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:27:05,785 [main] WARN  Server 196  - Using default SSL context creator
+16:27:05,817 [nioEventLoopGroup-66-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:05,818 [nioEventLoopGroup-66-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:05,823 [nioEventLoopGroup-66-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:08,146 [main] WARN  Server 196  - Using default SSL context creator
+16:27:08,173 [nioEventLoopGroup-68-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:08,173 [nioEventLoopGroup-68-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:08,179 [nioEventLoopGroup-68-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:10,390 [main] WARN  Server 196  - Using default SSL context creator
+16:27:10,415 [nioEventLoopGroup-70-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:10,415 [nioEventLoopGroup-70-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:10,416 [nioEventLoopGroup-70-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:27:10,497 [nioEventLoopGroup-70-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:27:10,499 [nioEventLoopGroup-70-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:12,806 [main] WARN  Server 196  - Using default SSL context creator
+16:27:12,835 [nioEventLoopGroup-72-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:12,835 [nioEventLoopGroup-72-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:12,844 [nioEventLoopGroup-72-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:12,845 [nioEventLoopGroup-72-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:12,845 [nioEventLoopGroup-72-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:27:13,071 [nioEventLoopGroup-72-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=topic, qos=EXACTLY_ONCE, cleanSession=true
+16:27:13,072 [nioEventLoopGroup-72-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=2, CId=TestClient, topic=topic, qos=EXACTLY_ONCE, cleanSession=true
+16:27:15,427 [main] WARN  Server 196  - Using default SSL context creator
+16:27:15,455 [nioEventLoopGroup-74-1] ERROR MemorySessionStore 130  - Can't find the session for client <subscriber>
+16:27:15,455 [nioEventLoopGroup-74-1] ERROR MemorySessionStore 130  - Can't find the session for client <subscriber>
+16:27:15,456 [nioEventLoopGroup-74-1] ERROR MemorySessionStore 306  - Fooooooooo <subscriber>
+16:27:15,465 [nioEventLoopGroup-74-2] ERROR MemorySessionStore 130  - Can't find the session for client <publisher>
+16:27:15,466 [nioEventLoopGroup-74-2] ERROR MemorySessionStore 130  - Can't find the session for client <publisher>
+16:27:15,467 [nioEventLoopGroup-74-2] ERROR MemorySessionStore 306  - Fooooooooo <publisher>
+16:27:15,617 [nioEventLoopGroup-74-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=subscriber, topic=topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:25,699 [nioEventLoopGroup-74-4] ERROR MemorySessionStore 306  - Fooooooooo <subscriber>
+16:27:35,718 [nioEventLoopGroup-74-6] ERROR MemorySessionStore 306  - Fooooooooo <publisher>
+16:27:35,831 [nioEventLoopGroup-74-6] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=subscriber, topic=topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:38,134 [main] WARN  Server 196  - Using default SSL context creator
+16:27:38,158 [nioEventLoopGroup-76-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:38,159 [nioEventLoopGroup-76-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:38,172 [nioEventLoopGroup-76-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:27:38,173 [nioEventLoopGroup-76-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:27:38,173 [nioEventLoopGroup-76-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:27:38,299 [nioEventLoopGroup-76-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:40,608 [main] WARN  Server 196  - Using default SSL context creator
+16:27:40,631 [nioEventLoopGroup-78-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:40,632 [nioEventLoopGroup-78-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:40,652 [nioEventLoopGroup-78-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:27:40,653 [nioEventLoopGroup-78-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:27:40,653 [nioEventLoopGroup-78-3] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:27:40,737 [nioEventLoopGroup-78-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:43,052 [main] WARN  Server 196  - Using default SSL context creator
+16:27:43,075 [nioEventLoopGroup-80-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:43,076 [nioEventLoopGroup-80-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:43,076 [nioEventLoopGroup-80-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:27:43,081 [nioEventLoopGroup-80-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:43,081 [nioEventLoopGroup-80-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:43,163 [nioEventLoopGroup-80-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:43,286 [nioEventLoopGroup-80-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:43,287 [nioEventLoopGroup-80-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=2, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:45,600 [main] WARN  Server 196  - Using default SSL context creator
+16:27:45,624 [nioEventLoopGroup-82-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:45,625 [nioEventLoopGroup-82-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:45,639 [nioEventLoopGroup-82-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:47,949 [main] WARN  Server 196  - Using default SSL context creator
+16:27:47,973 [nioEventLoopGroup-84-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:47,974 [nioEventLoopGroup-84-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:47,974 [nioEventLoopGroup-84-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:27:47,983 [nioEventLoopGroup-84-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:50,197 [main] WARN  Server 196  - Using default SSL context creator
+16:27:50,221 [nioEventLoopGroup-86-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:50,222 [nioEventLoopGroup-86-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:50,222 [nioEventLoopGroup-86-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:27:50,227 [nioEventLoopGroup-86-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:50,227 [nioEventLoopGroup-86-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:50,302 [nioEventLoopGroup-86-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=a/b, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:53,617 [main] WARN  Server 196  - Using default SSL context creator
+16:27:53,642 [nioEventLoopGroup-88-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:53,643 [nioEventLoopGroup-88-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:27:53,643 [nioEventLoopGroup-88-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:27:53,648 [nioEventLoopGroup-88-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:53,648 [nioEventLoopGroup-88-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:53,717 [nioEventLoopGroup-88-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:27:56,029 [main] WARN  Server 196  - Using default SSL context creator
+16:27:56,053 [nioEventLoopGroup-90-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:56,053 [nioEventLoopGroup-90-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:56,072 [nioEventLoopGroup-90-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:27:58,379 [main] WARN  Server 196  - Using default SSL context creator
+16:27:58,406 [nioEventLoopGroup-92-1] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberA>
+16:27:58,406 [nioEventLoopGroup-92-1] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberA>
+16:27:58,407 [nioEventLoopGroup-92-1] ERROR MemorySessionStore 306  - Fooooooooo <SubscriberA>
+16:27:58,418 [nioEventLoopGroup-92-2] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberB>
+16:27:58,418 [nioEventLoopGroup-92-2] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberB>
+16:27:58,419 [nioEventLoopGroup-92-2] ERROR MemorySessionStore 306  - Fooooooooo <SubscriberB>
+16:27:58,429 [nioEventLoopGroup-92-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:58,430 [nioEventLoopGroup-92-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:27:58,430 [nioEventLoopGroup-92-3] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:27:58,524 [nioEventLoopGroup-92-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=SubscriberB, topic=a/b, qos=EXACTLY_ONCE, cleanSession=true
+16:27:58,524 [nioEventLoopGroup-92-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=SubscriberA, topic=a/b, qos=AT_LEAST_ONCE, cleanSession=true
+16:28:00,864 [main] WARN  Server 196  - Using default SSL context creator
+16:28:00,891 [nioEventLoopGroup-94-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe1>
+16:28:00,892 [nioEventLoopGroup-94-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe1>
+16:28:00,892 [nioEventLoopGroup-94-1] ERROR MemorySessionStore 306  - Fooooooooo <clientForSubscribe1>
+16:28:03,103 [main] WARN  Server 196  - Using default SSL context creator
+16:28:03,124 [nioEventLoopGroup-96-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe2>
+16:28:03,124 [nioEventLoopGroup-96-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe2>
+16:28:03,125 [nioEventLoopGroup-96-1] ERROR MemorySessionStore 306  - Fooooooooo <clientForSubscribe2>
+16:28:03,135 [nioEventLoopGroup-96-2] ERROR MemorySessionStore 130  - Can't find the session for client <clientForPublish>
+16:28:03,136 [nioEventLoopGroup-96-2] ERROR MemorySessionStore 130  - Can't find the session for client <clientForPublish>
+16:28:03,136 [nioEventLoopGroup-96-2] ERROR MemorySessionStore 306  - Fooooooooo <clientForPublish>
+16:28:03,239 [nioEventLoopGroup-96-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=clientForSubscribe2, topic=topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:05,455 [main] WARN  Server 196  - Using default SSL context creator
+16:28:05,478 [nioEventLoopGroup-98-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:05,478 [nioEventLoopGroup-98-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:05,496 [nioEventLoopGroup-98-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:07,802 [main] WARN  Server 196  - Using default SSL context creator
+16:28:07,826 [nioEventLoopGroup-100-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:07,826 [nioEventLoopGroup-100-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:07,833 [nioEventLoopGroup-100-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:07,833 [nioEventLoopGroup-100-1] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=TestClient, cause=null, errorMessage=Se ha anulado una conexión establecida por el software en su equipo host.
+16:28:07,841 [nioEventLoopGroup-100-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:07,842 [nioEventLoopGroup-100-2] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=TestClient, cause=null, errorMessage=Se ha anulado una conexión establecida por el software en su equipo host.
+16:28:10,156 [main] WARN  Server 196  - Using default SSL context creator
+16:28:10,178 [nioEventLoopGroup-102-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:10,179 [nioEventLoopGroup-102-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:10,179 [nioEventLoopGroup-102-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:10,187 [nioEventLoopGroup-102-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:10,187 [nioEventLoopGroup-102-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:10,188 [nioEventLoopGroup-102-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:10,357 [nioEventLoopGroup-102-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:12,673 [main] WARN  Server 196  - Using default SSL context creator
+16:28:12,694 [nioEventLoopGroup-104-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:12,694 [nioEventLoopGroup-104-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:12,695 [nioEventLoopGroup-104-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:12,704 [nioEventLoopGroup-104-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:12,704 [nioEventLoopGroup-104-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:12,705 [nioEventLoopGroup-104-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:12,823 [nioEventLoopGroup-104-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:28:15,136 [main] WARN  Server 196  - Using default SSL context creator
+16:28:15,157 [nioEventLoopGroup-106-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:15,157 [nioEventLoopGroup-106-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:15,158 [nioEventLoopGroup-106-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:15,167 [nioEventLoopGroup-106-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:15,167 [nioEventLoopGroup-106-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:15,167 [nioEventLoopGroup-106-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:15,250 [nioEventLoopGroup-106-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:17,565 [main] WARN  Server 196  - Using default SSL context creator
+16:28:17,586 [nioEventLoopGroup-108-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:17,586 [nioEventLoopGroup-108-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:17,587 [nioEventLoopGroup-108-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:17,595 [nioEventLoopGroup-108-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:17,596 [nioEventLoopGroup-108-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:17,596 [nioEventLoopGroup-108-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:17,696 [nioEventLoopGroup-108-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:28:20,013 [main] WARN  Server 196  - Using default SSL context creator
+16:28:20,034 [nioEventLoopGroup-110-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:20,034 [nioEventLoopGroup-110-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:20,035 [nioEventLoopGroup-110-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:20,044 [nioEventLoopGroup-110-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:20,045 [nioEventLoopGroup-110-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:20,045 [nioEventLoopGroup-110-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:20,050 [nioEventLoopGroup-110-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:22,363 [main] WARN  Server 196  - Using default SSL context creator
+16:28:22,384 [nioEventLoopGroup-112-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:22,385 [nioEventLoopGroup-112-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:22,385 [nioEventLoopGroup-112-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:22,394 [nioEventLoopGroup-112-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:22,395 [nioEventLoopGroup-112-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:22,395 [nioEventLoopGroup-112-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:22,542 [nioEventLoopGroup-112-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:28:24,812 [main] WARN  Server 196  - Using default SSL context creator
+16:28:24,833 [nioEventLoopGroup-114-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:24,833 [nioEventLoopGroup-114-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:24,834 [nioEventLoopGroup-114-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:24,843 [nioEventLoopGroup-114-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:24,843 [nioEventLoopGroup-114-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:24,844 [nioEventLoopGroup-114-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:24,925 [nioEventLoopGroup-114-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:28:27,237 [main] WARN  Server 196  - Using default SSL context creator
+16:28:27,258 [nioEventLoopGroup-116-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:27,258 [nioEventLoopGroup-116-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:27,259 [nioEventLoopGroup-116-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:27,267 [nioEventLoopGroup-116-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:27,267 [nioEventLoopGroup-116-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:27,268 [nioEventLoopGroup-116-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:27,273 [nioEventLoopGroup-116-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:29,585 [main] WARN  Server 196  - Using default SSL context creator
+16:28:29,610 [nioEventLoopGroup-118-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:29,610 [nioEventLoopGroup-118-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:28:29,611 [nioEventLoopGroup-118-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:28:29,619 [nioEventLoopGroup-118-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:29,619 [nioEventLoopGroup-118-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:29,620 [nioEventLoopGroup-118-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:29,625 [nioEventLoopGroup-118-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:28:45,540 [main] WARN  Server 196  - Using default SSL context creator
+16:28:48,241 [main] WARN  Server 196  - Using default SSL context creator
+16:28:50,462 [main] WARN  Server 196  - Using default SSL context creator
+16:28:52,923 [main] WARN  Server 196  - Using default SSL context creator
+16:28:53,111 [nioEventLoopGroup-9-1] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+16:28:53,126 [nioEventLoopGroup-9-2] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=Publisher, username=dbuser, password=[119, 114, 111, 110, 103, 80, 97, 115, 115, 119, 111, 114, 100]
+16:28:55,340 [main] WARN  Server 196  - Using default SSL context creator
+16:28:55,371 [nioEventLoopGroup-12-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:55,372 [nioEventLoopGroup-12-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:28:55,379 [nioEventLoopGroup-12-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:28:57,592 [main] WARN  Server 196  - Using default SSL context creator
+16:28:57,624 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:57,625 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:57,626 [nioEventLoopGroup-14-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:28:59,856 [main] WARN  Server 196  - Using default SSL context creator
+16:28:59,879 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:59,881 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:28:59,882 [nioEventLoopGroup-16-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:28:59,885 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:29:02,100 [main] WARN  Server 196  - Using default SSL context creator
+16:29:02,120 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:02,120 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:02,121 [nioEventLoopGroup-18-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:02,123 [nioEventLoopGroup-18-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:29:04,335 [main] WARN  Server 196  - Using default SSL context creator
+16:29:04,359 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:04,361 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:04,362 [nioEventLoopGroup-20-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:04,364 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:29:06,623 [main] WARN  Server 196  - Using default SSL context creator
+16:29:06,642 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:06,643 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:06,644 [nioEventLoopGroup-22-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:06,645 [nioEventLoopGroup-22-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:29:08,935 [main] WARN  Server 196  - Using default SSL context creator
+16:29:08,955 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:08,956 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:08,956 [nioEventLoopGroup-24-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:08,958 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:29:11,170 [main] WARN  Server 196  - Using default SSL context creator
+16:29:11,189 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:11,189 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:11,190 [nioEventLoopGroup-26-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:11,192 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:29:13,425 [main] WARN  Server 196  - Using default SSL context creator
+16:29:13,449 [nioEventLoopGroup-28-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:13,450 [nioEventLoopGroup-28-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:13,450 [nioEventLoopGroup-28-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:13,452 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:29:15,666 [main] WARN  Server 196  - Using default SSL context creator
+16:29:15,687 [nioEventLoopGroup-30-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:15,687 [nioEventLoopGroup-30-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:15,688 [nioEventLoopGroup-30-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:17,897 [main] WARN  Server 196  - Using default SSL context creator
+16:29:17,916 [nioEventLoopGroup-32-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:17,916 [nioEventLoopGroup-32-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:17,917 [nioEventLoopGroup-32-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:17,919 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:29:20,215 [main] WARN  Server 196  - Using default SSL context creator
+16:29:20,238 [nioEventLoopGroup-34-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:20,239 [nioEventLoopGroup-34-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:20,239 [nioEventLoopGroup-34-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:22,451 [main] WARN  Server 196  - Using default SSL context creator
+16:29:22,470 [nioEventLoopGroup-36-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:22,471 [nioEventLoopGroup-36-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:22,471 [nioEventLoopGroup-36-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:24,682 [main] WARN  Server 196  - Using default SSL context creator
+16:29:24,707 [nioEventLoopGroup-38-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:24,708 [nioEventLoopGroup-38-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:24,709 [nioEventLoopGroup-38-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:29:27,922 [main] WARN  Server 196  - Using default SSL context creator
+16:29:27,943 [nioEventLoopGroup-40-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:27,944 [nioEventLoopGroup-40-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:29:27,955 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=foo, qos=AT_MOST_ONCE, cleanSession=true
+16:29:30,269 [main] WARN  Server 196  - Using default SSL context creator
+16:29:30,420 [nioEventLoopGroup-42-1] ERROR MemorySessionStore 130  - Can't find the session for client <WillTestamentPublisher>
+16:29:30,420 [nioEventLoopGroup-42-1] ERROR MemorySessionStore 130  - Can't find the session for client <WillTestamentPublisher>
+16:29:30,421 [nioEventLoopGroup-42-1] ERROR MemorySessionStore 306  - Fooooooooo <WillTestamentPublisher>
+16:29:30,431 [nioEventLoopGroup-42-2] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:29:30,432 [nioEventLoopGroup-42-2] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:29:30,441 [nioEventLoopGroup-42-1] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=WillTestamentPublisher, cause=null, errorMessage=Se ha forzado la interrupción de una conexión existente por el host remoto
+16:29:30,443 [nioEventLoopGroup-42-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/will/test, qos=AT_MOST_ONCE, cleanSession=true
+16:29:35,924 [main] WARN  Server 196  - Using default SSL context creator
+16:29:45,227 [main] WARN  Server 196  - Using default SSL context creator
+16:29:45,255 [nioEventLoopGroup-44-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:29:45,257 [nioEventLoopGroup-44-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:29:45,257 [nioEventLoopGroup-44-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:29:45,267 [nioEventLoopGroup-46-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:29:45,268 [nioEventLoopGroup-46-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:29:45,268 [nioEventLoopGroup-46-1] ERROR MemorySessionStore 306  - Fooooooooo <Listener>
+16:29:45,433 [hz._hzInstance_2_dev.event-9] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Listener, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:29:52,057 [main] WARN  Server 196  - Using default SSL context creator
+16:30:01,257 [main] WARN  Server 196  - Using default SSL context creator
+16:30:01,279 [nioEventLoopGroup-48-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:01,280 [nioEventLoopGroup-48-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:01,281 [nioEventLoopGroup-48-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:30:01,289 [nioEventLoopGroup-50-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:30:01,290 [nioEventLoopGroup-50-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:30:01,291 [nioEventLoopGroup-50-1] ERROR MemorySessionStore 306  - Fooooooooo <Listener>
+16:30:01,297 [hz._hzInstance_4_dev.event-19] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Listener, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:30:06,936 [main] WARN  Server 196  - Using default SSL context creator
+16:30:16,135 [main] WARN  Server 196  - Using default SSL context creator
+16:30:16,162 [nioEventLoopGroup-52-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:16,163 [nioEventLoopGroup-52-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:16,163 [nioEventLoopGroup-52-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:30:16,174 [nioEventLoopGroup-54-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:30:16,175 [nioEventLoopGroup-54-1] ERROR MemorySessionStore 130  - Can't find the session for client <Listener>
+16:30:16,175 [nioEventLoopGroup-54-1] ERROR MemorySessionStore 306  - Fooooooooo <Listener>
+16:30:16,271 [hz._hzInstance_6_dev.event-29] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Listener, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:30:20,837 [main] WARN  Server 196  - Using default SSL context creator
+16:30:20,862 [nioEventLoopGroup-56-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:20,863 [nioEventLoopGroup-56-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:20,879 [nioEventLoopGroup-56-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:30:20,880 [nioEventLoopGroup-56-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:30:20,880 [nioEventLoopGroup-56-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:30:20,974 [nioEventLoopGroup-56-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:30:20,986 [nioEventLoopGroup-56-4] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:30:21,059 [nioEventLoopGroup-56-5] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:30:23,368 [main] WARN  Server 196  - Using default SSL context creator
+16:30:23,392 [nioEventLoopGroup-58-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:23,393 [nioEventLoopGroup-58-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:23,403 [nioEventLoopGroup-58-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:23,404 [nioEventLoopGroup-58-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:23,404 [nioEventLoopGroup-58-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:30:23,692 [nioEventLoopGroup-58-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=topic, qos=EXACTLY_ONCE, cleanSession=true
+16:30:23,693 [nioEventLoopGroup-58-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=2, CId=TestClient, topic=topic, qos=EXACTLY_ONCE, cleanSession=true
+16:30:26,125 [main] WARN  Server 196  - Using default SSL context creator
+16:30:26,150 [nioEventLoopGroup-60-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:26,150 [nioEventLoopGroup-60-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:26,156 [nioEventLoopGroup-60-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:30:28,476 [main] WARN  Server 196  - Using default SSL context creator
+16:30:28,504 [nioEventLoopGroup-62-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:28,505 [nioEventLoopGroup-62-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:28,505 [nioEventLoopGroup-62-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:30:28,600 [nioEventLoopGroup-62-2] ERROR ResourceLeakDetector 176  - LEAK: ByteBuf.release() was not called before it's garbage-collected. Enable advanced leak reporting to find out where the leak occurred. To enable advanced leak reporting, specify the JVM option '-Dio.netty.leakDetection.level=advanced' or call ResourceLeakDetector.setLevel() See http://netty.io/wiki/reference-counted-objects.html for more information.
+16:30:28,601 [nioEventLoopGroup-62-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:30:28,602 [nioEventLoopGroup-62-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:30:30,910 [main] WARN  Server 196  - Using default SSL context creator
+16:30:30,934 [nioEventLoopGroup-64-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:30,935 [nioEventLoopGroup-64-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:30,942 [nioEventLoopGroup-64-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:30:33,156 [main] WARN  Server 196  - Using default SSL context creator
+16:30:33,179 [nioEventLoopGroup-66-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:33,180 [nioEventLoopGroup-66-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:33,193 [nioEventLoopGroup-66-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:30:33,194 [nioEventLoopGroup-66-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:30:33,194 [nioEventLoopGroup-66-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:30:33,346 [nioEventLoopGroup-66-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:30:35,747 [main] WARN  Server 196  - Using default SSL context creator
+16:30:35,781 [nioEventLoopGroup-68-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:35,782 [nioEventLoopGroup-68-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:35,782 [nioEventLoopGroup-68-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:30:37,994 [main] WARN  Server 196  - Using default SSL context creator
+16:30:38,019 [nioEventLoopGroup-70-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:38,019 [nioEventLoopGroup-70-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:38,020 [nioEventLoopGroup-70-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:30:38,110 [nioEventLoopGroup-70-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:30:40,323 [main] WARN  Server 196  - Using default SSL context creator
+16:30:40,347 [nioEventLoopGroup-72-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:40,347 [nioEventLoopGroup-72-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:40,361 [nioEventLoopGroup-72-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:30:40,362 [nioEventLoopGroup-72-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:30:40,362 [nioEventLoopGroup-72-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:30:40,555 [nioEventLoopGroup-72-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:30:42,906 [main] WARN  Server 196  - Using default SSL context creator
+16:30:42,929 [nioEventLoopGroup-74-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:42,930 [nioEventLoopGroup-74-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:42,946 [nioEventLoopGroup-74-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:30:45,155 [main] WARN  Server 196  - Using default SSL context creator
+16:30:45,178 [nioEventLoopGroup-76-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:45,179 [nioEventLoopGroup-76-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:45,196 [nioEventLoopGroup-76-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:30:47,499 [main] WARN  Server 196  - Using default SSL context creator
+16:30:47,527 [nioEventLoopGroup-78-1] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberA>
+16:30:47,527 [nioEventLoopGroup-78-1] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberA>
+16:30:47,527 [nioEventLoopGroup-78-1] ERROR MemorySessionStore 306  - Fooooooooo <SubscriberA>
+16:30:47,537 [nioEventLoopGroup-78-2] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberB>
+16:30:47,537 [nioEventLoopGroup-78-2] ERROR MemorySessionStore 130  - Can't find the session for client <SubscriberB>
+16:30:47,538 [nioEventLoopGroup-78-2] ERROR MemorySessionStore 306  - Fooooooooo <SubscriberB>
+16:30:47,544 [nioEventLoopGroup-78-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:47,544 [nioEventLoopGroup-78-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:47,545 [nioEventLoopGroup-78-3] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:30:47,695 [nioEventLoopGroup-78-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=SubscriberB, topic=a/b, qos=EXACTLY_ONCE, cleanSession=true
+16:30:47,696 [nioEventLoopGroup-78-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=SubscriberA, topic=a/b, qos=AT_LEAST_ONCE, cleanSession=true
+16:30:49,988 [main] WARN  Server 196  - Using default SSL context creator
+16:30:50,016 [nioEventLoopGroup-80-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe1>
+16:30:50,017 [nioEventLoopGroup-80-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe1>
+16:30:50,017 [nioEventLoopGroup-80-1] ERROR MemorySessionStore 306  - Fooooooooo <clientForSubscribe1>
+16:30:52,227 [main] WARN  Server 196  - Using default SSL context creator
+16:30:52,248 [nioEventLoopGroup-82-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe2>
+16:30:52,248 [nioEventLoopGroup-82-1] ERROR MemorySessionStore 130  - Can't find the session for client <clientForSubscribe2>
+16:30:52,249 [nioEventLoopGroup-82-1] ERROR MemorySessionStore 306  - Fooooooooo <clientForSubscribe2>
+16:30:52,259 [nioEventLoopGroup-82-2] ERROR MemorySessionStore 130  - Can't find the session for client <clientForPublish>
+16:30:52,260 [nioEventLoopGroup-82-2] ERROR MemorySessionStore 130  - Can't find the session for client <clientForPublish>
+16:30:52,260 [nioEventLoopGroup-82-2] ERROR MemorySessionStore 306  - Fooooooooo <clientForPublish>
+16:30:52,409 [nioEventLoopGroup-82-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=clientForSubscribe2, topic=topic, qos=AT_MOST_ONCE, cleanSession=true
+16:30:54,624 [main] WARN  Server 196  - Using default SSL context creator
+16:30:54,647 [nioEventLoopGroup-84-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:54,648 [nioEventLoopGroup-84-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:54,648 [nioEventLoopGroup-84-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:30:54,654 [nioEventLoopGroup-84-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:54,654 [nioEventLoopGroup-84-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:54,751 [nioEventLoopGroup-84-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:30:57,063 [main] WARN  Server 196  - Using default SSL context creator
+16:30:57,087 [nioEventLoopGroup-86-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:57,087 [nioEventLoopGroup-86-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:30:57,088 [nioEventLoopGroup-86-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:30:57,092 [nioEventLoopGroup-86-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:57,093 [nioEventLoopGroup-86-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:30:57,185 [nioEventLoopGroup-86-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=a/b, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:00,499 [main] WARN  Server 196  - Using default SSL context creator
+16:31:00,525 [nioEventLoopGroup-88-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:00,526 [nioEventLoopGroup-88-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:00,533 [nioEventLoopGroup-88-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:00,534 [nioEventLoopGroup-88-1] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=TestClient, cause=null, errorMessage=Se ha anulado una conexión establecida por el software en su equipo host.
+16:31:00,541 [nioEventLoopGroup-88-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:00,541 [nioEventLoopGroup-88-2] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=TestClient, cause=null, errorMessage=Se ha anulado una conexión establecida por el software en su equipo host.
+16:31:02,751 [main] WARN  Server 196  - Using default SSL context creator
+16:31:02,774 [nioEventLoopGroup-90-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:02,775 [nioEventLoopGroup-90-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:02,793 [nioEventLoopGroup-90-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:31:02,794 [nioEventLoopGroup-90-3] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:31:02,794 [nioEventLoopGroup-90-3] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:31:02,841 [nioEventLoopGroup-90-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:05,154 [main] WARN  Server 196  - Using default SSL context creator
+16:31:05,178 [nioEventLoopGroup-92-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:05,179 [nioEventLoopGroup-92-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:05,191 [nioEventLoopGroup-92-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:07,498 [main] WARN  Server 196  - Using default SSL context creator
+16:31:07,527 [nioEventLoopGroup-94-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:07,528 [nioEventLoopGroup-94-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:07,529 [nioEventLoopGroup-94-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:07,534 [nioEventLoopGroup-94-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:07,534 [nioEventLoopGroup-94-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:07,628 [nioEventLoopGroup-94-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:07,769 [nioEventLoopGroup-94-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:07,770 [nioEventLoopGroup-94-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=2, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:10,081 [main] WARN  Server 196  - Using default SSL context creator
+16:31:10,106 [nioEventLoopGroup-96-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:10,106 [nioEventLoopGroup-96-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:10,119 [nioEventLoopGroup-96-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:31:10,119 [nioEventLoopGroup-96-2] ERROR MemorySessionStore 130  - Can't find the session for client <TestClientPUB>
+16:31:10,120 [nioEventLoopGroup-96-2] ERROR MemorySessionStore 306  - Fooooooooo <TestClientPUB>
+16:31:10,222 [nioEventLoopGroup-96-3] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=TestClient, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:12,530 [main] WARN  Server 196  - Using default SSL context creator
+16:31:12,556 [nioEventLoopGroup-98-1] ERROR MemorySessionStore 130  - Can't find the session for client <subscriber>
+16:31:12,557 [nioEventLoopGroup-98-1] ERROR MemorySessionStore 130  - Can't find the session for client <subscriber>
+16:31:12,557 [nioEventLoopGroup-98-1] ERROR MemorySessionStore 306  - Fooooooooo <subscriber>
+16:31:12,570 [nioEventLoopGroup-98-2] ERROR MemorySessionStore 130  - Can't find the session for client <publisher>
+16:31:12,570 [nioEventLoopGroup-98-2] ERROR MemorySessionStore 130  - Can't find the session for client <publisher>
+16:31:12,571 [nioEventLoopGroup-98-2] ERROR MemorySessionStore 306  - Fooooooooo <publisher>
+16:31:12,723 [nioEventLoopGroup-98-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=subscriber, topic=topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:22,747 [nioEventLoopGroup-98-4] ERROR MemorySessionStore 306  - Fooooooooo <subscriber>
+16:31:32,765 [nioEventLoopGroup-98-6] ERROR MemorySessionStore 306  - Fooooooooo <publisher>
+16:31:32,870 [nioEventLoopGroup-98-6] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=subscriber, topic=topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:35,177 [main] WARN  Server 196  - Using default SSL context creator
+16:31:35,205 [nioEventLoopGroup-100-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:35,205 [nioEventLoopGroup-100-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:31:35,205 [nioEventLoopGroup-100-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:31:35,211 [nioEventLoopGroup-100-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:37,426 [main] WARN  Server 196  - Using default SSL context creator
+16:31:37,453 [nioEventLoopGroup-102-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:37,454 [nioEventLoopGroup-102-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:37,454 [nioEventLoopGroup-102-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:37,467 [nioEventLoopGroup-102-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:37,468 [nioEventLoopGroup-102-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:37,469 [nioEventLoopGroup-102-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:37,665 [nioEventLoopGroup-102-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:39,978 [main] WARN  Server 196  - Using default SSL context creator
+16:31:39,998 [nioEventLoopGroup-104-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:39,998 [nioEventLoopGroup-104-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:39,999 [nioEventLoopGroup-104-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:40,009 [nioEventLoopGroup-104-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:40,009 [nioEventLoopGroup-104-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:40,010 [nioEventLoopGroup-104-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:40,113 [nioEventLoopGroup-104-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:42,328 [main] WARN  Server 196  - Using default SSL context creator
+16:31:42,347 [nioEventLoopGroup-106-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:42,348 [nioEventLoopGroup-106-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:42,348 [nioEventLoopGroup-106-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:42,357 [nioEventLoopGroup-106-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:42,357 [nioEventLoopGroup-106-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:42,357 [nioEventLoopGroup-106-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:42,502 [nioEventLoopGroup-106-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:44,716 [main] WARN  Server 196  - Using default SSL context creator
+16:31:44,741 [nioEventLoopGroup-108-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:44,741 [nioEventLoopGroup-108-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:44,741 [nioEventLoopGroup-108-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:44,750 [nioEventLoopGroup-108-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:44,750 [nioEventLoopGroup-108-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:44,751 [nioEventLoopGroup-108-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:44,757 [nioEventLoopGroup-108-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:47,068 [main] WARN  Server 196  - Using default SSL context creator
+16:31:47,087 [nioEventLoopGroup-110-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:47,088 [nioEventLoopGroup-110-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:47,088 [nioEventLoopGroup-110-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:47,097 [nioEventLoopGroup-110-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:47,097 [nioEventLoopGroup-110-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:47,098 [nioEventLoopGroup-110-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:47,103 [nioEventLoopGroup-110-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:49,414 [main] WARN  Server 196  - Using default SSL context creator
+16:31:49,433 [nioEventLoopGroup-112-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:49,434 [nioEventLoopGroup-112-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:49,434 [nioEventLoopGroup-112-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:49,443 [nioEventLoopGroup-112-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:49,444 [nioEventLoopGroup-112-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:49,444 [nioEventLoopGroup-112-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:49,534 [nioEventLoopGroup-112-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:51,847 [main] WARN  Server 196  - Using default SSL context creator
+16:31:51,867 [nioEventLoopGroup-114-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:51,868 [nioEventLoopGroup-114-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:51,868 [nioEventLoopGroup-114-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:51,876 [nioEventLoopGroup-114-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:51,877 [nioEventLoopGroup-114-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:51,877 [nioEventLoopGroup-114-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:51,882 [nioEventLoopGroup-114-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Subscriber, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:31:54,196 [main] WARN  Server 196  - Using default SSL context creator
+16:31:54,215 [nioEventLoopGroup-116-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:54,216 [nioEventLoopGroup-116-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:54,216 [nioEventLoopGroup-116-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:54,224 [nioEventLoopGroup-116-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:54,225 [nioEventLoopGroup-116-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:54,225 [nioEventLoopGroup-116-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:54,358 [nioEventLoopGroup-116-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=EXACTLY_ONCE, cleanSession=true
+16:31:56,727 [main] WARN  Server 196  - Using default SSL context creator
+16:31:56,747 [nioEventLoopGroup-118-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:56,748 [nioEventLoopGroup-118-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:31:56,748 [nioEventLoopGroup-118-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:31:56,757 [nioEventLoopGroup-118-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:56,758 [nioEventLoopGroup-118-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:31:56,758 [nioEventLoopGroup-118-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:31:56,851 [nioEventLoopGroup-118-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:31:59,167 [main] WARN  Server 196  - Using default SSL context creator
+16:31:59,248 [main] WARN  DefaultMoquetteSslContextCreator 89  - Client authentication is enabled. The keystore will be used as a truststore. KeystorePath = signedserverkeystore.jks.
+16:31:59,601 [nioEventLoopGroup-120-1] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=null, cause=javax.net.ssl.SSLHandshakeException: General SSLEngine problem, errorMessage=javax.net.ssl.SSLHandshakeException: General SSLEngine problem
+16:31:59,701 [nioEventLoopGroup-120-2] ERROR NettyMQTTHandler 105  - An unexpected exception was caught while processing MQTT message. Closing Netty channel. CId=null, cause=javax.net.ssl.SSLHandshakeException: General SSLEngine problem, errorMessage=javax.net.ssl.SSLHandshakeException: General SSLEngine problem
+16:32:02,052 [main] WARN  Server 196  - Using default SSL context creator
+16:32:02,066 [main] WARN  DefaultMoquetteSslContextCreator 89  - Client authentication is enabled. The keystore will be used as a truststore. KeystorePath = signedserverkeystore.jks.
+16:32:02,263 [nioEventLoopGroup-122-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:32:02,264 [nioEventLoopGroup-122-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:32:02,265 [nioEventLoopGroup-122-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:32:04,482 [main] WARN  Server 196  - Using default SSL context creator
+16:32:04,642 [nioEventLoopGroup-124-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:32:04,642 [nioEventLoopGroup-124-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:32:04,643 [nioEventLoopGroup-124-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:32:06,857 [main] WARN  Server 196  - Using default SSL context creator
+16:32:06,939 [nioEventLoopGroup-126-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:32:06,940 [nioEventLoopGroup-126-1] ERROR MemorySessionStore 130  - Can't find the session for client <TestClient>
+16:32:06,945 [nioEventLoopGroup-126-1] ERROR MemorySessionStore 306  - Fooooooooo <TestClient>
+16:32:06,957 [nioEventLoopGroup-126-2] ERROR MemorySessionStore 130  - Can't find the session for client <secondTestClient>
+16:32:06,958 [nioEventLoopGroup-126-2] ERROR MemorySessionStore 130  - Can't find the session for client <secondTestClient>
+16:32:06,959 [nioEventLoopGroup-126-2] ERROR MemorySessionStore 306  - Fooooooooo <secondTestClient>
+16:32:06,964 [nioEventLoopGroup-126-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=TestClient, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:32:09,291 [main] WARN  Server 196  - Using default SSL context creator
+16:32:12,007 [main] WARN  Server 196  - Using default SSL context creator
+16:32:12,034 [nioEventLoopGroup-130-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:12,034 [nioEventLoopGroup-130-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:12,035 [nioEventLoopGroup-130-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:32:14,247 [main] WARN  Server 196  - Using default SSL context creator
+16:32:14,267 [nioEventLoopGroup-132-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:14,268 [nioEventLoopGroup-132-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:14,268 [nioEventLoopGroup-132-1] ERROR MemorySessionStore 306  - Fooooooooo <Subscriber>
+16:32:14,276 [nioEventLoopGroup-132-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:14,277 [nioEventLoopGroup-132-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:14,277 [nioEventLoopGroup-132-2] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:32:17,575 [main] WARN  Server 196  - Using default SSL context creator
+16:32:17,599 [nioEventLoopGroup-134-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:17,599 [nioEventLoopGroup-134-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:19,810 [main] WARN  Server 196  - Using default SSL context creator
+16:32:19,826 [nioEventLoopGroup-136-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:19,827 [nioEventLoopGroup-136-1] ERROR MemorySessionStore 130  - Can't find the session for client <Subscriber>
+16:32:19,832 [nioEventLoopGroup-136-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:19,833 [nioEventLoopGroup-136-2] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:19,916 [nioEventLoopGroup-136-2] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=1, CId=Subscriber, topic=/topic, qos=AT_LEAST_ONCE, cleanSession=true
+16:32:23,229 [main] WARN  Server 196  - Using default SSL context creator
+16:32:23,257 [nioEventLoopGroup-138-1] ERROR MemorySessionStore 130  - Can't find the session for client <SubPub>
+16:32:23,258 [nioEventLoopGroup-138-1] ERROR MemorySessionStore 130  - Can't find the session for client <SubPub>
+16:32:23,258 [nioEventLoopGroup-138-1] ERROR MemorySessionStore 306  - Fooooooooo <SubPub>
+16:32:23,264 [nioEventLoopGroup-138-1] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=SubPub, topic=/topic, qos=AT_MOST_ONCE, cleanSession=true
+16:32:25,475 [main] WARN  Server 196  - Using default SSL context creator
+16:32:25,492 [nioEventLoopGroup-140-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:25,493 [nioEventLoopGroup-140-1] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:25,493 [nioEventLoopGroup-140-1] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:32:29,039 [main] ERROR Topic 50  - Error parsing the topic: #MQTTClient, message: Bad format of topic, invalid subtopic name: #MQTTClient
+16:32:29,039 [main] ERROR ProtocolProcessor 863  - Topic filter is not valid CId=FAKE_123, username=null, messageId=10, topic=#MQTTClient
+16:32:29,351 [main] ERROR ProtocolProcessor 853  - Client does not have read permissions on the topic CId=FAKE_123, username=UnAuthUser, messageId=10, topic=/news
+16:32:30,257 [main] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:30,258 [main] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:30,258 [main] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:32:30,877 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:30,878 [main] ERROR Topic 50  - Error parsing the topic: #MQTTClient, message: Bad format of topic, invalid subtopic name: #MQTTClient
+16:32:30,878 [main] ERROR ProtocolProcessor 754  - Topic filter is not valid. CId=FAKE_123, topics=[#MQTTClient], badTopicFilter=#MQTTClient
+16:32:31,181 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:31,182 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:31,183 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:31,238 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_456>
+16:32:31,239 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_456>
+16:32:31,239 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_456>
+16:32:31,242 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=FAKE_123, topic=/news, qos=AT_MOST_ONCE, cleanSession=true
+16:32:31,243 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=FAKE_456, topic=/news, qos=AT_MOST_ONCE, cleanSession=true
+16:32:31,546 [main] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:31,547 [main] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:31,547 [main] ERROR MemorySessionStore 306  - Fooooooooo <Publisher>
+16:32:31,552 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=Publisher, topic=/news, qos=AT_MOST_ONCE, cleanSession=true
+16:32:31,856 [main] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:31,856 [main] ERROR MemorySessionStore 130  - Can't find the session for client <Publisher>
+16:32:32,461 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:32,468 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:32,471 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:32,475 [main] WARN  PersistentQueueMessageSender 56  - PUBLISH message could not be delivered. It will be discarded. MessageId=0, CId=FAKE_123, topic=/news, qos=AT_MOST_ONCE, cleanSession=true
+16:32:32,781 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:32,781 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:32,782 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:33,084 [main] ERROR ProtocolProcessor 334  - Client didn't supply any password and MQTT anonymous mode is disabled CId=FAKE_123
+16:32:33,386 [main] ERROR ProtocolProcessor 261  - The MQTT client ID cannot be empty. Username=null
+16:32:33,689 [main] ERROR MemorySessionStore 130  - Can't find the session for client <d16b2daf18874f15a99fcef221b679ec>
+16:32:33,689 [main] ERROR MemorySessionStore 130  - Can't find the session for client <d16b2daf18874f15a99fcef221b679ec>
+16:32:33,690 [main] ERROR MemorySessionStore 306  - Fooooooooo <d16b2daf18874f15a99fcef221b679ec>
+16:32:33,992 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:33,992 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:33,993 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:33,993 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:34,295 [main] ERROR ProtocolProcessor 261  - The MQTT client ID cannot be empty. Username=null
+16:32:34,598 [main] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=FAKE_123, username=fakeuser, password=null
+16:32:34,899 [main] ERROR ProtocolProcessor 346  - Client didn't supply any credentials and MQTT anonymous mode is disabled. CId=FAKE_123
+16:32:35,201 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:35,201 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:35,202 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:35,503 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:35,503 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:35,504 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:35,805 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:35,805 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:36,109 [main] ERROR MemorySessionStore 130  - Can't find the session for client <extremely_long_clientID_greater_than_23>
+16:32:36,110 [main] ERROR MemorySessionStore 130  - Can't find the session for client <extremely_long_clientID_greater_than_23>
+16:32:36,110 [main] ERROR MemorySessionStore 306  - Fooooooooo <extremely_long_clientID_greater_than_23>
+16:32:36,413 [main] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=FAKE_123, username=fakeuser_fake, password=[102, 97, 107, 101, 112, 119, 100]
+16:32:36,715 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:36,716 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:36,717 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:36,718 [main] ERROR ProtocolProcessor 339  - Authenticator has rejected the MQTT credentials CId=FAKE_123, username=eviluser, password=[117, 110, 115, 101, 99, 114, 101, 116]
+16:32:37,021 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:37,021 [main] ERROR MemorySessionStore 130  - Can't find the session for client <FAKE_123>
+16:32:37,022 [main] ERROR MemorySessionStore 306  - Fooooooooo <FAKE_123>
+16:32:38,005 [main] ERROR FileResourceLoader 67  - The given file is a directory. Path = C:\.
+16:32:38,005 [main] WARN  ResourceAuthenticator 70  - Trying to parse directory 
+16:32:38,011 [main] ERROR MemorySessionStore 90  - Can't find the session for client <FAKE_CLID_1>
+16:32:38,292 [main] ERROR MemorySessionStore 90  - Can't find the session for client <FAKE_CLID_1>
+16:32:38,412 [main] ERROR MemorySessionStore 90  - Can't find the session for client <FAKE_CLI_ID_2>
+16:32:38,419 [main] ERROR Topic 50  - Error parsing the topic: finance/#/closingprice, message: Bad format of topic, the multi symbol (#) has to be the last one after a separator
+16:32:38,421 [main] ERROR Topic 50  - Error parsing the topic: finance#, message: Bad format of topic, invalid subtopic name: finance#
+16:32:38,421 [main] ERROR Topic 50  - Error parsing the topic: /finance/#closingprice, message: Bad format of topic, invalid subtopic name: #closingprice
+16:32:38,423 [main] ERROR Topic 50  - Error parsing the topic: finance+, message: Bad format of topic, invalid subtopic name: finance+

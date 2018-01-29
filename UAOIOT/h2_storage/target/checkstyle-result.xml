@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\Users\Ivan\Desktop\UAOIOT\h2_storage\src\main\java\io\moquette\persistence\h2\H2MessagesStore.java">
+<error line="43" column="5" severity="warning" message="Modificador &apos;public&apos; redundante." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
+<error line="59" column="48" severity="warning" message="&apos;(&apos; está seguido de espacios en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="94" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\h2_storage\src\main\java\io\moquette\persistence\h2\H2PersistentQueue.java">
+<error line="0" severity="warning" message="missing copyright header" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\h2_storage\src\main\java\io\moquette\persistence\h2\H2PersistentStore.java">
+<error line="44" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="53" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="80" severity="warning" message="an empty line before }" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="C:\Users\Ivan\Desktop\UAOIOT\h2_storage\src\main\java\io\moquette\persistence\h2\H2SessionsStore.java">
+<error line="143" severity="warning" message="La línea es mayor de 120 caracteres." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>

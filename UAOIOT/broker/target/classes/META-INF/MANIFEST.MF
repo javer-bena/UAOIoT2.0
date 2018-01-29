@@ -1,0 +1,50 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1505942923685
+Build-Jdk: 1.8.0_65
+Built-By: Ivan
+Bundle-Description: Moquette lightweight MQTT Broker
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt, http://w
+ ww.eclipse.org/org/documents/epl-v10.php
+Bundle-ManifestVersion: 2
+Bundle-Name: Moquette - broker
+Bundle-SymbolicName: io.moquette.broker
+Bundle-Version: 0.10.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: io.moquette;version="0.10.0",io.moquette.connections;ver
+ sion="0.10.0",io.moquette.interception;version="0.10.0";uses:="io.moque
+ tte.interception.messages,io.moquette.server,io.netty.handler.codec.mqt
+ t",io.moquette.interception.messages;version="0.10.0";uses:="io.moquett
+ e.spi,io.netty.buffer,io.netty.handler.codec.mqtt",io.moquette.logging;
+ version="0.10.0",io.moquette.persistence;version="0.10.0";uses:="io.moq
+ uette.server.config,io.moquette.spi",io.moquette.server.config;version=
+ "0.10.0",io.moquette.server;version="0.10.0";uses:="com.hazelcast.core,
+ io.moquette.connections,io.moquette.interception,io.moquette.intercepti
+ on.messages,io.moquette.server.config,io.moquette.server.netty.metrics,
+ io.moquette.spi,io.moquette.spi.security,io.netty.channel,io.netty.hand
+ ler.codec.mqtt",io.moquette.server.netty;version="0.10.0";uses:="io.moq
+ uette.server,io.moquette.server.config,io.moquette.spi.security,io.nett
+ y.channel,io.netty.util",io.moquette.server.netty.metrics;version="0.10
+ .0";uses:="io.moquette.server.config,io.netty.channel",io.moquette.spi;
+ version="0.10.0";uses:="io.netty.buffer,io.netty.handler.codec.mqtt",io
+ .moquette.spi.security;version="0.10.0";uses:="javax.net.ssl"
+Import-Package: com.bugsnag,com.codahale.metrics;version="[3.2,4)",com.h
+ azelcast.config;version="[3.5,4)",com.hazelcast.core;version="[3.5,4)",
+ com.librato.metrics.reporter,com.mongodb;version="[3.4,4)",com.mongodb.
+ client;version="[3.4,4)",com.mongodb.client.model;version="[3.4,4)",io.
+ moquette.connections;version="[0.10,1)",io.moquette.logging;version="[0
+ .10,1)",io.moquette.server.config;version="[0.10,1)",io.netty.bootstrap
+ ;version="[4.1,5)",io.netty.buffer;version="[4.1,5)",io.netty.channel;v
+ ersion="[4.1,5)",io.netty.channel.epoll;version="[4.1,5)",io.netty.chan
+ nel.nio;version="[4.1,5)",io.netty.channel.socket;version="[4.1,5)",io.
+ netty.channel.socket.nio;version="[4.1,5)",io.netty.handler.codec;versi
+ on="[4.1,5)",io.netty.handler.codec.http;version="[4.1,5)",io.netty.han
+ dler.codec.http.websocketx;version="[4.1,5)",io.netty.handler.codec.mqt
+ t;version="[4.1,5)",io.netty.handler.ssl;version="[4.1,5)",io.netty.han
+ dler.timeout;version="[4.1,5)",io.netty.util;version="[4.1,5)",io.netty
+ .util.concurrent;version="[4.1,5)",javax.net.ssl,org.apache.commons.cod
+ ec.binary;version="[1.10,2)",org.apache.commons.codec.digest;version="[
+ 1.10,2)",org.bson;version="[3.4,4)",org.bson.conversions;version="[3.4,
+ 4)",org.slf4j;version="[1.7,2)"
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.3.0.201609221906

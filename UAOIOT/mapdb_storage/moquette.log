@@ -1,0 +1,8 @@
+16:32:52,385 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
+16:32:55,590 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
+16:32:57,304 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
+16:32:58,645 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
+16:33:00,428 [main] WARN  MapDBPersistentStore 103  - MapDB store is already closed. Nothing will be done
+16:33:00,433 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
+16:33:01,973 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
+16:33:03,506 [main] WARN  MapDBPersistentStore 78  - Using fresh MapDB store file. Path=C:\Users\Ivan\Desktop\UAOIOT\mapdb_storage\moquette_store.mapdb
