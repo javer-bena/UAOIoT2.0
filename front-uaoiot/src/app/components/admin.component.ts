@@ -9,6 +9,7 @@ import { UserService } from '../services/user.service';
 })
 
 export class  AdminComponent{
+    public users:Array<String>;
 
     constructor(private _userService:UserService){
 
@@ -17,7 +18,12 @@ export class  AdminComponent{
     ngOnInit(){
         this._userService.getUsers().subscribe(
             result => {
-                console.log(result);
+                this.users = result.users;
+                console.log(result.users)
+                if(!this.users){
+                    console.log("No hay usuarios");
+                }
+                
             },
             error => {
                 var errorMsj = <any>error;

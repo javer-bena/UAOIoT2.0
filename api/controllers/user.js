@@ -55,7 +55,6 @@ function postUser(req, res) {
     var user = new user();
     var params = req.body;
 
-    user.id = params.id;
     user.login = params.login;
     user.password = params.password;
 

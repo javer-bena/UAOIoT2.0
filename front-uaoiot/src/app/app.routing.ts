@@ -3,16 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login.component';
 import { AdminComponent } from './components/admin.component';
 import { DashboardComponent } from './components/dashboard.component';
-import { ProjectComponent } from './components/project.component';
 import { ErrorComponent } from './components/error.component';
 import { LibrariesComponent } from './components/libraries.component';
+import { HomeComponent } from './components/home.component';
+import { ProfileComponent } from './components/profile.component';
+
+import { TutorialsComponent } from './components/tutorials.component';
+import { DevicesComponent } from './components/devices.component';
 
 const appRoutes: Routes = [
-    //{path: '', component: InicioComponent},
+    {path: '', component: DashboardComponent},
     {path: 'login', component: LoginComponent},
+    {path: 'devices', component: DevicesComponent},
+    {path: 'profile', component: ProfileComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'dashboard', component: DashboardComponent},
-    {path: 'project', component: ProjectComponent},
+    {path: 'tutorials', component: TutorialsComponent},
     {path: 'libraries', component: LibrariesComponent },
     {path: 'error', component: ErrorComponent}
 ];

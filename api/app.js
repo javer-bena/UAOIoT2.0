@@ -8,6 +8,10 @@ var apiUser = require('./routes/user');
 var apiMessage = require('./routes/message');
 var apiAcls = require('./routes/acls');
 
+
+//Socket.io conexión
+
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
