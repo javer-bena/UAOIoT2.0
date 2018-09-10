@@ -1,0 +1,69 @@
+<nav>
+    <div id="nav-elements">
+        
+        <div id="logo">
+            <a id="title-nav"  [routerLinkActive]="['active']">UAOIOT</a>
+        </div>
+        
+        
+        
+        <div *ngIf="authService.isAdminLoggedIn();else user_content" id="options-nav">
+            <ul>
+                <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                    <a [routerLink]="['/dashboard']">Admin</a>
+                </li>
+            
+                <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                    <a [routerLink]="['/devices']">Admin</a>
+                </li>
+        
+                <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                    <a [routerLink]="['/libraries']">Admin</a>
+                </li>
+                <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                    <a [routerLink]="['/tutorials']">Admin</a>
+                </li>
+        
+                <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                    <a [routerLink]="['/profile']">Admin</a>
+                </li>
+            </ul>            
+
+        </div>
+
+        <ng-template #user_content>
+            <div id="options-nav">
+                <ul>
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                        <a [routerLink]="['/dashboard']">Dashboard</a>
+                    </li>
+                
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                        <a [routerLink]="['/devices']">Dispositivos</a>
+                    </li>
+            
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                        <a [routerLink]="['/libraries']">Librerias</a>
+                    </li>
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                        <a [routerLink]="['/tutorials']">Tutoriales</a>
+                    </li>
+            
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                        <a [routerLink]="['/profile']">Perfil</a>
+                    </li>
+                </ul>
+
+            </div>
+        </ng-template>
+        
+        
+        
+
+        
+
+
+    </div>
+    
+
+</nav>

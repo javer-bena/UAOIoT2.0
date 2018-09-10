@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'profile',
@@ -8,7 +10,24 @@ import { Component } from '@angular/core';
 
 export class ProfileComponent{
 
-    constructor(){}
+    user:Object;
 
-    ngOnInit(){}
+    constructor(
+        private authService:AuthService,
+        private router:Router
+    ){}
+
+    ngOnInit(){
+        this.authService.getProfile().subscribe(profile => {
+            this.user = profile.user;
+        },
+        err => {
+            console.log(err);
+            return false;
+        });
+    }
+
+    logout(){
+        this.authService.logout();
+    }
 }

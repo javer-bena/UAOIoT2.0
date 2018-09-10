@@ -19,6 +19,10 @@ export class MessageService{
     } 
 
     getMessages(){
-        return this._http.get(this.url).map(res => res.json());
+        return this._http.get(this.url)
+            .map(res => res.json());
+
     }
+
+    
 }

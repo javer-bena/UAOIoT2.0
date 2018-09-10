@@ -1,19 +1,4 @@
-<nav>
-    <div id="title-nav">
-        <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']">UAOIOT</a>
-    </div>
-
-    <div id="options-nav">
-        <a [routerLink]="['/dashboard']" [routerLinkActive]="['active']">Dashboard</a>
-        <a [routerLink]="['/devices']" [routerLinkActive]="['active']">Dispositivos</a>
-        <a [routerLink]="['/libraries']" [routerLinkActive]="['active']">Librerias</a>
-        <a [routerLink]="['/tutorials']" [routerLinkActive]="['active']">Tutoriales</a>
-    </div>
-
-    <div id="profile-nav">
-        <a [routerLink]="['/profile']" [routerLinkActive]="['active']">Perfil</a>
-    </div>
-
-</nav>
-
-<router-outlet></router-outlet>
+<nav-bar></nav-bar>
+<div>
+    <router-outlet></router-outlet>
+</div>

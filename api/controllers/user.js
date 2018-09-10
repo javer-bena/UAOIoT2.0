@@ -1,6 +1,8 @@
 'use strict'
 
 var User = require('../models/user');
+var bcrypt = require("bcryptjs");
+var crypto = require("crypto");
 
 /**
  * Metodo para consultar un usuario de la base de datos mediante su id.
@@ -52,20 +54,38 @@ function getUsers(req, res) {
  * @param {*} res 
  */
 function postUser(req, res) {
-    var user = new user();
+    var user = new User();
     var params = req.body;
 
     user.login = params.login;
     user.password = params.password;
+    
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(user.password, salt, (err, hash) => {
+            if(err) throw err;
 
-    user.save((err, userStored) => {
-        if (err) {
-            res.status(500).send({ message: 'Error al guardar' });
-        } else {
-            res.status(200).send({ user: userStored });
-        }
+            user.password = hash;
+            console.log("HASH: " + hash);
 
+            let hash256 = crypto.createHash('sha256').update(new Buffer(user.password,'utf8')).digest('hex');
+            console.log("HASH256: " + hash256);
+            
+            user.password = hash256;
+            
+            user.save((err, userStored) => {
+                if (err) {
+                    res.status(500).send({ message: 'Error al guardar ' + err});
+                } else {
+                    res.status(200).send({ user: userStored });
+                }
+        
+            });
+
+        });
     });
+
+
+    
 }
 
 /**

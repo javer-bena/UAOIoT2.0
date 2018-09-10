@@ -16,6 +16,25 @@ import { ProfileComponent } from './components/profile.component';
 
 import { TutorialsComponent } from './components/tutorials.component';
 import { DevicesComponent } from './components/devices.component';
+import { AuthService } from './services/auth.service';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar.component';
+import { materialize } from 'rxjs/operators';
+import { RegisterComponent } from './components/register.component';
+import { ValidateService } from './services/validate.service';
+
+//primeng
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import {GrowlModule} from 'primeng/growl';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import { AuthGuardService } from './services/authGuard.service';
+import {TableModule} from 'primeng/table';
+import { ProjectComponent } from './components/project.component';
+import { UserListComponent } from './components/userList.component';
 
 
 @NgModule({
@@ -30,18 +49,32 @@ import { DevicesComponent } from './components/devices.component';
     LibrariesComponent,
     ChartComponent,
     DevicesComponent,
-    TutorialsComponent
+    TutorialsComponent,
+    NavbarComponent,
+    RegisterComponent,
+    ProjectComponent,
+    UserListComponent
     
   ],
   imports: [
     BrowserModule,
     routing,
+    HttpClientModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    InputTextModule,
+    ButtonModule,
+    CardModule,
+    GrowlModule,
+    MessageModule,
+    MessagesModule,
+    TableModule
+    
 
   ],
-  providers: [appRoutingProvider],
+  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService],
   bootstrap: [AppComponent],
-  entryComponents: [ChartComponent]
+  entryComponents: [ChartComponent],
+  
 })
 export class AppModule { }

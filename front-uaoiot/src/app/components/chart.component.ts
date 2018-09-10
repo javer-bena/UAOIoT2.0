@@ -20,22 +20,22 @@ export class ChartComponent{
     }
 
     ngOnInit(){
-        this.createChart()
+        this.createChart('line',["1:00 pm","2:00 pm", "3:00 pm"],[28, 21, 34, 33, 25, 22, 22],
+        [24, 45, 22, 22, 19, 35, 23]);
     }
 
-    createChart(){
-        
+    createChart(type:string,labels,data1,data2){    
         this.chart = new Chart('canvas',{
             type:'line',
             data: {
-                labels: ["1:00 pm","2:00 pm", "3:00 pm"],
+                labels: labels,
                 datasets:[{
-                    data: [28, 21, 34, 33, 25, 22, 22],
+                    data: data1,
                     borderColor:"#3cba9f",
                     fill: false
                 },
                 {
-                    data: [24, 45, 22, 22, 19, 35, 23],
+                    data: data2,
                     borderColor:"#ff0000",
                     fill: false
                 },]

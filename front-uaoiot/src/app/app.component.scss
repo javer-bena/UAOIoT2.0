@@ -1,37 +1,4 @@
-$rojo-principal: #ec1c24;
-$rojo-secundario: #e83e44;
-nav {
-    background-color: $rojo-principal;
-    margin: 0;
-    padding: 1.8em;
-    display: flex;
-    justify-content: space-around;
-    a {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-decoration: none;
-    }
-    #options-nav {
-        word-spacing: 0;
-        float: right;
-    }
-    #options-nav a {
-        color: white;
-        padding: 1.8em 1em 1.8em 1em;
-        font-weight: 500;
-    }
-    #options-nav a.active {
-        color: white;
-        background-color: #7f0000;
-    }
-    #options-nav a:hover {
-        background-color: #7f0000;
-    }
-    #title-nav a {
-        padding: 2em 0 2em 0;
-        color: aqua;
-    }
-    #profile-nav a {
-        text-decoration: none;
-        color: white;
-    }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }

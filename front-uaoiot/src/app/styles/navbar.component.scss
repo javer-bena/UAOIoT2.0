@@ -1,0 +1,52 @@
+$rojo-principal: #ec1c24;
+$rojo-secundario: #e83e44;
+nav {
+    background-color: $rojo-principal;
+    margin: 0;
+    //padding: 1.8em;
+    
+    a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+    }
+
+    #logo{
+        padding: 0 1em 0 4em;
+    }
+
+    #nav-elements{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    #options-nav {
+        word-spacing: 0;
+        float: right;
+        
+    }
+
+    #options-nav ul{
+        list-style-type: none;
+    }
+
+    #options-nav li a {
+        color: white;
+        padding: 0 2em 0 2em;
+        font-weight: 500;
+    }
+    #options-nav a.active {
+        color: white;
+        background-color: #7f0000;
+    }
+    #options-nav a:hover {
+        background-color: #7f0000;
+    }
+    #title-nav a {
+        padding: 2em 0 2em 0;
+        color: aqua;
+    }
+    #profile-nav a {
+        text-decoration: none;
+        color: white;
+    }
+}

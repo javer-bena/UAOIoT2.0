@@ -10,12 +10,13 @@ import { ProfileComponent } from './components/profile.component';
 
 import { TutorialsComponent } from './components/tutorials.component';
 import { DevicesComponent } from './components/devices.component';
+import { AuthGuardService } from './services/authGuard.service';
 
 const appRoutes: Routes = [
-    {path: '', component: DashboardComponent},
+    {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'devices', component: DevicesComponent},
-    {path: 'profile', component: ProfileComponent},
+    {path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService]},
     {path: 'home', component: HomeComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'dashboard', component: DashboardComponent},

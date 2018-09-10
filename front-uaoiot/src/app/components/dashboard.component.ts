@@ -4,6 +4,7 @@ import { MessageService } from '../services/message.service'
 import { Message } from '../models/message';
 import { Http } from '@angular/http';
 import { ChartComponent } from './chart.component';
+import { timeout } from 'rxjs/operators';
 
 @Component({
     selector: 'dashboard',
@@ -23,16 +24,18 @@ export class  DashboardComponent{
     public message;
     public post;
     public loaderChart;
+    public alive:boolean;
 
     constructor(private _http:Http, private _messageService:MessageService,
         private componentFactoryResolver: ComponentFactoryResolver){
 
         this.messages = [];
+        this.alive = true;
         
     } 
     ngOnInit(){   
 
-        this.getLastData();
+        this.getLastData(2000,6);
         /*this._messageService.getMessages().subscribe(
             result => {
                 var lastIndex = Object.keys(result.messages).length;
@@ -56,14 +59,14 @@ export class  DashboardComponent{
 
     /**
      */
-    getLastData(): void{
-        this.post = Observable
-        .interval(1000) // call once per second
-        .startWith(0)
-        .switchMap(() =>this._messageService.getMessages()
-        //.map(post => post[0])
-        //.map(res => res.json())
-        ).subscribe(
+    getLastData(timeInterval,amountData): void{
+        var obv = Observable.interval(timeInterval)
+                            .startWith(0)
+                            .takeWhile(() => this.alive)
+                            .switchMap(() => this._messageService.getMessages())
+
+                            
+        this.post = obv.subscribe(
             result => {
                 var lastIndex = Object.keys(result.messages).length;
                 var lastMessage = result.messages[lastIndex-1];
@@ -83,13 +86,21 @@ export class  DashboardComponent{
                 this.messages.push(this.message);
 
                 console.log(this.messages);
+
+                if (this.messages.length >= amountData){
+                    console.log("TERMINA");
+                    this.alive = false;
+                    //this.closeConnection();
+                }
                 
             },
             error => {
                 var errorMsj = <any>error;
                 console.log('Error en la busqueda' + errorMsj);
             }
+
         )
+
     }
     
     getDataWithInterval(init,final):void{
@@ -101,6 +112,10 @@ export class  DashboardComponent{
     checkConnection():boolean{
         //TODO: Verificar conexión con  api.
         return true;
+    }
+
+    closeConnection(){
+        this.alive = false;
     }
     
     /**

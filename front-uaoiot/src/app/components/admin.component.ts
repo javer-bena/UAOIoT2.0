@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { AuthService} from '../services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'admin',
@@ -10,25 +13,18 @@ import { UserService } from '../services/user.service';
 
 export class  AdminComponent{
     public users:Array<String>;
+    
+    /*credentials: TokenPayload = {
+        user: '',
+        password: '',
+        name: ''
+    };*/
 
-    constructor(private _userService:UserService){
+    constructor(private _userService:UserService, 
+        private auth: AuthService, private router: Router){
 
     }
 
-    ngOnInit(){
-        this._userService.getUsers().subscribe(
-            result => {
-                this.users = result.users;
-                console.log(result.users)
-                if(!this.users){
-                    console.log("No hay usuarios");
-                }
-                
-            },
-            error => {
-                var errorMsj = <any>error;
-                console.log('Error en la busqueda' + errorMsj);
-            }
-        );
-    }
+    ngOnInit(){}
+    
 }
