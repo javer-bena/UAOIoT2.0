@@ -5,17 +5,25 @@ $rojo-secundario: #e83e44;
     margin: 0 auto;   
 }
 
+.card .card-content {
+    padding: 3em 0em 3em 0em;
+    border-radius: 0 0 2px 2px;
+}
+
 #title-card{
+    
     font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #content-card{
-    padding: 4em 0 0 0;
+    padding: 4em 0 4em 0;
 }
 
 #login-button{
     color: white;
     font-weight: 400;
+    font-size: 0.8em;
 }
 
 

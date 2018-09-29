@@ -11,6 +11,7 @@ import { ProfileComponent } from './components/profile.component';
 import { TutorialsComponent } from './components/tutorials.component';
 import { DevicesComponent } from './components/devices.component';
 import { AuthGuardService } from './services/authGuard.service';
+import { ProjectComponent } from './components/project.component';
 
 const appRoutes: Routes = [
     {path: '', component: LoginComponent},
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     {path: 'dashboard', component: DashboardComponent},
     {path: 'tutorials', component: TutorialsComponent},
     {path: 'libraries', component: LibrariesComponent },
+    {path: 'projects', component: ProjectComponent },
     {path: 'error', component: ErrorComponent}
 ];
 

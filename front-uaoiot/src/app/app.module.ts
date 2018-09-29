@@ -35,6 +35,8 @@ import { AuthGuardService } from './services/authGuard.service';
 import {TableModule} from 'primeng/table';
 import { ProjectComponent } from './components/project.component';
 import { UserListComponent } from './components/userList.component';
+import { SubNavbar } from './components/subNavbar.component';
+import { SocketService } from './services/socket.service';
 
 
 @NgModule({
@@ -53,7 +55,8 @@ import { UserListComponent } from './components/userList.component';
     NavbarComponent,
     RegisterComponent,
     ProjectComponent,
-    UserListComponent
+    UserListComponent,
+    SubNavbar
     
   ],
   imports: [
@@ -72,7 +75,7 @@ import { UserListComponent } from './components/userList.component';
     
 
   ],
-  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService],
+  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   

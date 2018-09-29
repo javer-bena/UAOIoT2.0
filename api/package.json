@@ -22,6 +22,7 @@
         "express-jwt": "^5.3.1",
         "jsonwebtoken": "^8.2.2",
         "mongoose": "^5.0.11",
+        "mqtt": "^2.18.8",
         "npm": "^5.8.0",
         "passport": "^0.4.0",
         "passport-jwt": "*",

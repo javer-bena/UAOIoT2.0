@@ -19,6 +19,28 @@ var apiMessage = require('./routes/message');
 var apiAcls = require('./routes/acls');
 var apiUserLogin = require('./routes/userLogin');
 var device = require('./routes/device');
+var mqtt = require('mqtt');
+
+var optionsMqtt = {
+    port: 1883,
+    host: 'mqtt://10.10.38.129',
+    username: 'user1',
+    password: '123456',
+    keepalive: 60,
+    reconnectPeriod: 1000,
+    protocolId: 'MQIsdp',
+    protocolVersion: 3,
+    clean: true,
+    encoding: 'utf8'
+};
+
+var io = require('socket.io').listen(5000);
+//var io = require('socket.io').connect();
+
+//ip UAO
+var client = mqtt.connect('mqtt://10.10.47.120',optionsMqtt);
+//ip casa
+//var client = mqtt.connect('mqtt://192.168.0.14');
 
 app.use(cors());
 //app.use(logger('dev'));
@@ -38,6 +60,53 @@ app.use((req, res, next) => {
 
     next();
 });
+
+var topic = 'test1';
+
+/**
+ * Socket events
+ */
+
+
+io.sockets.on('connection', function(socket){
+    console.log('Socket connected');
+    
+    socket.on('recep', function (data) {
+        console.log('Subscribing to '+ topic);
+        console.log('DATA to '+ data.payload);
+        //socket.broadcast.emit()
+        socket.join(topic);
+        
+        client.subscribe(topic, function(){
+            client.on('payload',function(topic,payload,packet){
+                console.log('payload: ' + payload);
+            });
+        });
+        
+    });
+
+    
+    client.publish(topic,'15',function(){
+        console.log("MESSAGE: " + topic);
+    });
+
+
+    socket.on('recep', function (data) {
+        console.log('Publishing to '+ topic);
+        console.log('DATA 2 '+ data.payload);
+        client.publish(topic,data.payload);
+        
+    });
+
+});
+
+client.on(topic, function (topic, payload, packet) {
+    console.log(topic+'='+payload);
+    io.sockets.emit('mqtt',{'topic':String(topic),
+                            'payload':String(payload)});
+});
+
+
 
 app.use('/api', apiUser);
 app.use('/api', apiMessage);

@@ -29,6 +29,10 @@ nav {
         list-style-type: none;
     }
 
+    #profile-option ul{
+        list-style-type: none;
+    }
+
     #options-nav li a {
         color: white;
         padding: 0 2em 0 2em;
@@ -45,8 +49,16 @@ nav {
         padding: 2em 0 2em 0;
         color: aqua;
     }
-    #profile-nav a {
+    #profile-option a {
         text-decoration: none;
         color: white;
+    }
+
+    #profile-option li a {
+        list-style-type: none;
+        color: white;
+        padding: 0 2em 0em 2em;
+        font-weight: 500;
+        margin-right: 1.5em;
     }
 }

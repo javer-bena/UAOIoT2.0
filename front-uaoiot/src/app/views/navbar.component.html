@@ -25,7 +25,7 @@
                 </li>
         
                 <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-                    <a [routerLink]="['/profile']">Admin</a>
+                    <a [routerLink]="['/profile']">Perfil</a>
                 </li>
             </ul>            
 
@@ -35,7 +35,8 @@
             <div id="options-nav">
                 <ul>
                     <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-                        <a [routerLink]="['/dashboard']">Dashboard</a>
+                        <!--<a [routerLink]="['/projects']">Proyectos</a>-->
+                        <a [routerLink]="['/dashboard']">Proyectos</a>
                     </li>
                 
                     <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
@@ -49,6 +50,13 @@
                         <a [routerLink]="['/tutorials']">Tutoriales</a>
                     </li>
             
+                    
+                </ul>
+
+            </div>
+
+            <div id="profile-option">
+                <ul>
                     <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
                         <a [routerLink]="['/profile']">Perfil</a>
                     </li>
@@ -57,13 +65,9 @@
             </div>
         </ng-template>
         
-        
-        
-
-        
-
 
     </div>
     
 
 </nav>
+<sub-navbar></sub-navbar>

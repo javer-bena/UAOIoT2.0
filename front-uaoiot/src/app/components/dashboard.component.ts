@@ -1,6 +1,7 @@
 import { Component,ComponentFactoryResolver, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MessageService } from '../services/message.service'
+import { SocketService } from '../services/socket.service'
 import { Message } from '../models/message';
 import { Http } from '@angular/http';
 import { ChartComponent } from './chart.component';
@@ -27,13 +28,17 @@ export class  DashboardComponent{
     public alive:boolean;
 
     constructor(private _http:Http, private _messageService:MessageService,
-        private componentFactoryResolver: ComponentFactoryResolver){
+        private componentFactoryResolver: ComponentFactoryResolver, private socketService:SocketService){
 
         this.messages = [];
         this.alive = true;
         
     } 
     ngOnInit(){   
+    
+        this.socketService.onNewMessage().subscribe(msg => {
+            console.log('MSG: ' + msg);
+        });
 
         this.getLastData(2000,6);
         /*this._messageService.getMessages().subscribe(
@@ -57,6 +62,9 @@ export class  DashboardComponent{
         )*/
     }
 
+    sendMsg(){
+        this.socketService.sendMessage('13');
+    }
     /**
      */
     getLastData(timeInterval,amountData): void{

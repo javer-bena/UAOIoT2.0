@@ -44,7 +44,8 @@ export class LoginComponent{
                 if(this.authService.isAdminLoggedIn()){
                     this.router.navigate(['admin']);
                 }else{
-                    this.router.navigate(['profile']);
+                    console.log(data);
+                    this.router.navigate(['dashboard']);
                 }
 
             }else{
