@@ -23,6 +23,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { materialize } from 'rxjs/operators';
 import { RegisterComponent } from './components/register.component';
 import { ValidateService } from './services/validate.service';
+import { PermissionService } from './services/permission.service';
 
 //primeng
 import {InputTextModule} from 'primeng/inputtext';
@@ -33,6 +34,8 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import { AuthGuardService } from './services/authGuard.service';
 import {TableModule} from 'primeng/table';
+import {TooltipModule} from 'primeng/tooltip';
+
 import { ProjectComponent } from './components/project.component';
 import { UserListComponent } from './components/userList.component';
 import { SubNavbar } from './components/subNavbar.component';
@@ -71,11 +74,12 @@ import { SocketService } from './services/socket.service';
     GrowlModule,
     MessageModule,
     MessagesModule,
-    TableModule
+    TableModule,
+    TooltipModule
     
 
   ],
-  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService],
+  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService,PermissionService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   

@@ -8,4 +8,25 @@ import {Observable} from 'rxjs/Observable';
 
 
 //TOPICO ES EL PROYECTO
-export class PermissionService{}
+export class PermissionService{
+
+    public url:string;
+
+    constructor(private _http:Http){
+        this.url = "http://localhost:3000/";
+    }
+
+    getPermission(){
+        return this._http.get(this.url + 'api/aclss').map(res => res.json());
+    }
+
+    postPermission(permission){
+        let json = JSON.stringify(permission);
+        let headers = new Headers();
+        
+        headers.append('Content-Type','application/json');
+        console.log("USER POST " + json);
+        return this._http.post(this.url + 'api/acls', json, {headers: headers})
+        .map(res => res.json());
+    }
+}

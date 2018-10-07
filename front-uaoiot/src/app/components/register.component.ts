@@ -5,6 +5,7 @@ import { AuthService } from  '../services/auth.service';
 import { Router } from '@angular/router';
 import { UserLogin } from '../models/userLogin';
 import { UserService } from '../services/user.service';
+import { PermissionService } from '../services/permission.service';
 
 @Component({
     selector: 'register',
@@ -17,12 +18,16 @@ export class  RegisterComponent{
     userName:String;
     name:String;
     password:String;
+    permission:String;
+    readPermission:boolean;
+    writePermission:boolean;
     //user:UserLogin;
 
     constructor(
         private validateService: ValidateService,
         private authService: AuthService,
         private userService: UserService,
+        private permissionServie: PermissionService,
         private router: Router
     ){
         
@@ -36,6 +41,16 @@ export class  RegisterComponent{
 
     onRegisterSubmit(){
         //this.user = new UserLogin(this.userName,this.name,this.password);
+
+        if(this.readPermission && this.writePermission){
+            this.permission = 'READWRITE';
+        }else if(this.readPermission){
+            this.permission = 'READ';
+        }else if(this.writePermission){
+            this.permission = 'WRITE';
+        }
+
+
         const userLogin = {
             user: this.userName,
             name: this.name,
@@ -48,9 +63,14 @@ export class  RegisterComponent{
             name: this.name
         }
 
+        const permission = {
+            user: user.login,
+            topic: 'test1',
+            permission: this.permission
+        }
+
         if(!this.validateService.validateEmail(user.login)){
             alert("Ingrese un usuario valido");
-            
             return false;
         }
 
@@ -64,6 +84,12 @@ export class  RegisterComponent{
             console.log("ENTRA LOGIN USER");
         },Error => {
             console.log("ERROR USER LOGIN");
+        });
+
+        this.permissionServie.postPermission(permission).subscribe(data => {
+    
+        },Error => {
+
         });
     }
     

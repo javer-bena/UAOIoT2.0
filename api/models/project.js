@@ -4,8 +4,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var projectSchema = Schema({
-    name:String,
-    device: String
+    name:String, //TOPICO
+    device: String,
+    dashboard: String
 });
 
 module.exports = mongoose.model('Project', projectSchema);

@@ -65,10 +65,10 @@ function postUser(req, res) {
             if(err) throw err;
 
             user.password = hash;
-            console.log("HASH: " + hash);
+            console.log("HASH USERLOGIN: " + hash);
 
             let hash256 = crypto.createHash('sha256').update(new Buffer(user.password,'utf8')).digest('hex');
-            console.log("HASH256: " + hash256);
+            console.log("HASH256 USER: " + hash256);
             
             user.password = hash256;
             

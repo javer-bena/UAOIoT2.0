@@ -26,19 +26,21 @@ export class  DashboardComponent{
     public post;
     public loaderChart;
     public alive:boolean;
+    public messageToSend;
 
     constructor(private _http:Http, private _messageService:MessageService,
         private componentFactoryResolver: ComponentFactoryResolver, private socketService:SocketService){
 
         this.messages = [];
         this.alive = true;
-        
-    } 
-    ngOnInit(){   
     
-        this.socketService.onNewMessage().subscribe(msg => {
-            console.log('MSG: ' + msg);
-        });
+    }
+    
+    ngAfterViewInit(): void{}
+    
+    ngOnInit(){   
+
+        this.socketService.onNewMessageListen();
 
         this.getLastData(2000,6);
         /*this._messageService.getMessages().subscribe(
@@ -62,8 +64,12 @@ export class  DashboardComponent{
         )*/
     }
 
+    
+
     sendMsg(){
-        this.socketService.sendMessage('13');
+        
+        this.socketService.sendMessage(this.messageToSend);
+        //alert("Mensage: " + this.messageToSend);
     }
     /**
      */

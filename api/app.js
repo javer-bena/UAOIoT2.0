@@ -23,7 +23,7 @@ var mqtt = require('mqtt');
 
 var optionsMqtt = {
     port: 1883,
-    host: 'mqtt://10.10.38.129',
+    host: 'mqtt://192.168.0.14',
     username: 'user1',
     password: '123456',
     keepalive: 60,
@@ -38,7 +38,7 @@ var io = require('socket.io').listen(5000);
 //var io = require('socket.io').connect();
 
 //ip UAO
-var client = mqtt.connect('mqtt://10.10.47.120',optionsMqtt);
+var client = mqtt.connect('mqtt://192.168.0.14',optionsMqtt);
 //ip casa
 //var client = mqtt.connect('mqtt://192.168.0.14');
 
@@ -61,7 +61,7 @@ app.use((req, res, next) => {
     next();
 });
 
-var topic = 'test1';
+var topic = '';
 
 /**
  * Socket events
@@ -69,34 +69,51 @@ var topic = 'test1';
 
 
 io.sockets.on('connection', function(socket){
-    console.log('Socket connected');
+    console.log('1 Socket connected');
     
-    socket.on('recep', function (data) {
-        console.log('Subscribing to '+ topic);
-        console.log('DATA to '+ data.payload);
+
+    socket.on('sendMessage', function (data) {
+
+        console.log('3 Subscribing to '+ data.topic + ' payload: ' + data.payload );
+        this.topic = data.topic;
         //socket.broadcast.emit()
-        socket.join(topic);
-        
-        client.subscribe(topic, function(){
-            client.on('payload',function(topic,payload,packet){
-                console.log('payload: ' + payload);
+
+        socket.join(data.topic); 
+
+        client.subscribe(data.topic, function(){
+            //console.log('Subscribing to ANGULAR'+ topic);
+            /*client.on('message',function(topic,payload,packet){
+                console.log('payload: ANGULAR' + payload);
+            });*/
+
+            client.publish(data.topic,data.payload,function(){
+                console.log("2 MESSAGE from client: " + data.payload);
+                
             });
+
         });
         
     });
 
-    
-    client.publish(topic,'15',function(){
-        console.log("MESSAGE: " + topic);
+
+    client.subscribe(topic, function(){
+
+        client.on('message',function(topic,payload,packet){
+            console.log('payload from phone: ' + payload);
+            io.sockets.emit('reciveMessage',{'topic':String(topic),
+                            'payload':String(payload)});
+            //io.sockets.emit('reciveMessage',{msg: payload});
+        });
+
     });
 
 
-    socket.on('recep', function (data) {
-        console.log('Publishing to '+ topic);
-        console.log('DATA 2 '+ data.payload);
+    /*socket.on('recep', function (data) {
+        //console.log('Publishing to ANGULAR'+ topic);
+        //console.log('DATA 2 ANGULAR'+ data.payload);
         client.publish(topic,data.payload);
         
-    });
+    });*/
 
 });
 
@@ -104,6 +121,7 @@ client.on(topic, function (topic, payload, packet) {
     console.log(topic+'='+payload);
     io.sockets.emit('mqtt',{'topic':String(topic),
                             'payload':String(payload)});
+
 });
 
 

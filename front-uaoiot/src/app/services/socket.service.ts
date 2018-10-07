@@ -13,18 +13,27 @@ export class SocketService{
         this.socket = io('http://localhost:5000');
     }
 
-    // EMITTER
-  sendMessage(msg: string) {
-    this.socket.emit('recep', { payload: msg });
-  }
+    onNewMessageListen() {
+        this.socket.on('reciveMessage',function(data){
+            console.log('MSG DATA SOCKET '+ data.payload)
+            alert(data.payload);
+        })
+    }
 
-  // HANDLER
-  onNewMessage() {
-    return Observable.create(observer => {
-      this.socket.on('test1', msg => {
-        observer.next(msg);
-      });
-    });
-  }
+    // EMITTER
+    sendMessage(msg: string) {
+        
+        this.socket.emit('sendMessage', { payload: msg, topic: 'test1' });
+    }
+
+    // HANDLER
+    onNewMessage() {
+        return Observable.create(observer => {
+            this.socket.on('reciveMessage', msg => {
+                
+                observer.next(msg);
+            });
+        });
+    }
 
 }

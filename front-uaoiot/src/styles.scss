@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
+@font-face {
+    font-family: lato;
+    src: url(assets/fonts/OpenSans-Regular.ttf) format("opentype");
+}
 $rojo-principal: "#ff00cc";
 html,
 body {
@@ -8,6 +11,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
+
 
 }
 
