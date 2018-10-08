@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { User } from '../models/user';
+import { UserLoginService } from '../services/userLogin.service';
+import { UserLogin } from '../models/userLogin';
 
 @Component({
     selector: 'userList',
@@ -10,11 +12,11 @@ import { User } from '../models/user';
 
 export class UserListComponent{
     
-    users: User[];
+    users: UserLogin[];
     cols: any[];
-    user: User;
+    user: UserLogin;
 
-    constructor(private _userService:UserService){
+    constructor(private _userService:UserLoginService){
 
         this.users = [];
     }
@@ -22,8 +24,9 @@ export class UserListComponent{
     ngOnInit(){
 
         this.cols = [
-            { field: 'login', header: 'Usuario' },
-            { field: 'password', header: 'SHA256' }
+            { field: 'userName', header: 'Usuario' },
+            { field: 'name', header: 'Nombre' },
+            { field: 'password', header: 'Credencial'}
         ];
 
         this._userService.getUsers().subscribe(
@@ -31,7 +34,7 @@ export class UserListComponent{
                 
                 for (var i = 0; i<result.users.length; i++){
                     var userItem = result.users[i];
-                    this.user = new User(userItem._id,userItem.login,userItem.password);
+                    this.user = new UserLogin(userItem.user,userItem.name,userItem.password);
                     this.users.push(this.user);
                     
                 }

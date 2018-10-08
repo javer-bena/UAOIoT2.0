@@ -1,8 +1,9 @@
 <h3>Usuarios</h3>
 
-<p-table [columns]="cols" [value]="users">
+<p-table [columns]="cols" [value]="users" [tableStyle]="{'table-layout':'auto'}" selectionMode="single" 
+    [(selection)]="selectedUser" (onRowSelect)="onRowSelect($event)">
 
-    <ng-template pTemplate="header" let-columns>
+    <ng-template pTemplate="header" let-columns class="header-col">
         <tr>
             <th *ngFor="let col of columns">
                 {{col.header}}
@@ -18,4 +19,16 @@
         </tr>
     </ng-template>
 
+    <ng-template pTemplate="summary" let-rowData>
+        <div style="text-align:left; margin:1em 0em 0.2em 0em;">
+            <div class="listen button-section" class="left-align">
+                <a class="blue darken-1 btn-small white-text" (click)="showDialogToAdd()">Agregar</a>
+            </div>
+            <!--<button type="button" pButton icon="fa fa-plus" (click)="showDialogToAdd()" label="Agregar"></button>-->
+        </div>
+    </ng-template>  
 </p-table>
+
+<p-dialog>
+
+</p-dialog>

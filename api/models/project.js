@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var projectSchema = Schema({
     name:String, //TOPICO
     device: String,
-    dashboard: String
+    user: String
 });
 
 module.exports = mongoose.model('Project', projectSchema);

@@ -24,6 +24,10 @@ var userLoginSchema = new mongoose.Schema({
 
 var UserLogin = module.exports = mongoose.model('userlogin', userLoginSchema);
 
+module.exports.getUsers = function(user,callback){
+    UserLogin.find({},callback);
+}
+
 module.exports.getUserById = function(id, callback){
     UserLogin.findById(id, callback);
 }

@@ -39,10 +39,10 @@ function getAclss(req, res) {
 }
 
 function postAcls(req, res) {
-    var acls = new acls();
+    var acls = new Acls();
     var params = req.body;
 
-    acls.id = params.id;
+    
     acls.user = params.user;
     acls.topic = params.topic;
     acls.permission = params.permission;

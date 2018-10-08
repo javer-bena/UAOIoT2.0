@@ -32,14 +32,18 @@ import {CardModule} from 'primeng/card';
 import {GrowlModule} from 'primeng/growl';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
-import { AuthGuardService } from './services/authGuard.service';
 import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
+import {CheckboxModule} from 'primeng/checkbox';
+import {DialogModule} from 'primeng/dialog';
 
+
+import { AuthGuardService } from './services/authGuard.service';
 import { ProjectComponent } from './components/project.component';
 import { UserListComponent } from './components/userList.component';
 import { SubNavbar } from './components/subNavbar.component';
 import { SocketService } from './services/socket.service';
+import { UserLoginService } from './services/userLogin.service';
 
 
 @NgModule({
@@ -75,11 +79,13 @@ import { SocketService } from './services/socket.service';
     MessageModule,
     MessagesModule,
     TableModule,
-    TooltipModule
+    TooltipModule,
+    CheckboxModule,
+    DialogModule
     
 
   ],
-  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService,PermissionService],
+  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService,PermissionService,UserLoginService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   

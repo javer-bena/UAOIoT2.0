@@ -23,9 +23,15 @@
                 </div>
             </div>
 
+            <span>Permisos</span>
             <div class="row">
-                <input type="submit" class="waves-effect waves-light btn" value="Submit">
-                <a class="waves-effect waves-light btn" type="Submit">Ingresar</a>
+                <p-checkbox [(ngModel)]="readPermission" binary="true" name="readPermission" label="Leer"></p-checkbox>
+                <p-checkbox [(ngModel)]="writePermission" binary="true" name="writePermission" label="Escribir"></p-checkbox>
+            </div>
+
+            <div class="row">
+                <input type="submit" class="blue darken-1 btn" value="Registrar">
+                
             </div>
         </form>
     </div>

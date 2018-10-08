@@ -4,9 +4,12 @@ var passport = require("passport");
 var api = express.Router();
 var jwt = require("jsonwebtoken");
 var Userlogin = require("../models/userLogin");
+var UserLoginController = require("../controllers/userLogin");
 const config = require('../config/database');
 
 //var auth = jwt({secret: 'MY_SECRET',userProperty: 'payload'});
+api.get('/usersLogin', UserLoginController.getUsers);
+
 
 //REGISTRO
 router.post('/register',(req, res, next) => {
@@ -64,7 +67,26 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
     res.json({user: req.user});
 });
 
+//GET USERS
+router.get('/usersLogin',(req,res,next) =>{
+
+    Userlogin.getUsers({}, (err, users) => {
+        if (err) {
+            res.status(500).send({ message: 'Error al buscar' });
+        } else {
+            if (!users) {
+                res.status(404).send({ message: 'No existen usuarios' });
+            } else {
+                res.status(200).send({ users });
+            }
+        }
+
+    });
+});
+
+
 module.exports = router;
+module.exports = api;
 
 
 

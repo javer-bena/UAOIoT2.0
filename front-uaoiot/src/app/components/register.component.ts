@@ -34,6 +34,8 @@ export class  RegisterComponent{
     }
 
     ngOnInit(){
+        this.readPermission = false;
+        this.writePermission = false;
         this.authService.getProfile().subscribe(data => {
             console.log(data.user);
         });
@@ -75,7 +77,7 @@ export class  RegisterComponent{
         }
 
         this.userService.postUser(user).subscribe(data =>{
-            alert("Usuario registrado hash:  " + user.password);
+            //alert("Usuario registrado hash:  " + user.password);
         },Error => {
             alert("Algo salio mal");
         });
@@ -87,9 +89,9 @@ export class  RegisterComponent{
         });
 
         this.permissionServie.postPermission(permission).subscribe(data => {
-    
+            alert("PERMISOS: " + permission.permission +" " + permission.user +" " + permission.topic);
         },Error => {
-
+            alert("ERROR :" +Error +" " + "PERMISOS: " + permission.permission +" " + permission.user +" " + permission.topic);
         });
     }
     
