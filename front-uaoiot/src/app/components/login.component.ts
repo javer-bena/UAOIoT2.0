@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms/src/directives';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
@@ -7,6 +7,7 @@ import { AuthService } from '../services/auth.service';
 import {SelectItem} from 'primeng/components/common/api';
 import {Message} from 'primeng/components/common/api';
 import {MessageService} from 'primeng/components/common/messageservice';
+import { NavbarComponent } from './navbar.component';
 
 @Component({
     selector: 'login',
@@ -20,6 +21,8 @@ export class LoginComponent{
     public userName:String;
     public userPassword:String;
     public msgs: Message[] = [];
+    public isLogged:boolean;
+    public stringName:String;
 
     constructor(
         private authService: AuthService,
@@ -27,9 +30,7 @@ export class LoginComponent{
         private messageService: MessageService
     ){}
 
-    ngOnInit(){
-        
-    }
+    ngOnInit(){}
 
     onLoginSubmit(){
         const user = {
@@ -39,12 +40,16 @@ export class LoginComponent{
 
         this.authService.authenticateUser(user).subscribe(data => {
             if(data.success){
-                this.authService.storeUserData(data.token, data.login);
+
+                this.authService.storeUserData(data.token, data.user);
                 
                 if(this.authService.isAdminLoggedIn()){
                     this.router.navigate(['admin']);
                 }else{
-                    console.log(data);
+                    console.log("DATA: " + data.user);
+                    var dataUserItem = data.user;
+                    
+                    this.stringName = dataUserItem;
                     this.router.navigate(['dashboard']);
                 }
 

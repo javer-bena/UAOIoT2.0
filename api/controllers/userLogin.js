@@ -17,15 +17,37 @@ function getUsers(req, res) {
                 res.status(404).send({ message: 'No existen usuarios' });
             } else {
                 res.status(200).send({ users });
-            }
         }
+    }
 
     });
 
 }
 
+function getUserByName(req,res){
+    
+    var userName = req.params.user;
+
+    UserLogin.findOne({user : userName},['user','name'],(err,user)=>{
+        if(err){
+            res.status(500).send({message:"ERROR"});
+        }else{
+            if(!user){
+                res.status(404).send({ message: 'No existen usuarios' });
+            }else{
+                res.status(200).send({ message: user });
+                console.log(userName);
+                console.log(user);
+            }
+        }
+    });
+
+    
+}
+
 module.exports = {
 
     getUsers,
+    getUserByName
     
 }

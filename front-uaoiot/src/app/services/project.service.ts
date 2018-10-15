@@ -6,32 +6,24 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 
-export class UserLoginService{
-
+export class ProjectService{
     public url:string;
 
     constructor(private _http:Http){
         this.url = "http://localhost:3000/";
     }
 
-    getPrueba(){
-        return 'Funciona el servicio';
-    } 
 
-    getUsers(){
-        return this._http.get(this.url + 'api/usersLogin').map(res => res.json());
+    getProjectByUserName(userName){
+        return this._http.get(this.url + 'api/projectUser/' + userName).map(res => res.json());
     }
 
-    getUserByUserName(userName){
-        return this._http.get(this.url + 'api/userName/' + userName).map(res => res.json());
-    }
-
-    postUser(user){
-        let json = JSON.stringify(user);
+    postUser(project){
+        let json = JSON.stringify(project);
         let headers = new Headers();
         
         headers.append('Content-Type','application/json');
-        console.log("USER POST " + json);
+        console.log("PROJECT POST " + json);
         return this._http.post(this.url + 'api/user', json, {headers: headers})
         .map(res => res.json());
     }

@@ -8,7 +8,8 @@ var UserLoginController = require("../controllers/userLogin");
 const config = require('../config/database');
 
 //var auth = jwt({secret: 'MY_SECRET',userProperty: 'payload'});
-api.get('/usersLogin', UserLoginController.getUsers);
+router.get('/usersLogin', UserLoginController.getUsers);
+router.get('/userName/:user', UserLoginController.getUserByName);
 
 
 //REGISTRO
@@ -86,7 +87,7 @@ router.get('/usersLogin',(req,res,next) =>{
 
 
 module.exports = router;
-module.exports = api;
+//module.exports = api;
 
 
 

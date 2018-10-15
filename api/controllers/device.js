@@ -35,14 +35,14 @@ function getDeviceUser(req,res){
     
     var deviceUser = req.params.user;
 
-    Device.find({user : deviceUser},['user','tken','name'], (err,device) => {
+    Device.find({user : deviceUser},['user','name'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
             if(!device){
                 res.status(404).send({ message: "Este usuario no existe"});
             }else if(device.length == 0){
-                res.status(200).sedm({ message: "Este usuario no tiene dispositivos"});
+                res.status(200).send({ message: "Este usuario no tiene dispositivos"});
             }else{
                 res.status(200).send({ device });
             }
@@ -54,8 +54,9 @@ function postDevice(req, res){
     var device = new Device();
     var params = req.body;
 
-    deviceid = params.token;
-    device.name = parmas.name;
+    //deviceid = params.token;
+
+    device.name = params.name;
     device.user = params.user;
 
     device.save((err, deviceStored) => {

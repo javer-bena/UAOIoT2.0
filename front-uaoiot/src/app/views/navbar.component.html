@@ -25,7 +25,7 @@
                 </li>
         
                 <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-                    <a [routerLink]="['/profile']">Perfil</a>
+                    <a [routerLink]="['/profile']">{{ stringUserName }}</a>
                 </li>
             </ul>            
 
@@ -58,8 +58,14 @@
             <div id="profile-option">
                 <ul>
                     <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-                        <a [routerLink]="['/profile']">Perfil</a>
+                        <a [routerLink]="['/profile']"> {{getUserName()}} </a>
                     </li>
+
+                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                        
+                        <a type="button" id="logout-button" (click)="getInfo()">Credencial</a>
+                    </li>
+
                 </ul>
 
             </div>

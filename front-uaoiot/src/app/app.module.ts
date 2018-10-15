@@ -44,6 +44,7 @@ import { UserListComponent } from './components/userList.component';
 import { SubNavbar } from './components/subNavbar.component';
 import { SocketService } from './services/socket.service';
 import { UserLoginService } from './services/userLogin.service';
+import { ProjectService } from './services/project.service';
 
 
 @NgModule({
@@ -85,7 +86,7 @@ import { UserLoginService } from './services/userLogin.service';
     
 
   ],
-  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService,PermissionService,UserLoginService],
+  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService,PermissionService,UserLoginService,ProjectService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   
