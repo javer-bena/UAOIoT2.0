@@ -18,13 +18,13 @@ export class ProjectService{
         return this._http.get(this.url + 'api/projectUser/' + userName).map(res => res.json());
     }
 
-    postUser(project){
+    postProject(project){
         let json = JSON.stringify(project);
         let headers = new Headers();
         
         headers.append('Content-Type','application/json');
         console.log("PROJECT POST " + json);
-        return this._http.post(this.url + 'api/user', json, {headers: headers})
+        return this._http.post(this.url + 'api/project', json, {headers: headers})
         .map(res => res.json());
     }
 }

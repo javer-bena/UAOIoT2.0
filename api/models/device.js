@@ -4,9 +4,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var deviceSchema = Schema({
-    token:String,
     name:String,
-    user:String
+    user:String,
+    project:String
 
 });
 

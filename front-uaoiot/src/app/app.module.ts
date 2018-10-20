@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -45,6 +46,7 @@ import { SubNavbar } from './components/subNavbar.component';
 import { SocketService } from './services/socket.service';
 import { UserLoginService } from './services/userLogin.service';
 import { ProjectService } from './services/project.service';
+import { DeviceService } from './services/device.service';
 
 
 @NgModule({
@@ -69,6 +71,7 @@ import { ProjectService } from './services/project.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     routing,
     HttpClientModule,
     HttpModule,
@@ -86,7 +89,8 @@ import { ProjectService } from './services/project.service';
     
 
   ],
-  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,SocketService,PermissionService,UserLoginService,ProjectService],
+  providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,
+    SocketService,PermissionService,UserLoginService,ProjectService,DeviceService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   

@@ -11,7 +11,7 @@ function getDeviceId(req,res){
 
     var deviceId = req.params.token;
 
-    Device.finde({id : deviceId},['token','user','name'], (err,device) => {
+    Device.find({id : deviceId},['user','name','project'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -35,7 +35,7 @@ function getDeviceUser(req,res){
     
     var deviceUser = req.params.user;
 
-    Device.find({user : deviceUser},['user','name'], (err,device) => {
+    Device.find({user : deviceUser},['user','name','project'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -50,14 +50,66 @@ function getDeviceUser(req,res){
     })
 }
 
+/**
+ * Método para consultar los dispositivos de un usuario.
+ * @param {*} req 
+ * @param {*} res 
+ */
+function getDeviceUser(req,res){
+    
+    var deviceUser = req.params.user;
+
+    Device.find({user : deviceUser},['user','name','project'], (err,device) => {
+        if(err){
+            res.status(500).send({ message: "Error "+ err});
+        }else{
+            if(!device){
+                res.status(404).send({ message: "Este usuario no existe"});
+            }else if(device.length == 0){
+                res.status(200).send({ message: "Este usuario no tiene dispositivos"});
+            }else{
+                res.status(200).send({ device });
+            }
+        }
+    })
+}
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
+function getDeviceProject(req,res){
+
+    var deviceProject = req.params.project;
+
+    Device.find({project: deviceProject},['user','name','project'], (err,project) =>{
+        if(err){
+            res.status(500).send({message: "Error " + err});
+        }else{
+            if(!device){
+                res.status(404).send({message: "Este usuario no existe"});
+            }else if(device.length == 0){
+                res.status(200).send({message: "Este proyecto no tiene dispositivos"});
+            }else{
+                res.status(200).send({device});
+            }
+        }
+    })
+}
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function postDevice(req, res){
     var device = new Device();
     var params = req.body;
 
-    //deviceid = params.token;
-
     device.name = params.name;
     device.user = params.user;
+    davice.project = params.project;
 
     device.save((err, deviceStored) => {
         if(err){
@@ -108,5 +160,6 @@ module.exports = {
     getDeviceUser,
     getDeviceId,
     postDevice,
+    updateDevice,
     deleteDevice
 }

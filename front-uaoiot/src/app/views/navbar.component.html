@@ -61,10 +61,10 @@
                         <a [routerLink]="['/profile']"> {{getUserName()}} </a>
                     </li>
 
-                    <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+                    <!--<li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
                         
                         <a type="button" id="logout-button" (click)="getInfo()">Credencial</a>
-                    </li>
+                    </li>-->
 
                 </ul>
 

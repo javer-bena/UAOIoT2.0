@@ -10,9 +10,9 @@ var Project = require('../models/project');
  */
 function getProjectId(req,res){
 
-    var projectId = req.params.id;
+    var projectId = req.params._id;
 
-    Project.find({id : projectId},['token','user','name'], (err,project) => {
+    Project.find({_id : projectId},['name','user'], (err,project) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -36,7 +36,7 @@ function getProjectUser(req,res){
     
     var projectUser = req.params.user;
 
-    Project.find({user : projectUser},['name','device', 'user'], (err,project) => {
+    Project.find({user : projectUser},['name','user'], (err,project) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -58,14 +58,14 @@ function postProject(req, res){
     //deviceid = params.token;
 
     project.name = params.name;
-    project.device = params.device;
     project.user = params.user;
 
-    Project.save((err, projectStored) => {
+    project.save((err, projectStored) => {
         if(err){
+            console.log("ERROR: " + err);
             res.status(500).send({ message: 'Error ' + err});
         }else{
-            res.status(200).send({ device: projectStored });
+            res.status(200).send({ project: projectStored });
         }
     });
 }

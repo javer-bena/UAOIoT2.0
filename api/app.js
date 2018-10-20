@@ -13,14 +13,19 @@ var passport = require('passport');
 require('./models/db');
 require('./config/passport');
 
+//Routes
 var routesApi = require("./index")
 var apiUser = require('./routes/user');
 var apiMessage = require('./routes/message');
 var apiAcls = require('./routes/acls');
 var apiUserLogin = require('./routes/userLogin');
 var device = require('./routes/device');
-var mqtt = require('mqtt');
+var apiDashboard = require('./routes/dashboard');
+var apiChart = require('./routes/chart');
+var apiProject = require('./routes/project');
 
+//MQTT
+var mqtt = require('mqtt');
 var optionsMqtt = {
     port: 1883,
     host: 'mqtt://192.168.0.14',
@@ -131,5 +136,8 @@ app.use('/api', apiMessage);
 app.use('/api', apiAcls);
 app.use('/api', apiUserLogin);
 app.use('/api', device);
+app.use('/api', apiDashboard);
+app.use('/api', apiChart);
+app.use('/api', apiProject);
 
 module.exports = app;

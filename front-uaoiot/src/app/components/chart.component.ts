@@ -30,17 +30,24 @@ export class ChartComponent{
             data: {
                 labels: labels,
                 datasets:[{
+                    label: 'Data Dataset',
                     data: data1,
                     borderColor:"#3cba9f",
                     fill: false
                 },
                 {
+                    label: 'Data 2',
                     data: data2,
                     borderColor:"#ff0000",
                     fill: false
                 },]
             },
             options:{
+                title: {
+                    display: true,
+                    text: 'My Title',
+                    fontSize: 16
+                },
                 legend:{
                     display:false
                 },
@@ -51,7 +58,9 @@ export class ChartComponent{
                     yAxes:[{
                         display:true
                     }],
-                }
+                },
+
+                responsive:true
             }
         });
     }
