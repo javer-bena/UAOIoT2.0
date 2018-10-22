@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Project } from '../models/project';
 import { ProjectService } from '../services/project.service';
 import { UserLoginService } from '../services/userLogin.service';
+import { DashboardService } from '../services/dashboard.service';
+import { PermissionService } from '../services/permission.service';
 
 @Component({
     selector: 'project',
@@ -19,11 +21,46 @@ export class ProjectComponent{
 
     constructor(
         private projectService:ProjectService,
-        private userLoginService: UserLoginService){}
+        private userLoginService: UserLoginService,
+        private dashboardService: DashboardService,
+        private permissionService: PermissionService){}
 
     ngOnInit(){
 
+        if(localStorage.getItem('user') != null){
+            var userProfile = JSON.parse(localStorage.getItem('user'));
+            this.userProject = userProfile.user;    
+        }else{
+            this.userProject = '';
+        }
+
+        this.getAllProjects(this.userProject);
+
         //this.getProjectData();
+    }
+
+    goToDashboard(){}
+
+    /**
+     * 
+     */
+    getAllProjects(userName){
+        
+        this.projectsArray = [];
+
+        this.projectService.getProjectByUserName(userName).subscribe(data =>{
+            
+            var datasArray = data.project;
+        
+            for (let datas in datasArray){
+                
+                var projectObj = new Project(datasArray[datas].name, datasArray[datas].user);
+                this.projectsArray.push(projectObj);      
+            }
+
+        },Error=>{
+
+        });
     }
 
     /**
@@ -64,13 +101,44 @@ export class ProjectComponent{
 
         this.projectService.postProject(projectJson).subscribe(data =>{
             this.idProject = data.project;
-            //alert("Proyecto creado con exito: " + this.dataTest.name);
-            console.log("Proyecto creado con exito: " + this.idProject._id);
+            
+            const permission = {
+                user: this.projectObj.user,
+                topic: this.projectObj.name + "_" + this.projectObj.user,
+                permission: 'READWRITE'
+            }
+
+            const dashboard = {
+                project: this.idProject._id,
+                user: this.projectObj.user
+            }
+
+            alert(permission.topic);
+            //this.createNewPermission(permission);
+            //this.createDashboard(dashboard);
+            this.getAllProjects(this.projectObj.user);
+
         },Error=>{
             alert("Algo salio mal");
         })
 
         this.nameProject = '';
         
+    }
+
+    createNewPermission(permission){
+        this.permissionService.postPermission(permission).subscribe(data =>{
+
+        },Error=>{
+
+        });
+    }
+
+    createDashboard(dashboard){
+        this.dashboardService.postDashboard(dashboard).subscribe(data =>{
+
+        },Error=>{
+
+        });
     }
 }

@@ -28,7 +28,7 @@ var apiProject = require('./routes/project');
 var mqtt = require('mqtt');
 var optionsMqtt = {
     port: 1883,
-    host: 'mqtt://192.168.0.14',
+    host: 'mqtt://192.168.0.11',
     username: 'user1',
     password: '123456',
     keepalive: 60,
@@ -43,7 +43,7 @@ var io = require('socket.io').listen(5000);
 //var io = require('socket.io').connect();
 
 //ip UAO
-var client = mqtt.connect('mqtt://192.168.0.14',optionsMqtt);
+var client = mqtt.connect('mqtt://192.168.0.11',optionsMqtt);
 //ip casa
 //var client = mqtt.connect('mqtt://192.168.0.14');
 
@@ -76,41 +76,79 @@ var topic = '';
 io.sockets.on('connection', function(socket){
     console.log('1 Socket connected');
     
+    //SUBSCRIBIRSE AL BROKER DESPUES DE CONECTARSE AL SOCKET
+    client.subscribe("test1", function(){
+        console.log('2 Subscribing to test1');
+        //console.log('Subscribing to ANGULAR'+ topic);
+        /*client.on('message',function(topic,payload,packet){
+            console.log('payload: ANGULAR' + payload);
+        });*/
+
+        //SE PUBLICA EL MENSAJE RECIBIDO DE ANGULAR AL BROKER
+        /*client.publish(data.topic,data.payload,function(){
+            console.log("2 MESSAGE from client : " + data.payload);
+            
+        });*/
+
+    });
 
     socket.on('sendMessage', function (data) {
 
-        console.log('3 Subscribing to '+ data.topic + ' payload: ' + data.payload );
         this.topic = data.topic;
         //socket.broadcast.emit()
 
         socket.join(data.topic); 
 
-        client.subscribe(data.topic, function(){
+        //SE PUBLICA EL MENSAJE RECIBIDO DE ANGULAR AL BROKER
+        client.publish(data.topic,data.payload,function(){
+            console.log("3 MESSAGE from client : " + data.payload);
+            
+        });
+        
+        //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
+        client.on('message',function(topic,payload,packet){
+            console.log('payload from phone: ' + payload);
+
+            
+            io.sockets.emit('reciveMessage',{'topic':String(topic),
+                            'payload':String(payload)});
+            console.log("EMITE RECIVEMESSAGE TO ANGULAR");
+            //io.sockets.emit('reciveMessage',{msg: payload});
+        })
+        
+        
+
+
+        /*client.subscribe(data.topic, function(){
             //console.log('Subscribing to ANGULAR'+ topic);
             /*client.on('message',function(topic,payload,packet){
                 console.log('payload: ANGULAR' + payload);
-            });*/
+            });VOLVER A COMENTAR
 
+            //SE PUBLICA EL MENSAJE RECIBIDO DE ANGULAR AL BROKER
             client.publish(data.topic,data.payload,function(){
-                console.log("2 MESSAGE from client: " + data.payload);
+                console.log("2 MESSAGE from client : " + data.payload);
                 
             });
 
-        });
+        });*/
         
     });
 
 
-    client.subscribe(topic, function(){
+    /*client.subscribe(topic, function(){
 
         client.on('message',function(topic,payload,packet){
             console.log('payload from phone: ' + payload);
+
+            
             io.sockets.emit('reciveMessage',{'topic':String(topic),
                             'payload':String(payload)});
+            console.log("EMITE RECIVEMESSAGE TO ANGULAR");
             //io.sockets.emit('reciveMessage',{msg: payload});
         });
 
-    });
+    });*/
 
 
     /*socket.on('recep', function (data) {
@@ -122,12 +160,12 @@ io.sockets.on('connection', function(socket){
 
 });
 
-client.on(topic, function (topic, payload, packet) {
+/*client.on(topic, function (topic, payload, packet) {
     console.log(topic+'='+payload);
     io.sockets.emit('mqtt',{'topic':String(topic),
                             'payload':String(payload)});
 
-});
+});*/
 
 
 

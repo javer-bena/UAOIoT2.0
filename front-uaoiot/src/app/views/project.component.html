@@ -1,20 +1,45 @@
 <p-dialog header="Crear proyecto" [(visible)]="display" [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
-[width]="350" [minWidth]="200" >
+[width]="400" [minWidth]="300" >
 
     <div class="ui-inputgroup">
-        <input type="text" pInputText placeholder="Nombre del proyecto" name="nameProject" [(ngModel)]="nameProject">         
+        <input type="text" pInputText placeholder="Nombre del proyecto" name="nameProject" [(ngModel)]="nameProject">        
     </div>
 
-
+    <div id="description-div">
+        <textarea rows="10" cols="30" pInputTextarea autoResize="autoResize" placeholder="Descripción"></textarea> 
+    </div>
+    
     <p-footer>
-        
         <a class="btn-flat blue-text" (click)="getProjectData()">CREAR</a>
-
     </p-footer>
 
 </p-dialog>
 
-<div>
-    <a type="button" id="add-button" (click)="showDialogAddProject()">Agregar </a>
 
+<div id="projects-div">
+
+    <div class="row">
+        <div *ngFor="let project of projectsArray" class="col s3">
+            <div >
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{{project.name}}</span>
+                        <p></p>
+                        <p>{{project.user}}</p>
+                    </div>
+                    <div class="card-action right-align">
+                        <a pTooltip="Editar" tooltipPosition="bottom"><i class="material-icons">create</i></a>
+                        <a pTooltip="Eliminar" tooltipPosition="bottom"><i class="material-icons">delete</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a type="button" id="add-button" (click)="showDialogAddProject()">Agregar </a>
+            
+        </div>
+    </div>
+    
+    
 </div>

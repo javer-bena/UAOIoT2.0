@@ -37,6 +37,8 @@ import {TableModule} from 'primeng/table';
 import {TooltipModule} from 'primeng/tooltip';
 import {CheckboxModule} from 'primeng/checkbox';
 import {DialogModule} from 'primeng/dialog';
+import {MenubarModule} from 'primeng/menubar';
+import {MenuItem} from 'primeng/api';
 
 
 import { AuthGuardService } from './services/authGuard.service';
@@ -47,6 +49,8 @@ import { SocketService } from './services/socket.service';
 import { UserLoginService } from './services/userLogin.service';
 import { ProjectService } from './services/project.service';
 import { DeviceService } from './services/device.service';
+import { DashboardService } from './services/dashboard.service';
+
 
 
 @NgModule({
@@ -76,6 +80,7 @@ import { DeviceService } from './services/device.service';
     HttpClientModule,
     HttpModule,
     FormsModule,
+    MenubarModule,
     InputTextModule,
     ButtonModule,
     CardModule,
@@ -90,7 +95,7 @@ import { DeviceService } from './services/device.service';
 
   ],
   providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,
-    SocketService,PermissionService,UserLoginService,ProjectService,DeviceService],
+    SocketService,PermissionService,UserLoginService,ProjectService,DeviceService,DashboardService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   

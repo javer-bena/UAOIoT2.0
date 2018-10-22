@@ -11,7 +11,7 @@ function getDashboardId(req,res){
 
     var dashboardId = req.params.id;
 
-    Dashboard.finde({id : dashboardId},['token','user','name'], (err,dashboard) => {
+    Dashboard.finde({id : dashboardId},['project','user'], (err,dashboard) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -35,7 +35,7 @@ function getDashboardUser(req,res){
     
     var dashboardUser = req.params.user;
 
-    Dashboard.find({user : dashboardUser},['user','name'], (err,dashboard) => {
+    Dashboard.find({user : dashboardUser},['project','user'], (err,dashboard) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -59,7 +59,7 @@ function getDashboardProject(req,res){
     
     var dashboardProject = req.params.project;
 
-    Dashboard.find({user : dashboardProject},['user','name'], (err,dashboard) => {
+    Dashboard.find({user : dashboardProject},['project','user'], (err,dashboard) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{

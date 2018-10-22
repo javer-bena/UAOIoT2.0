@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { UserLoginService } from '../services/userLogin.service';
 import { UserLogin } from '../models/userLogin';
+import { MenuItem } from '../../../node_modules/primeng/api';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class NavbarComponent{
     public userNameFromLogin:String;
     public stringUserName:String;
     public userLogged:UserLogin;
+    public items:MenuItem[];
 
     constructor(
         private authService: AuthService,

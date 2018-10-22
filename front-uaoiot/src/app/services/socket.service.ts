@@ -16,7 +16,7 @@ export class SocketService{
     onNewMessageListen() {
         this.socket.on('reciveMessage',function(data){
             console.log('MSG DATA SOCKET '+ data.payload)
-            alert(data.payload);
+            //alert(data.payload);
         })
     }
 

@@ -42,7 +42,7 @@ export class  DashboardComponent{
 
         this.socketService.onNewMessageListen();
 
-        this.getLastData(2000,6);
+        //this.getLastData(2000,6);
         /*this._messageService.getMessages().subscribe(
             result => {
                 var lastIndex = Object.keys(result.messages).length;
