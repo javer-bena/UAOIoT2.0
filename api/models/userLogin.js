@@ -9,17 +9,9 @@ var jwt = require("jsonwebtoken");
 
 
 var userLoginSchema = new mongoose.Schema({
-    user: {
-        type: String,
-    },
-    name: {
-        type: String,
-        required: true
-    },
-    password:{
-        type: String,
-        required: true
-    } 
+    user: String,
+    name: String,
+    password:String 
 });
 
 var UserLogin = module.exports = mongoose.model('userlogin', userLoginSchema);
@@ -46,6 +38,7 @@ module.exports.addUser = function(newUser,callback){
     bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
             if(err) throw err;
+
             newUser.password = hash;
             newUser.save(callback);
         });

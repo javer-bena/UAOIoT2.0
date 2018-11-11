@@ -10,7 +10,7 @@ const config = require('../config/database');
 //var auth = jwt({secret: 'MY_SECRET',userProperty: 'payload'});
 router.get('/usersLogin', UserLoginController.getUsers);
 router.get('/userName/:user', UserLoginController.getUserByName);
-
+router.post('/userLogin',UserLoginController.postUserLogin)
 
 //REGISTRO
 router.post('/register',(req, res, next) => {
@@ -24,6 +24,7 @@ router.post('/register',(req, res, next) => {
         if(err){
             res.json({success: false, msg: 'Fallo en el registro'});
         }else{
+            console.log("POST USER LOGIN: REGISTER");
             res.json({success: true, msg: "Usuario registrado"});
         }
     });

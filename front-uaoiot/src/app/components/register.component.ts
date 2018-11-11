@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { UserLogin } from '../models/userLogin';
 import { UserService } from '../services/user.service';
 import { PermissionService } from '../services/permission.service';
+import { UserLoginService } from '../services/userLogin.service';
 
 @Component({
     selector: 'register',
@@ -28,6 +29,7 @@ export class  RegisterComponent{
         private authService: AuthService,
         private userService: UserService,
         private permissionServie: PermissionService,
+        private userLoginService: UserLoginService,
         private router: Router
     ){
         
@@ -76,20 +78,29 @@ export class  RegisterComponent{
             return false;
         }
 
+        this.userLoginService.postUser(userLogin).subscribe(data =>{
+
+        },Error =>{
+            console.log("ERROR USER LOGIN");
+        })
+
         this.userService.postUser(user).subscribe(data =>{
-            //alert("Usuario registrado hash:  " + user.password);
+            alert("Usuario registrado hash:  " + user.password);
         },Error => {
             alert("Algo salio mal");
         });
 
-        this.authService.registerUser(userLogin).subscribe(data => {
+        
+
+        /*this.authService.registerUser(userLogin).subscribe(data => {
             console.log("ENTRA LOGIN USER");
         },Error => {
             console.log("ERROR USER LOGIN");
-        });
+        });*/
 
         this.permissionServie.postPermission(permission).subscribe(data => {
-            alert("PERMISOS: " + permission.permission +" " + permission.user +" " + permission.topic);
+            // alert("PASSWORD: " + user.password +"LOGIN:  " +userLogin.password);
+
         },Error => {
             alert("ERROR :" +Error +" " + "PERMISOS: " + permission.permission +" " + permission.user +" " + permission.topic);
         });

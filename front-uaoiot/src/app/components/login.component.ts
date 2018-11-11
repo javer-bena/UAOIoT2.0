@@ -50,7 +50,8 @@ export class LoginComponent{
                     var dataUserItem = data.user;
                     
                     this.stringName = dataUserItem;
-                    this.router.navigate(['dashboard']);
+                    //this.router.navigate(['dashboard']);
+                    this.router.navigate(['projects']);
                 }
 
             }else{

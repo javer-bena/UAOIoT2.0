@@ -6,6 +6,11 @@ import { Message } from '../models/message';
 import { Http } from '@angular/http';
 import { ChartComponent } from './chart.component';
 import { timeout } from 'rxjs/operators';
+import { SubNavbar } from './subNavbar.component';
+import { DashboardService } from '../services/dashboard.service';
+import { Router, ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ChartService } from '../services/chart.service';
+import { Chart } from '../models/charts';
 
 @Component({
     selector: 'dashboard',
@@ -17,6 +22,7 @@ import { timeout } from 'rxjs/operators';
 export class  DashboardComponent{
     
     @ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
+
     public components = [];
     public chart = ChartComponent;
 
@@ -27,21 +33,50 @@ export class  DashboardComponent{
     public loaderChart;
     public alive:boolean;
     public messageToSend;
+    public dataToChart = [];
+    public dataChart:String;
+
+    //User data to chart
+    public userName:String;
+    public projectName:String;
+    public projectId:String;
+    public chartsArray = [];
+
+    parentMMessage = ["4:00 pm","5:00 pm", "6:00 pm"];
 
     constructor(private _http:Http, private _messageService:MessageService,
-        private componentFactoryResolver: ComponentFactoryResolver, private socketService:SocketService){
+        private componentFactoryResolver: ComponentFactoryResolver, private socketService:SocketService,
+        private chartService:ChartService, private router:Router){
 
         this.messages = [];
         this.alive = true;
     
     }
+
     
     ngAfterViewInit(): void{}
     
     ngOnInit(){   
 
-        this.socketService.onNewMessageListen();
+        let link = this.router.url;
+        this.projectId = link.replace('/dashboard/','');
 
+        this.getCharts();
+        
+        //this.dataChart = this.subNavBarObj.typeDataChart;
+        this.projectName = '';
+        if(localStorage.getItem('user') != null){
+            var userProfile = JSON.parse(localStorage.getItem('user'));
+            this.userName = userProfile.user;    
+        }else{
+            this.userName = '';
+        }
+
+        this.socketService.sendDataMqtt('user6','test1','$2a$10$10TMIWzLv/waT621bFFeC.MuzAONgIaC7C1UTj76ROd/aKWCjqd92');
+        //this.socketService.onNewMessageListen();
+        this.dataToChart = [];
+        
+        
         //this.getLastData(2000,6);
         /*this._messageService.getMessages().subscribe(
             result => {
@@ -64,12 +99,46 @@ export class  DashboardComponent{
         )*/
     }
 
+    getCharts(){
+        this.chartService.getChartByProject(this.projectId).subscribe(data =>{
+
+            var dataArray = data.chart;
+
+            for(let data in dataArray){
+
+                var chartObj = new Chart(dataArray[data].project,
+                dataArray[data].user, dataArray[data].type, dataArray[data].datas,
+                dataArray[data].labels, dataArray[data].title);
+
+                this.chartsArray.push(chartObj);
+            }
+        },Error=>{
+            alert(Error);
+        });
+    }
+
+    createChart($event){
     
+        this.dataChart = $event;
+        this.addWidget(this.chart);
+    }
+
+    getDataToChart(){
+        console.log("ESCUCHANDO SOCKET");
+        this.socketService.onNewMessage().subscribe(data =>{
+
+            this.dataToChart.push(data.payload);
+            console.log("DATA DASHBOARD SOCKET: " + this.dataToChart);
+        });
+        
+    }  
 
     sendMsg(){
         
         this.socketService.sendMessage(this.messageToSend);
+        alert("Mensaje enviado con exitosamente");
         //alert("Mensage: " + this.messageToSend);
+        this.messageToSend = '';
     }
     /**
      */
@@ -134,11 +203,13 @@ export class  DashboardComponent{
     
     /**
      */
-    addWidget(componentClass: Type<any>):void{
+    addWidget(componentClass: Type<ChartComponent>):void{
         //TODO: Crear widget según el parámetro recibido.
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(componentClass);
         const component = this.container.createComponent(componentFactory);
 
+        component.instance.createChart('line',["1:00 am","2:00 am", "3:00 am"],[46, 64, 13, 63, 24, 67, 78],
+        [24, 45, 12, 52, 45, 35, 23]);
         // Push the component so that we can keep track of which components are created
         this.components.push(component);
     }

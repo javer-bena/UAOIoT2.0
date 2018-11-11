@@ -13,6 +13,9 @@ export class ProjectService{
         this.url = "http://localhost:3000/";
     }
 
+    getProjects(){
+        return this._http.get(this.url + 'api/projects').map(res => res.json());
+    }
 
     getProjectByUserName(userName){
         return this._http.get(this.url + 'api/projectUser/' + userName).map(res => res.json());

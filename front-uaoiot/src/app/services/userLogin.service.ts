@@ -32,7 +32,7 @@ export class UserLoginService{
         
         headers.append('Content-Type','application/json');
         console.log("USER POST " + json);
-        return this._http.post(this.url + 'api/user', json, {headers: headers})
+        return this._http.post(this.url + 'api/userLogin', json, {headers: headers})
         .map(res => res.json());
     }
 }

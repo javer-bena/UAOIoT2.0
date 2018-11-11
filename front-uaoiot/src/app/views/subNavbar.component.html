@@ -1,7 +1,13 @@
+<p-dialog>
+
+</p-dialog>
+
 <nav>
     <div id="buttons" >
         <ul class="center-align">
-                <li><a id="chart-button" class="btn-floating blue darken-1" pTooltip="Graficar" tooltipPosition="bottom"><i class="material-icons">insert_chart</i></a></li>
+                <li><a id="chart-button" class="btn-floating blue darken-1" pTooltip="Graficar" 
+                tooltipPosition="bottom"><i class="material-icons"(click)="sendData()" >insert_chart</i></a></li>
+                
                 <li><a id="table-button" class="btn-floating blue darken-1" pTooltip="Tabular" tooltipPosition="bottom"><i class="material-icons">table_chart</i></a></li>
         </ul>
     </div>

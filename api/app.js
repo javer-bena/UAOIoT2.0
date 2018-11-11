@@ -23,10 +23,12 @@ var device = require('./routes/device');
 var apiDashboard = require('./routes/dashboard');
 var apiChart = require('./routes/chart');
 var apiProject = require('./routes/project');
+var apiToken = require('./routes/token');
 
 //MQTT
 var mqtt = require('mqtt');
-var optionsMqtt = {
+var optionsMqtt = {};
+/*var optionsMqtt = {
     port: 1883,
     host: 'mqtt://192.168.0.11',
     username: 'user1',
@@ -37,15 +39,13 @@ var optionsMqtt = {
     protocolVersion: 3,
     clean: true,
     encoding: 'utf8'
-};
+};*/
 
 var io = require('socket.io').listen(5000);
 //var io = require('socket.io').connect();
-
 //ip UAO
-var client = mqtt.connect('mqtt://192.168.0.11',optionsMqtt);
 //ip casa
-//var client = mqtt.connect('mqtt://192.168.0.14');
+//var client = mqtt.connect('mqtt://192.168.0.7');
 
 app.use(cors());
 //app.use(logger('dev'));
@@ -66,107 +66,81 @@ app.use((req, res, next) => {
     next();
 });
 
+var user = '';
 var topic = '';
+var password = '';
+
 
 /**
  * Socket events
  */
 
-
 io.sockets.on('connection', function(socket){
     console.log('1 Socket connected');
+    var client;
     
-    //SUBSCRIBIRSE AL BROKER DESPUES DE CONECTARSE AL SOCKET
-    client.subscribe("test1", function(){
-        console.log('2 Subscribing to test1');
-        //console.log('Subscribing to ANGULAR'+ topic);
-        /*client.on('message',function(topic,payload,packet){
-            console.log('payload: ANGULAR' + payload);
-        });*/
+    socket.on('sendData', function(data){
 
-        //SE PUBLICA EL MENSAJE RECIBIDO DE ANGULAR AL BROKER
-        /*client.publish(data.topic,data.payload,function(){
-            console.log("2 MESSAGE from client : " + data.payload);
-            
-        });*/
+        user = data.user;
+        topic = data.topic;
+        password = data.password;
 
-    });
+        console.log(user);
+        console.log(topic);
+        console.log(password);
 
-    socket.on('sendMessage', function (data) {
 
-        this.topic = data.topic;
-        //socket.broadcast.emit()
+        optionsMqtt = {
+            port: 1883,
+            host: 'mqtt://192.168.0.3',
+            username: user,
+            password: password,
+            keepalive: 60,
+            reconnectPeriod: 1000,
+            protocolId: 'MQIsdp',
+            protocolVersion: 3,
+            clean: true,
+            encoding: 'utf8'
+        };
+    
 
-        socket.join(data.topic); 
-
-        //SE PUBLICA EL MENSAJE RECIBIDO DE ANGULAR AL BROKER
-        client.publish(data.topic,data.payload,function(){
-            console.log("3 MESSAGE from client : " + data.payload);
-            
+        client = mqtt.connect('mqtt://192.168.0.3',optionsMqtt);
+    
+        //SUBSCRIBIRSE AL BROKER DESPUES DE CONECTARSE AL SOCKET
+        client.subscribe("test1", function(){
+            console.log('2 Subscribing to test1');
+    
+            //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
         });
-        
-        //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
+
         client.on('message',function(topic,payload,packet){
             console.log('payload from phone: ' + payload);
 
-            
             io.sockets.emit('reciveMessage',{'topic':String(topic),
                             'payload':String(payload)});
             console.log("EMITE RECIVEMESSAGE TO ANGULAR");
             //io.sockets.emit('reciveMessage',{msg: payload});
-        })
+        });
+
+
+        //MENSAJE ENVIADO DESDE ANGULAR
+        socket.on('sendMessage', function (data) {
+
+            this.topic = data.topic;
         
-        
-
-
-        /*client.subscribe(data.topic, function(){
-            //console.log('Subscribing to ANGULAR'+ topic);
-            /*client.on('message',function(topic,payload,packet){
-                console.log('payload: ANGULAR' + payload);
-            });VOLVER A COMENTAR
-
             //SE PUBLICA EL MENSAJE RECIBIDO DE ANGULAR AL BROKER
             client.publish(data.topic,data.payload,function(){
-                console.log("2 MESSAGE from client : " + data.payload);
+                console.log("3 MESSAGE from client : " + data.payload + " - " + data.topic);
                 
             });
-
-        });*/
-        
-    });
-
-
-    /*client.subscribe(topic, function(){
-
-        client.on('message',function(topic,payload,packet){
-            console.log('payload from phone: ' + payload);
-
             
-            io.sockets.emit('reciveMessage',{'topic':String(topic),
-                            'payload':String(payload)});
-            console.log("EMITE RECIVEMESSAGE TO ANGULAR");
-            //io.sockets.emit('reciveMessage',{msg: payload});
         });
 
-    });*/
-
-
-    /*socket.on('recep', function (data) {
-        //console.log('Publishing to ANGULAR'+ topic);
-        //console.log('DATA 2 ANGULAR'+ data.payload);
-        client.publish(topic,data.payload);
-        
-    });*/
+    });
+    
+    
 
 });
-
-/*client.on(topic, function (topic, payload, packet) {
-    console.log(topic+'='+payload);
-    io.sockets.emit('mqtt',{'topic':String(topic),
-                            'payload':String(payload)});
-
-});*/
-
 
 
 app.use('/api', apiUser);
@@ -177,5 +151,6 @@ app.use('/api', device);
 app.use('/api', apiDashboard);
 app.use('/api', apiChart);
 app.use('/api', apiProject);
+app.use('/api', apiToken);
 
 module.exports = app;

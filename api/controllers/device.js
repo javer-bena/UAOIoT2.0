@@ -3,6 +3,28 @@
 var Device = require('../models/device');
 
 /**
+ * Metodo para consultar todos los dispositivos de la base de datos.
+ * @param {*} req 
+ * @param {*} res 
+ */
+function getDevices(req, res) {
+
+    Device.find({}, (err, devices) => {
+        if (err) {
+            res.status(500).send({ message: 'Error al buscar' });
+        } else {
+            if (!devices) {
+                res.status(404).send({ message: 'No existen dispositivos' });
+            } else {
+                res.status(200).send({ devices });
+            }
+        }
+
+    });
+
+}
+
+/**
  * Método para consultar un dispositivo por su ID.
  * @param {*} req 
  * @param {*} res 
@@ -11,7 +33,7 @@ function getDeviceId(req,res){
 
     var deviceId = req.params.token;
 
-    Device.find({id : deviceId},['user','name','project'], (err,device) => {
+    Device.find({id : deviceId},['user','name','project','variables'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -27,15 +49,15 @@ function getDeviceId(req,res){
 }
 
 /**
- * Método para consultar los dispositivos de un usuario.
+ * Método para consultar los dispositivos por id.
  * @param {*} req 
  * @param {*} res 
  */
-function getDeviceUser(req,res){
+function getDeviceId(req,res){
     
-    var deviceUser = req.params.user;
+    var deviceUser = req.params.id;
 
-    Device.find({user : deviceUser},['user','name','project'], (err,device) => {
+    Device.find({user : deviceUser},['user','name','project','variables'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -59,7 +81,7 @@ function getDeviceUser(req,res){
     
     var deviceUser = req.params.user;
 
-    Device.find({user : deviceUser},['user','name','project'], (err,device) => {
+    Device.find({user : deviceUser},['user','name','project','variables'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -83,7 +105,7 @@ function getDeviceProject(req,res){
 
     var deviceProject = req.params.project;
 
-    Device.find({project: deviceProject},['user','name','project'], (err,project) =>{
+    Device.find({project: deviceProject},['user','name','project','variables'], (err,project) =>{
         if(err){
             res.status(500).send({message: "Error " + err});
         }else{
@@ -109,7 +131,8 @@ function postDevice(req, res){
 
     device.name = params.name;
     device.user = params.user;
-    davice.project = params.project;
+    device.project = params.project;
+    device.variables = params.variables;
 
     device.save((err, deviceStored) => {
         if(err){
@@ -157,8 +180,10 @@ function deleteDevice(req,res){
 }
 
 module.exports = {
+    getDevices,
     getDeviceUser,
     getDeviceId,
+    getDeviceProject,
     postDevice,
     updateDevice,
     deleteDevice

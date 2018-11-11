@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { SocketService } from '../services/socket.service';
+import { DashboardComponent } from './dashboard.component';
 
 @Component({
     selector: 'sub-navbar',
@@ -8,7 +10,20 @@ import { Component } from '@angular/core';
 
 export class  SubNavbar{
 
-    constructor(){}
+    
+    public typeDataChart;
+    @Output() subNavbarEvent = new EventEmitter<string>();
 
-    ngOnInit(){}
+    constructor(
+        private socketService:SocketService, 
+    ){}
+
+    ngOnInit(){
+        this.typeDataChart ='';
+    }
+
+    sendData(){
+        this.subNavbarEvent.emit('line');
+        //this.typeDataChart = 'line';
+    }
 }

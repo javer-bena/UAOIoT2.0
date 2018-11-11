@@ -36,7 +36,7 @@ function getProjectUser(req,res){
     
     var projectUser = req.params.user;
 
-    Project.find({user : projectUser},['name','user'], (err,project) => {
+    Project.find({user : projectUser},['_id','name','user'], (err,project) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{

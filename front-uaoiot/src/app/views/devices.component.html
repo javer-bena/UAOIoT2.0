@@ -1,0 +1,80 @@
+<p-dialog header="Crear dispositivo" [(visible)]="display" [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+[width]="400" [minWidth]="500" [resizable]="true">
+
+<div class="ui-fluid">
+    
+        <div id="device-div">
+            <p>Nombre del dispositivo</p>
+            <div class="ui-inputgroup">
+                <input type="text" pInputText placeholder="Nombre del dispositivo" name="nameDevice" [(ngModel)]="nameDevice">
+                <p-message severity="error"></p-message>      
+            </div>      
+        </div>
+    
+    
+</div>
+    
+<span class="ui-fluid">
+    
+    <div id="project-div">
+        <p>Proyecto asociado</p>
+        <p-autoComplete [(ngModel)]="nameProject" [suggestions]="filteredProjectsArray" (completeMethod)="filterProject($event)"
+            placeholder="Nombre del proyecto" [minLength]="1"  ></p-autoComplete><br>
+        
+    </div>
+    
+</span>
+
+<div class="ui-fluid">
+    <div id="variables-div">
+        <p>Variables</p>
+        <p-chips [(ngModel)]="variablesArray"></p-chips>
+    </div>
+</div>
+    
+
+    
+    
+    <p-footer>
+        <a class="btn-flat red-text" (click)="display=false">CANCELAR</a>
+        <a class="btn-flat blue-text" (click)="getDeviceData()">CREAR</a>
+    </p-footer>
+
+</p-dialog>
+
+<!--*ngFor="let device of devicessArray"-->
+<div id="devices-div">
+    <div class="row">
+        <div *ngFor="let device of devicesArray" class="col s4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">{{device.name}}</span>
+
+                    <p>Dispositivo asociado al proyecto <span id="project-span">{{device.project}}</span></p>
+                    
+                    <div id="variables-div">
+                        <p>Variables asociadas</p>
+                        <div id="variables-chips" *ngFor="let variable of device.variables, let i = index">
+                            
+                            <div class="chip">
+                                <span>{{device.variables[i]}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="card-action right-align">
+                    <a pTooltip="Editar" tooltipPosition="bottom"><i class="material-icons">create</i></a>
+                    <a pTooltip="Eliminar" tooltipPosition="bottom"><i class="material-icons">delete</i></a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a type="button" id="add-button" (click)="showDialogAddDevice()">Crear</a>    
+        </div>
+    </div>
+</div>
+

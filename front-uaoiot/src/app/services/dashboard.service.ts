@@ -14,6 +14,15 @@ export class DashboardService{
         this.url = "http://localhost:3000/";
     }
 
+    getDashboardByUser(userName){
+        return this._http.get(this.url + 'api/dashboarduser/' + userName).map(res => res.json());
+
+    }
+
+    getDashboardByProject(projectId){
+        return this._http.get(this.url + 'api/dashboardproject' + projectId).map(res => res.json());
+    }
+
     postDashboard(dashboard){
         let json = JSON.stringify(dashboard);
         let headers = new Headers();

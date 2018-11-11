@@ -1,6 +1,40 @@
 'use strict'
 
 var UserLogin = require('../models/userLogin');
+var bcrypt = require("bcryptjs");
+
+function postUserLogin(req,res){
+
+    var userLogin = new UserLogin();
+    var params = req.body;
+
+    userLogin.user = params.user;
+    userLogin.name = params.name;
+    userLogin.password = params.password;
+
+    console.log("POST USERLOGIN PASS: " + userLogin.password);
+
+    bcrypt.genSalt(10, (err, salt) =>{
+        bcrypt.hash(userLogin.password, salt, (err, hash) =>{
+            if(err) throw err;
+
+            userLogin.password = hash;
+
+            userLogin.save((err, userLoginStored) =>{
+                if(err){
+                    res.status(500).send({ message: 'Error al guardar ' + err});
+                }else{
+                    
+                    console.log("POST USERLOGIN: " + hash);
+                    res.status(200).send({userLogin: userLoginStored});
+                }
+            })
+
+
+        })
+
+    })
+}
 
 /**
  * Metodo para consultar todos los uusarios de la base de datos.
@@ -28,7 +62,7 @@ function getUserByName(req,res){
     
     var userName = req.params.user;
 
-    UserLogin.findOne({user : userName},['user','name'],(err,user)=>{
+    UserLogin.findOne({user : userName},['user','name','password'],(err,user)=>{
         if(err){
             res.status(500).send({message:"ERROR"});
         }else{
@@ -48,6 +82,7 @@ function getUserByName(req,res){
 module.exports = {
 
     getUsers,
-    getUserByName
+    getUserByName,
+    postUserLogin
     
 }

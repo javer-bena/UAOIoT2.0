@@ -1,35 +1,39 @@
 <div> 
-    <sub-navbar></sub-navbar>
+    <sub-navbar (subNavbarEvent)="createChart($event)"></sub-navbar>
 </div>
+
+<!--<span>JSON CHART: {{dataChart}}</span>-->
 
 <div>
     <div class="row">
         <div class="col s4">
             <div class="card" id="device-card">
+
                 <div id="listen-device-section">
                     <span>Dispositivo escuchado:</span>
                     <span id="add-listener-icon"><i class="material-icons add-button">add_circle</i>Agregar dispositivo</span>
+                
+                    
                 </div>
 
-                <div class="row">
+                <div id="listen-amount-section">
 
-                    <div id="listen-amount-section" class="col s6">
-                        <div class="input-field">
-                            <input id="amount_data" type="text" class="validate">
-                            <label for="text">Cantidad de datos</label>
-                        </div>
+                    <div class="input-field">
+                        <label for="text">Cantidad de datos</label>
+                        <input id="amount_data" type="text" pInputText class="validate">
                     </div>
+                </div>
+
+                <div id="listen-delay-section">
+                    <div class="input-field">
+                        <label for="text">Frecuencia de datos (ms)</label>
+                        <input id="delay_data" type="text"pInputText class="validate right-align">
                         
-                    <div id="listen-delay-section" class="col s6">
-                        <div class="input-field">
-                            <input id="delay_data" type="text" class="validate">
-                            <label for="text">Frecuencia de datos (ms)</label>
-                        </div>
                     </div>
                 </div>
 
-                <div class="listen button-section" class="right-align">
-                    <a class="blue darken-1 btn-small">Escuchar</a>
+                <div id="listen-button-section" class="right-align">
+                    <a class="blue darken-1 btn-small" (click)="getDataToChart()">Escuchar</a>
                 </div>
                 
             </div>
@@ -46,8 +50,9 @@
                 <div class="row">
                     <div id="sender-msg-section">
                         <div class="input-field">
-                            <input id="send_msg" type="text" class="validate" name="messageToSend" [(ngModel)]="messageToSend">
                             <label for="text">Mensaje a enviar</label>
+                            <input id="send_msg" type="text" pInputText class="validate" name="messageToSend" [(ngModel)]="messageToSend">
+                            
                         </div>
                     </div>
                 </div>
@@ -63,7 +68,14 @@
     
         <div class="col s4">
             <div class="card">
-                
+                <div class="listado-msj">
+                    <h5>Listado de mensajes</h5>
+                    <ul>
+                        <li>
+                            <h6 *ngFor="let data of dataToChart">{{data}}</h6>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -72,20 +84,33 @@
 
 <!--<div class="widgets-section">
     <a type="button" id="add-button" (click)="addWidget(chart)">Agregar</a>
+</div>
+
+<div id="charts-div">
+    <div class="row">
+        <div *ngFor="let chart of chartsArray" class="col s6">
+            <div>
+                <div class="card">
+                    <div class="card-content">
+                        <chart></chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>-->
 
 
-<!--<div>
-    <ng-template #container></ng-template>
-</div>-->
 
-<div class="listado-msj">
+<!--<chart [chartDataMessage]="parentMMessage"></chart>-->
+
+<!--<div class="listado-msj">
     <h3>Listado de mensajes</h3>
     <ul>
         <li>
-            <h5>{{message}}</h5>
+            <h5 *ngFor="let data of dataToChart">{{data}}</h5>
         </li>
     </ul>
-</div>
+</div>-->
 
 <!--<chart></chart>-->

@@ -25,8 +25,7 @@ export class UserListComponent{
 
         this.cols = [
             { field: 'userName', header: 'Usuario' },
-            { field: 'name', header: 'Nombre' },
-            { field: 'password', header: 'Credencial'}
+            { field: 'name', header: 'Nombre' }
         ];
 
         this._userService.getUsers().subscribe(

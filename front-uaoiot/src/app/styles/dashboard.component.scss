@@ -1,5 +1,8 @@
+html,body{
+    background-color: #F0F0F7;
+}
 #device-card{
-    padding: 0.5em 0.9em 0.5em 0.9em;
+    padding: 0em 0.9em 0.5em 0.9em;
 }
 
 
@@ -8,21 +11,25 @@
 }
 
 #listen-device-section{
-    padding-top: 0.5em;
+    
+    padding-top: 0em;
     padding-bottom: 0.5em;
 }
 
 #listen-amount-section{
     
-    padding: 0.5em 1.5em 0em 0.5em;
+    padding: 0.5em 1.5em 0em 0em;
     margin: 0;
     
 }
 
 #listen-delay-section{
     margin: 0;
-    
     padding: 0.5em 1.5em 0em 0em;
+}
+
+#listen-button-section{
+    margin-top: 1em;
 }
 
 #sender-device-section{
@@ -31,16 +38,18 @@
 }
 
 #sender-msg-section{
-    padding-top: 1em;
+    padding: 0.5em 1.5em 0em 0em;
 }
 
 .row{
     margin: 0;
 }
 .input-field{
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .add-button{
+    margin: 1em 0.3em 0em 0em;
     color:#1e88e5;
 }

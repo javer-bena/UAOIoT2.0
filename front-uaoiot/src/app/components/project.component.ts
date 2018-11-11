@@ -4,6 +4,8 @@ import { ProjectService } from '../services/project.service';
 import { UserLoginService } from '../services/userLogin.service';
 import { DashboardService } from '../services/dashboard.service';
 import { PermissionService } from '../services/permission.service';
+import { Router } from '@angular/router';
+import { DashboardComponent } from './dashboard.component';
 
 @Component({
     selector: 'project',
@@ -23,7 +25,8 @@ export class ProjectComponent{
         private projectService:ProjectService,
         private userLoginService: UserLoginService,
         private dashboardService: DashboardService,
-        private permissionService: PermissionService){}
+        private permissionService: PermissionService,
+        private router: Router){}
 
     ngOnInit(){
 
@@ -39,7 +42,10 @@ export class ProjectComponent{
         //this.getProjectData();
     }
 
-    goToDashboard(){}
+    goToDashboard(index){
+        
+        this.router.navigate(['dashboard/' + this.projectsArray[index].id]);
+    }
 
     /**
      * 
@@ -54,7 +60,8 @@ export class ProjectComponent{
         
             for (let datas in datasArray){
                 
-                var projectObj = new Project(datasArray[datas].name, datasArray[datas].user);
+                var projectObj = new Project(datasArray[datas]._id, datasArray[datas].name, datasArray[datas].user);
+
                 this.projectsArray.push(projectObj);      
             }
 
@@ -92,31 +99,31 @@ export class ProjectComponent{
      */
     addProject(name:String,user:String){
         
-        this.projectObj = new Project(name,user);
+        //this.projectObj = new Project(name,user);
 
         const projectJson = {
-            name: this.projectObj.name,
-            user: this.projectObj.user
+            name: name,
+            user: user
         };
 
         this.projectService.postProject(projectJson).subscribe(data =>{
             this.idProject = data.project;
             
             const permission = {
-                user: this.projectObj.user,
-                topic: this.projectObj.name + "_" + this.projectObj.user,
+                user: user,
+                topic: name + "_" + user,
                 permission: 'READWRITE'
             }
 
             const dashboard = {
                 project: this.idProject._id,
-                user: this.projectObj.user
+                user: user
             }
 
-            alert(permission.topic);
+            //alert(permission.topic);
             //this.createNewPermission(permission);
-            //this.createDashboard(dashboard);
-            this.getAllProjects(this.projectObj.user);
+            this.createDashboard(dashboard);
+            this.getAllProjects(user);
 
         },Error=>{
             alert("Algo salio mal");

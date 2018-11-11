@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MessageService } from '../services/message.service'
 import { Http } from '@angular/http';
@@ -20,8 +20,7 @@ export class ChartComponent{
     }
 
     ngOnInit(){
-        this.createChart('line',["1:00 pm","2:00 pm", "3:00 pm"],[28, 21, 34, 33, 25, 22, 22],
-        [24, 45, 22, 22, 19, 35, 23]);
+        //this.createChart('line',this.chartDataMessage,[28, 21, 34, 33, 25, 22, 22],[24, 45, 22, 22, 19, 35, 23]);
     }
 
     createChart(type:string,labels,data1,data2){    

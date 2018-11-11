@@ -30,6 +30,7 @@ export class NavbarComponent{
 
         if(localStorage.getItem('user') != null){
             var userProfile = JSON.parse(localStorage.getItem('user'));
+            this.userNameFromLogin = userProfile.user;
             this.stringUserName = userProfile.name;    
         }else{
             this.stringUserName = 'perfil';
@@ -40,12 +41,10 @@ export class NavbarComponent{
 
     getInfo(){
 
-        var userProfile = JSON.parse(localStorage.getItem('user'));
         //this.stringUserName = userProfile.name;   
-        
-        this.userLoginService.getUserByUserName(userProfile.user).subscribe(data =>{
+        this.userLoginService.getUserByUserName(this.userNameFromLogin).subscribe(data =>{
             var msj = data.message;
-            
+            alert(msj.password);
         },error =>{
             var errorMsj = <any>error;
             console.log('Error en la busqueda' + errorMsj);

@@ -12,7 +12,7 @@ function getChartProject(req,res){
     
     var chartProject = req.params.project;
 
-    Chart.find({user : chartProject},['user','name'], (err,chart) => {
+    Chart.find({project: chartProject},['datas','labels','project','user','type','title'], (err,chart) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -51,7 +51,7 @@ function postChart(req, res){
             
             res.status(404).send({ message: 'Error ' + err});
         }else{
-            res.status(200).send({ device: chartStored });
+            res.status(200).send({ chart: chartStored });
         }
     });
 }

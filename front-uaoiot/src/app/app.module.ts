@@ -39,6 +39,8 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {DialogModule} from 'primeng/dialog';
 import {MenubarModule} from 'primeng/menubar';
 import {MenuItem} from 'primeng/api';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {ChipsModule} from 'primeng/chips';
 
 
 import { AuthGuardService } from './services/authGuard.service';
@@ -50,6 +52,8 @@ import { UserLoginService } from './services/userLogin.service';
 import { ProjectService } from './services/project.service';
 import { DeviceService } from './services/device.service';
 import { DashboardService } from './services/dashboard.service';
+import { ChartService } from './services/chart.service';
+import { TokenService } from './services/token.service';
 
 
 
@@ -90,12 +94,14 @@ import { DashboardService } from './services/dashboard.service';
     TableModule,
     TooltipModule,
     CheckboxModule,
-    DialogModule
+    DialogModule,
+    AutoCompleteModule,
+    ChipsModule
     
 
   ],
   providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,
-    SocketService,PermissionService,UserLoginService,ProjectService,DeviceService,DashboardService],
+    SocketService,PermissionService,UserLoginService,ProjectService,DeviceService,DashboardService,DeviceService,ChartService,TokenService],
   bootstrap: [AppComponent],
   entryComponents: [ChartComponent],
   

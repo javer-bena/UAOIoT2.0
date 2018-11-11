@@ -6,7 +6,8 @@ var Schema = mongoose.Schema;
 var deviceSchema = Schema({
     name:String,
     user:String,
-    project:String
+    project:String,
+    variables:[]
 
 });
 
