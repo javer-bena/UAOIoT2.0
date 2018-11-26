@@ -1,4 +1,4 @@
-import { Component,ComponentFactoryResolver, Type, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component,ComponentFactoryResolver, OnChanges, AfterViewInit, Type, ViewChild, ElementRef, ViewContainerRef, SimpleChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MessageService } from '../services/message.service'
 import { SocketService } from '../services/socket.service'
@@ -10,7 +10,8 @@ import { SubNavbar } from './subNavbar.component';
 import { DashboardService } from '../services/dashboard.service';
 import { Router, ActivatedRoute } from '../../../node_modules/@angular/router';
 import { ChartService } from '../services/chart.service';
-import { Chart } from '../models/charts';
+import { Charts } from '../models/charts';
+
 
 @Component({
     selector: 'dashboard',
@@ -22,6 +23,8 @@ import { Chart } from '../models/charts';
 export class  DashboardComponent{
     
     @ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
+    @ViewChild(ChartComponent) child;
+    @ViewChild('charts', { read: ElementRef }) canvas: ElementRef;
 
     public components = [];
     public chart = ChartComponent;
@@ -42,6 +45,11 @@ export class  DashboardComponent{
     public projectId:String;
     public chartsArray = [];
 
+    public chartsInput = [Charts];
+
+    public charts = [];
+    public numberOfChart:any;
+
     parentMMessage = ["4:00 pm","5:00 pm", "6:00 pm"];
 
     constructor(private _http:Http, private _messageService:MessageService,
@@ -52,9 +60,6 @@ export class  DashboardComponent{
         this.alive = true;
     
     }
-
-    
-    ngAfterViewInit(): void{}
     
     ngOnInit(){   
 
@@ -103,24 +108,94 @@ export class  DashboardComponent{
         this.chartService.getChartByProject(this.projectId).subscribe(data =>{
 
             var dataArray = data.chart;
+            this.numberOfChart = dataArray.length;
 
             for(let data in dataArray){
 
-                var chartObj = new Chart(dataArray[data].project,
+                var chartObj = new Charts(dataArray[data].project,
                 dataArray[data].user, dataArray[data].type, dataArray[data].datas,
                 dataArray[data].labels, dataArray[data].title);
 
                 this.chartsArray.push(chartObj);
             }
+
+            this.chartsInput = this.chartsArray;
         },Error=>{
             alert(Error);
         });
     }
 
-    createChart($event){
+    
+    /*createChart($event){
     
         this.dataChart = $event;
         this.addWidget(this.chart);
+    }*/
+
+    createChartsData(){
+        
+        console.log("WIDGET createChartsData entra" + this.numberOfChart);
+        var array = [];
+
+        for(var i =0; i<2; i++){
+            var chart = {
+                type:'line',
+                data:{
+                    labels: ["2:00 pm","2:30 pm", "2:45 pm"],
+
+                    datasets:[{
+                        label: 'Data Dataset',
+                        data: [28, 21, 34, 33, 25, 22, 22],
+                        borderColor:"#3cba9f",
+                        fill: false
+                    },
+                
+                    {  
+                        label: 'Data 2',
+                        data: [38, 11, 45, 13, 55, 62, 12],
+                        borderColor:"#ff0000",
+                        fill: false
+                    },]
+                },
+
+                options:{
+                    title: {
+                        display: true,
+                        text: 'My Title',
+                        fontSize: 16
+                    },
+                    legend:{
+                        display:false
+                    },
+                    scales:{
+                        xAxes:[{
+                            display:true
+                        }],
+                        yAxes:[{
+                            display:true
+                        }],
+                    },
+                    responsive:true
+                }
+            };
+
+            array.push(chart); 
+        }
+        
+        this.createCharts(array);
+        
+    }
+
+    createCharts(array){
+        console.log("WIDGET createCharts entra");
+        for(var j = 0; j < 2; j++){
+            console.log("WIDGET createCharts entra for");
+
+            //let htmlRef = this.canvas.nativeElement.select(`canvas`+j);
+            //console.log("WIDGET HTML: " + this.canvas.nativeElement);
+            //var chart = new Chart(htmlRef,array[j]);
+            //this.charts.push(chart);
+        }
     }
 
     getDataToChart(){
@@ -208,10 +283,13 @@ export class  DashboardComponent{
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(componentClass);
         const component = this.container.createComponent(componentFactory);
 
-        component.instance.createChart('line',["1:00 am","2:00 am", "3:00 am"],[46, 64, 13, 63, 24, 67, 78],
-        [24, 45, 12, 52, 45, 35, 23]);
+        component.instance.createChart();
         // Push the component so that we can keep track of which components are created
         this.components.push(component);
+
+        console.log("WIDGET FACTORY: " + componentFactory.inputs);
+        console.log("WIDGET COMPONENT: " + component.injector);
+        console.log("WIDGET COMPONENTS: " + this.components);
     }
 
     /**

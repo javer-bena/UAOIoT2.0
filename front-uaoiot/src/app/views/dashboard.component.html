@@ -82,7 +82,7 @@
 </div>
 
 
-<!--<div class="widgets-section">
+<div class="widgets-section">
     <a type="button" id="add-button" (click)="addWidget(chart)">Agregar</a>
 </div>
 
@@ -92,16 +92,18 @@
             <div>
                 <div class="card">
                     <div class="card-content">
-                        <chart></chart>
+                        <p>{{chart.labels}}</p>
+                        <p>{{chart.datas}}</p>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>-->
+</div>
 
-
-
+<!--<canvas #charts *ngFor="let chart of charts; let i = index" id="charts">{{chart}}</canvas>-->
+<chart [charts]="chartsInput"></chart>
 <!--<chart [chartDataMessage]="parentMMessage"></chart>-->
 
 <!--<div class="listado-msj">

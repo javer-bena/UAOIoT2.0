@@ -1,4 +1,4 @@
-export class Chart{
+export class Charts{
     constructor(
     public project:String,
     public user:String,
