@@ -81,7 +81,6 @@ export class  DashboardComponent{
         //this.socketService.onNewMessageListen();
         this.dataToChart = [];
         
-        
         //this.getLastData(2000,6);
         /*this._messageService.getMessages().subscribe(
             result => {
@@ -104,6 +103,8 @@ export class  DashboardComponent{
         )*/
     }
 
+    
+
     getCharts(){
         this.chartService.getChartByProject(this.projectId).subscribe(data =>{
 
@@ -119,84 +120,18 @@ export class  DashboardComponent{
                 this.chartsArray.push(chartObj);
             }
 
-            this.chartsInput = this.chartsArray;
+            //this.chartsInput = this.chartsArray;
+            //this.child.setArrayChart(this.chartsArray);
+            //this.child.charts = this.chartsArray
+            this.child.setArrayChart(this.chartsArray);
+            this.child.createChart(this.chartsArray);
+
         },Error=>{
             alert(Error);
         });
     }
 
     
-    /*createChart($event){
-    
-        this.dataChart = $event;
-        this.addWidget(this.chart);
-    }*/
-
-    createChartsData(){
-        
-        console.log("WIDGET createChartsData entra" + this.numberOfChart);
-        var array = [];
-
-        for(var i =0; i<2; i++){
-            var chart = {
-                type:'line',
-                data:{
-                    labels: ["2:00 pm","2:30 pm", "2:45 pm"],
-
-                    datasets:[{
-                        label: 'Data Dataset',
-                        data: [28, 21, 34, 33, 25, 22, 22],
-                        borderColor:"#3cba9f",
-                        fill: false
-                    },
-                
-                    {  
-                        label: 'Data 2',
-                        data: [38, 11, 45, 13, 55, 62, 12],
-                        borderColor:"#ff0000",
-                        fill: false
-                    },]
-                },
-
-                options:{
-                    title: {
-                        display: true,
-                        text: 'My Title',
-                        fontSize: 16
-                    },
-                    legend:{
-                        display:false
-                    },
-                    scales:{
-                        xAxes:[{
-                            display:true
-                        }],
-                        yAxes:[{
-                            display:true
-                        }],
-                    },
-                    responsive:true
-                }
-            };
-
-            array.push(chart); 
-        }
-        
-        this.createCharts(array);
-        
-    }
-
-    createCharts(array){
-        console.log("WIDGET createCharts entra");
-        for(var j = 0; j < 2; j++){
-            console.log("WIDGET createCharts entra for");
-
-            //let htmlRef = this.canvas.nativeElement.select(`canvas`+j);
-            //console.log("WIDGET HTML: " + this.canvas.nativeElement);
-            //var chart = new Chart(htmlRef,array[j]);
-            //this.charts.push(chart);
-        }
-    }
 
     getDataToChart(){
         console.log("ESCUCHANDO SOCKET");
@@ -283,7 +218,7 @@ export class  DashboardComponent{
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(componentClass);
         const component = this.container.createComponent(componentFactory);
 
-        component.instance.createChart();
+        //component.instance.createChart();
         // Push the component so that we can keep track of which components are created
         this.components.push(component);
 

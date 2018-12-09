@@ -86,24 +86,9 @@
     <a type="button" id="add-button" (click)="addWidget(chart)">Agregar</a>
 </div>
 
-<div id="charts-div">
-    <div class="row">
-        <div *ngFor="let chart of chartsArray" class="col s6">
-            <div>
-                <div class="card">
-                    <div class="card-content">
-                        <p>{{chart.labels}}</p>
-                        <p>{{chart.datas}}</p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--<canvas #charts *ngFor="let chart of charts; let i = index" id="charts">{{chart}}</canvas>-->
-<chart [charts]="chartsInput"></chart>
+<chart></chart>
 <!--<chart [chartDataMessage]="parentMMessage"></chart>-->
 
 <!--<div class="listado-msj">
