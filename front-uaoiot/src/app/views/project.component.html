@@ -15,14 +15,26 @@
 
 </p-dialog>
 
+<p-dialog header="Eliminar proyecto" [(visible)]="displayDelete" [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+[width]="400" [minWidth]="300" >
+
+    <p>¿Estás seguro que deseas eliminar este proyecto?</p>
+    
+    <p-footer>
+        <a class="btn-flat blue-text" (click)="deleteProject()">Si</a>
+        <a class="btn-flat blue-text" (click)="displayDelete=false" >No</a>
+    </p-footer>
+
+</p-dialog>
+
 
 <div id="projects-div">
 
     <div class="row">
         <div *ngFor="let project of projectsArray; let i = index" class="col s3">
             <div >
-                <div class="card" (click)="goToDashboard(i)">
-                    <div class="card-content">
+                <div class="card" >
+                    <div class="card-content" (click)="goToDashboard(i)">
                         <span class="card-title">{{project.name}}</span>
                         <p></p>
                         <p>{{project.user}}</p>
@@ -30,15 +42,16 @@
                     
                     <div class="card-action right-align">
                         <a pTooltip="Editar" tooltipPosition="bottom"><i class="material-icons">create</i></a>
-                        <a pTooltip="Eliminar" tooltipPosition="bottom"><i class="material-icons">delete</i></a>
+                        <a pTooltip="Eliminar" tooltipPosition="bottom" (click)="showDialogDeleteProject(i)"><i class="material-icons">delete</i></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <a type="button" id="add-button" (click)="showDialogAddProject()">Agregar </a>
-            
+        <div class="col s3">
+            <div class="card" id="addProjectButton">
+                <a type="button" id="add-button" (click)="showDialogAddProject()">Crear proyecto</a>
+            </div>
         </div>
     </div>
     

@@ -33,7 +33,7 @@ function getDeviceId(req,res){
 
     var deviceId = req.params.token;
 
-    Device.find({id : deviceId},['user','name','project','variables'], (err,device) => {
+    Device.find({id : deviceId},['user','name','project','projectId','variables'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -57,7 +57,7 @@ function getDeviceId(req,res){
     
     var deviceUser = req.params.id;
 
-    Device.find({user : deviceUser},['user','name','project','variables'], (err,device) => {
+    Device.find({user : deviceUser},['user','name','project','projectId','variables'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -81,7 +81,7 @@ function getDeviceUser(req,res){
     
     var deviceUser = req.params.user;
 
-    Device.find({user : deviceUser},['user','name','project','variables'], (err,device) => {
+    Device.find({user : deviceUser},['user','name','project','projectId','variables'], (err,device) => {
         if(err){
             res.status(500).send({ message: "Error "+ err});
         }else{
@@ -105,7 +105,7 @@ function getDeviceProject(req,res){
 
     var deviceProject = req.params.project;
 
-    Device.find({project: deviceProject},['user','name','project','variables'], (err,project) =>{
+    Device.find({project: deviceProject},['user','name','project','projectId','variables'], (err,project) =>{
         if(err){
             res.status(500).send({message: "Error " + err});
         }else{
@@ -132,6 +132,7 @@ function postDevice(req, res){
     device.name = params.name;
     device.user = params.user;
     device.project = params.project;
+    device.projectId = params.projectId;
     device.variables = params.variables;
 
     device.save((err, deviceStored) => {
@@ -156,11 +157,11 @@ function updateDevice(req, res){
     });
 }
 
-function deleteDevice(req,res){
+function deleteDeviceByProject(req,res){
 
-    var deviceId = req.params.id;
+    var project = req.params.projectId;
 
-    Device.find({id : deviceId},(err, device) => {
+    Device.find({projectId : project},(err, device) => {
         if(err){
             res.status(500).send({ message: "Error "});
         }
@@ -168,13 +169,30 @@ function deleteDevice(req,res){
         if(!device){
             res.status(500).send({ message: "No existe"});
         }else{
-            device.remove((err) => {
+            Device.remove((err) => {
                 if(err){
                     res.status(500).send({ message: "ERROR AL ELIMINAR"});
                 }else{
-                    res.status(200).send({ message: "Dispositivo eliminado"});
+                    res.status(200).send({ message: "Dispositivos eliminados"});
                 }
             });
+        }
+    });
+}
+
+function deleteDeviceById(req,res){
+
+    var deviceId = req.params.id;
+
+    Device.findByIdAndRemove({_id: deviceId},req.body,(err,device)=>{
+        if(err){
+            res.status(500).send({ message: "Error"});
+
+        }else if(!device){
+            res.status(404).send({ message: "No existe"});
+
+        }else if(!err){
+            res.status(200).send({ message: "Dispositivo eliminado"});
         }
     });
 }
@@ -186,5 +204,6 @@ module.exports = {
     getDeviceProject,
     postDevice,
     updateDevice,
-    deleteDevice
+    deleteDeviceById,
+    deleteDeviceByProject
 }

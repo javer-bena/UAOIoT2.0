@@ -7,6 +7,7 @@ var deviceSchema = Schema({
     name:String,
     user:String,
     project:String,
+    projectId:String,
     variables:[]
 
 });

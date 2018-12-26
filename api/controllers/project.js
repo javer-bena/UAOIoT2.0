@@ -51,6 +51,27 @@ function getProjectUser(req,res){
     })
 }
 
+
+function getProjectName(req,res){
+    
+    var projectName = req.params.name;
+
+    Project.find({name : projectName},['_id','name','user'], (err,project) => {
+        if(err){
+            res.status(500).send({ message: "Error "+ err});
+        }else{
+            if(!project){
+                res.status(404).send({ message: "Este proyecto no existe"});
+            }else if(project.length == 0){
+                res.status(200).send({ message: "No hay proyectos con ese nombre " + projectName});
+            }else{
+                res.status(200).send({ project });
+            }
+        }
+    })
+}
+
+
 function postProject(req, res){
     var project = new Project();
     var params = req.body;
@@ -87,30 +108,57 @@ function deleteProject(req,res){
 
     var projectId = req.params.id;
 
-    Project.find({id : projectId},(err, project) => {
+    Project.findByIdAndRemove({_id : projectId},req.body,(err, project) => {
         if(err){
             res.status(500).send({ message: "Error "});
-        }
 
-        if(!project){
-            res.status(500).send({ message: "No existe"});
-        }else{
-            project.remove((err) => {
+        }else if(!project){
+            res.status(404).send({ message: "No existe"});
+
+        }else if(!err){
+            res.status(200).send({ message: "Proyecto eliminado"});
+        }
+        
+        /*else {
+            Project.remove((err) => {
                 if(err){
                     res.status(500).send({ message: "ERROR AL ELIMINAR"});
                 }else{
                     res.status(200).send({ message: "Proyecto eliminado"});
+
                 }
             });
+        }*/
+    });
+}
+
+function deleteProjectByUser(req,res){
+
+    var userProject = req.params.user;
+
+    Chart.find({user: userProject},req.body,(err, project) =>{
+        if(err){
+            res.status(500).send({ message: "Error"});
+        }else if(!project){
+            res.status(404).send({ message: "No existe"});
+        }else{
+            Project.remove((err) =>{
+                if(err){
+                    res.status(500).send({ message: "Error al eliminar"});
+                }else{
+                    res.status(200).send({ message: "Proyectos eliminados"});
+                }
+            });  
         }
     });
 }
 
-
 module.exports = {
     getProjectId,
     getProjectUser,
+    getProjectName,
     postProject,
     updateProject,
-    deleteProject
+    deleteProject,
+    deleteProjectByUser
 }

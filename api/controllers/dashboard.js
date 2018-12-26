@@ -120,7 +120,7 @@ function deleteDashboard(req,res){
 
     var dashboardId = req.params.id;
 
-    Dashboard.find({id : dashboardId},(err, device) => {
+    Dashboard.find({project : dashboardId},(err, dashboard) => {
         if(err){
             res.status(500).send({ message: "Error "});
         }
@@ -128,7 +128,7 @@ function deleteDashboard(req,res){
         if(!dashboard){
             res.status(500).send({ message: "No existe"});
         }else{
-            dashboard.remove((err) => {
+            Dashboard.remove((err) => {
                 if(err){
                     res.status(500).send({ message: "ERROR AL ELIMINAR"});
                 }else{

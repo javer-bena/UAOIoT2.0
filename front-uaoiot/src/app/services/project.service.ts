@@ -17,6 +17,10 @@ export class ProjectService{
         return this._http.get(this.url + 'api/projects').map(res => res.json());
     }
 
+    getProjectByName(name){
+        return this._http.get(this.url + 'api/projectName/' + name).map(res => res.json());
+    }
+
     getProjectByUserName(userName){
         return this._http.get(this.url + 'api/projectUser/' + userName).map(res => res.json());
     }
@@ -26,8 +30,16 @@ export class ProjectService{
         let headers = new Headers();
         
         headers.append('Content-Type','application/json');
-        console.log("PROJECT POST " + json);
+        
         return this._http.post(this.url + 'api/project', json, {headers: headers})
         .map(res => res.json());
+    }
+
+    deleteProject(idProject){
+        return this._http.delete(this.url + 'api/project/' + idProject).map(res => res.json());
+    }
+
+    deleteProjectByUser(user){
+        return this._http.delete(this.url + 'api/project' + user).map(res => res.json());
     }
 }

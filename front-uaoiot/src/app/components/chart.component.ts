@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, SimpleChanges,OnInit, AfterViewInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges,OnInit, AfterViewInit, ViewChild, ElementRef, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MessageService } from '../services/message.service'
 import { Http } from '@angular/http';
@@ -10,6 +10,7 @@ import { Charts } from '../models/charts';
     selector: 'chart',
     templateUrl: '../views/chart.component.html',
     styleUrls: ['../styles/chart.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [MessageService]
 })
 
@@ -17,61 +18,36 @@ export class ChartComponent{
     
     @ViewChild('canvas1', { read: ElementRef }) canvas: ElementRef;
     //public canvas;
+    public displayDelete:boolean = false;
+    public idChartToDelete;
     public chart;
     public chartObj;
     public prueba:number;
     //@Input() charts:[Charts];
     public charts;
-    
     public pruebaData:string;
-
     public chartsData = [];
     public amountCharts;
 
-    isDataLoaded:boolean = false;
-
     constructor(private chartService: ChartService,
         private cd: ChangeDetectorRef){
-        //this.chart = [];
-        //this.array = [Chart];
+
+        
     }
 
-    ngOnInit(){
-        
-        this.charts = [new Charts("5bdfb88005583d0ecce856a4",
-        "user4","line",[33, 25, 22, 22],
-        ["1:00 am","2:00 am", "3:00 am","","","",""]
-        ,"Chart 1"),  
-        
-        new Charts("5bdfb88005583d0ecce856a4",
-        "user4","line",[18, 41, 54, 13, 35, 22, 42],
-        ["2:15 pm","2:30 pm", "2:45 pm","","","",""]
-        ,"Chart 2"),
-    
-        new Charts("5bdfb88005583d0ecce856a4",
-        "user4","line",[18, 41, 54, 13, 35, 22, 42],
-        ["2:15 pm","2:30 pm", "2:45 pm","","","",""]
-        ,"Chart 2")];
-        console.log("CHARTS INIT" + this.charts);
+    ngOnInit(){ 
+        this.charts = [];
     }
 
-    setArrayChart(array){
-        console.log("CHARTS " + array[0].datas);
+    setArrayChart(array){   
         this.charts = array;
         this.cd.detectChanges();
     }
 
-    ngAfterViewInit(){
-        console.log("CHARTS AFTER " + this.charts[0].datas);
-        this.isDataLoaded = true;
-        //this.createChart(this.charts);
-    }
+    ngAfterViewInit(){}
 
     createChart(array){   
 
-        //this.charts = array;
-        
-        console.log("CHARTS CREATE " + this.charts[0].datas);
         for(var i = 0; i < array.length; i++){
             this.chart = new Chart('canvas' + i,{
                 type:'line',
@@ -106,12 +82,24 @@ export class ChartComponent{
                 }
             });
             
-            //this.charts.push(chart);
-            console.log("WIDGET CHART OBJ " + i );
-            console.log("WIDGET CHART OBJ " + this.chart );
         }
-        
+    }
 
+    showDialogDeleteChart(index){
+        
+        this.idChartToDelete = this.charts[index].id;
+        this.displayDelete = true;
+    }
+
+    deleteChart(){
+        this.chartService.deleteChartsById(this.idChartToDelete).subscribe(data=>{
+            this.displayDelete = false;
+            alert("eliminada");
+            
+        },Error=>{
+            alert("ERROR " + Error);
+            this.displayDelete = false;
+        });
     }
 
 

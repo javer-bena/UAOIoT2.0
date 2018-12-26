@@ -1,14 +1,27 @@
-<p-dialog>
+<p-dialog header="Selecciona un tipo de gráfica" [(visible)]="display"  [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+    [width]="400" [minWidth]="300">
 
+    <div class="ui-g-12"><p-radioButton name="group1" value="line" label="Lineas" 
+        [(ngModel)]="typeDataChart" inputId="opt1"></p-radioButton></div>
+
+    <div class="ui-g-12"><p-radioButton name="group1" value="bar" label="Barras" 
+        [(ngModel)]="typeDataChart" inputId="opt2"></p-radioButton></div>
+
+        {{typeDataChart}}
+
+    <p-footer>
+        <a class="btn-flat blue-text" (click)="sendData()">CREAR</a>
+    </p-footer>
 </p-dialog>
 
 <nav>
     <div id="buttons" >
         <ul class="center-align">
-                <li><a id="chart-button" class="btn-floating blue darken-1" pTooltip="Graficar" 
-                tooltipPosition="bottom"><i class="material-icons"(click)="sendData()" >insert_chart</i></a></li>
-                
-                <li><a id="table-button" class="btn-floating blue darken-1" pTooltip="Tabular" tooltipPosition="bottom"><i class="material-icons">table_chart</i></a></li>
+            <li><a id="chart-button" class="btn-floating blue darken-1" pTooltip="Graficar" 
+            tooltipPosition="bottom"><i class="material-icons"(click)="showDialogTypeChart()" >insert_chart</i></a></li>
+            
+            <li><a id="table-button" class="btn-floating blue darken-1" pTooltip="Tabular" tooltipPosition="bottom"><i class="material-icons">table_chart</i></a></li>
+    
         </ul>
     </div>
 </nav>

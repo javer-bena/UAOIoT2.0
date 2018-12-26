@@ -1,4 +1,4 @@
-import { Component,ComponentFactoryResolver, OnChanges, AfterViewInit, Type, ViewChild, ElementRef, ViewContainerRef, SimpleChanges } from '@angular/core';
+import { Component,ComponentFactoryResolver, OnChanges, AfterViewInit, Type, ViewChild, ElementRef, ViewContainerRef, SimpleChanges, ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MessageService } from '../services/message.service'
 import { SocketService } from '../services/socket.service'
@@ -54,7 +54,8 @@ export class  DashboardComponent{
 
     constructor(private _http:Http, private _messageService:MessageService,
         private componentFactoryResolver: ComponentFactoryResolver, private socketService:SocketService,
-        private chartService:ChartService, private router:Router){
+        private chartService:ChartService, private router:Router,
+        private cd: ChangeDetectorRef){
 
         this.messages = [];
         this.alive = true;
@@ -108,12 +109,13 @@ export class  DashboardComponent{
     getCharts(){
         this.chartService.getChartByProject(this.projectId).subscribe(data =>{
 
+            this.chartsArray = [];
             var dataArray = data.chart;
             this.numberOfChart = dataArray.length;
 
             for(let data in dataArray){
 
-                var chartObj = new Charts(dataArray[data].project,
+                var chartObj = new Charts(dataArray[data]._id,dataArray[data].project,
                 dataArray[data].user, dataArray[data].type, dataArray[data].datas,
                 dataArray[data].labels, dataArray[data].title);
 
@@ -131,7 +133,41 @@ export class  DashboardComponent{
         });
     }
 
+    /**
+     * 
+     * @param $event 
+     */
+    getTypeChart($event){
+        //alert($event);
+
+        this.addChart($event,'Chart 2');
+    }
+
     
+    addChart(type:String,title:String,){
+
+        const chartJson = {
+            project : this.projectId,
+            user : this.userName,
+            type : type,
+            datas : [10,15,20,25,30],
+            labels : ["1","2","3","4","5"],
+            title : title
+        }
+
+        this.chartService.postChart(chartJson).subscribe(data=>{
+            alert('Gráfica creada');
+        },Error=>{
+            alert('Error al crear la gráfica');
+        });
+
+        this.getCharts();
+        this.cd.markForCheck();
+        //window.location.reload();
+        //this.router.navigateByUrl('/dashboard/' + this.projectId, {skipLocationChange: true}).then(()=>
+        //this.router.navigate(["DashboardComponent"])); 
+
+    }
 
     getDataToChart(){
         console.log("ESCUCHANDO SOCKET");

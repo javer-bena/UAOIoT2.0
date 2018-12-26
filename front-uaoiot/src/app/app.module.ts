@@ -38,9 +38,10 @@ import {TooltipModule} from 'primeng/tooltip';
 import {CheckboxModule} from 'primeng/checkbox';
 import {DialogModule} from 'primeng/dialog';
 import {MenubarModule} from 'primeng/menubar';
-import {MenuItem} from 'primeng/api';
+import {MenuModule} from 'primeng/menu';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {ChipsModule} from 'primeng/chips';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 
 import { AuthGuardService } from './services/authGuard.service';
@@ -85,6 +86,7 @@ import { TokenService } from './services/token.service';
     HttpModule,
     FormsModule,
     MenubarModule,
+    MenuModule,
     InputTextModule,
     ButtonModule,
     CardModule,
@@ -96,7 +98,8 @@ import { TokenService } from './services/token.service';
     CheckboxModule,
     DialogModule,
     AutoCompleteModule,
-    ChipsModule
+    ChipsModule,
+    RadioButtonModule
     
 
   ],

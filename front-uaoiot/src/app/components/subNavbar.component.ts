@@ -9,8 +9,8 @@ import { DashboardComponent } from './dashboard.component';
 })
 
 export class  SubNavbar{
-
     
+    public display: boolean = false;
     public typeDataChart;
     @Output() subNavbarEvent = new EventEmitter<string>();
 
@@ -22,8 +22,13 @@ export class  SubNavbar{
         this.typeDataChart ='';
     }
 
+    showDialogTypeChart(){
+        this.display = true;
+    }
+
     sendData(){
-        this.subNavbarEvent.emit('line');
+        this.subNavbarEvent.emit(this.typeDataChart);
+        this.display = false;
         //this.typeDataChart = 'line';
     }
 }

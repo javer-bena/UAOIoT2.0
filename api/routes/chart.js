@@ -8,6 +8,7 @@ api.get('/chartproject/:project',ChartController.getChartProject);
 //api.get('/deviceuser/:user', ChartController.getDashboardUser);
 api.post('/chart', ChartController.postChart);
 //api.put('device/:id',ChartController.updateDashboard);
-//api.delete('/device/:id',ChartController.deleteDashboard);
+api.delete('/chart/:project',ChartController.deleteChartByProject);
+api.delete('/chart/:id',ChartController.deleteChartById);
 
 module.exports = api;

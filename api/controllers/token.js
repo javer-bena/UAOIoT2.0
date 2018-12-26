@@ -33,9 +33,10 @@ function getTokenUser(req,res){
         }else{
             if(!token){
                 res.status(404).send({ message: "Este usuario no existe"});
-            }else if(device.length == 0){
+            }else if(token.length == 0){
                 res.status(200).send({ message: "Este usuario no tiene token"});
             }else{
+                console.log(token);
                 res.status(200).send({ token });
             }
         }

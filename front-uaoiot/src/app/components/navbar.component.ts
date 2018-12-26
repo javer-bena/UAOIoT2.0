@@ -3,7 +3,8 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { UserLoginService } from '../services/userLogin.service';
 import { UserLogin } from '../models/userLogin';
-import { MenuItem } from '../../../node_modules/primeng/api';
+import {MenuItem} from 'primeng/api';
+import { TokenService } from '../services/token.service';
 
 
 @Component({
@@ -14,15 +15,19 @@ import { MenuItem } from '../../../node_modules/primeng/api';
 
 export class NavbarComponent{
 
+    public display:boolean = false;
+    public displayLogout:boolean = false;
     public isLogged:boolean;
     public userNameFromLogin:String;
     public stringUserName:String;
+    public tokenString:String;
     public userLogged:UserLogin;
-    public items:MenuItem[];
+    public itemsProfile: MenuItem[];
 
     constructor(
         private authService: AuthService,
         private userLoginService: UserLoginService,
+        private tokenService: TokenService,
         private router: Router
     ){}
 
@@ -36,21 +41,31 @@ export class NavbarComponent{
             this.stringUserName = 'perfil';
         }
 
+        this.itemsProfile = [
+                {label: "Credenciales", command: (onclick)=>{this.showCredentials()}},
+                {label: "Cerrar sesión", command: (onclick)=>(this.displayLogout = true)}];
         
     }
 
-    getInfo(){
-
-        //this.stringUserName = userProfile.name;   
-        this.userLoginService.getUserByUserName(this.userNameFromLogin).subscribe(data =>{
-            var msj = data.message;
-            alert(msj.password);
-        },error =>{
-            var errorMsj = <any>error;
-            console.log('Error en la busqueda' + errorMsj);
-        });
+    showCredentials(){
+        this.getInfo();
+        this.display = true;
 
     }
+    getInfo(){
+        this.tokenService.getTokenByUser(this.userNameFromLogin).subscribe(data =>{
+            var token = data.token[0];
+            this.tokenString = token.value;
+        },Error=>{
+
+        });
+    }
+    
+    copyToClipboard(element) {
+        alert(element.value);
+        
+    }
+
     getUserName(){
 
         if(localStorage.getItem('user') != null){
@@ -65,7 +80,9 @@ export class NavbarComponent{
 
     }
 
-    onLogout(){
+    
+    logout(){
+        this.displayLogout = false;
         this.authService.logout();
         this.router.navigate(['/login']);
         return false;

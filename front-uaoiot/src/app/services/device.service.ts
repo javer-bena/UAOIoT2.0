@@ -31,4 +31,12 @@ export class DeviceService{
         return this._http.post(this.url + 'api/device', json, {headers: headers})
         .map(res => res.json());
     }
+
+    deleteDevice(idDevice){
+        return this._http.delete(this.url + 'api/device/' + idDevice).map(res => res.json());
+    }
+
+    deleteDevicetByProject(project){
+        return this._http.delete(this.url + 'api/device' + project).map(res => res.json());
+    }
 }

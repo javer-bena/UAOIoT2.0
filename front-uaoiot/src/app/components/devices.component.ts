@@ -13,12 +13,14 @@ import { Device } from '../models/device';
 export class DevicesComponent{
 
     public userDevice:String;
+    public idProject:String;
     public nameProject:String;
     public nameDevice:String;
     public display:boolean;
+    public displayDelete:boolean;
     public filteredProject:String;
     public filteredProjectsArray = [];
-    
+    public idDeviceToDelete:String;
     public deviceObj:Device;
     public variablesArray = [];
     public projectsArray = [];
@@ -61,10 +63,32 @@ export class DevicesComponent{
             if(project.toLowerCase().indexOf(event.query.toLowerCase()) == 0){
 
                 this.filteredProjectsArray.push(project);
+                
                 //this.nameProject = this.filteredProjectsArray[i];
             
             }
         }
+
+    }
+
+    showDialogDeleteDevice(index){
+        this.idDeviceToDelete = this.devicesArray[index].id;
+        this.displayDelete = true;
+    }
+
+    deleteDevice(){
+        this.deviceService.deleteDevice(this.idDeviceToDelete).subscribe(data =>{
+            this.displayDelete = false;
+            alert("Dispositivo eliminado exitosamente");
+            this.getAllDevices(this.userDevice);
+
+        },Error=>{
+            this.displayDelete = false;
+            alert("Error al eliminar el dispositivo." + Error);
+        })
+        
+        
+        
     }
 
     /**
@@ -73,7 +97,7 @@ export class DevicesComponent{
      * @param user 
      * @param project 
      */
-    addDevice(name:String, user:String, project:String,variables){
+    addDevice(name:String, user:String, project:String,projectId:String, variables){
 
         if(name === "" || user === "" || project === ""){
             alert("faltan datos");
@@ -83,6 +107,7 @@ export class DevicesComponent{
                 name: name,
                 user: user,
                 project: project,
+                projectId:projectId,
                 variables: variables
             };
 
@@ -106,13 +131,14 @@ export class DevicesComponent{
 
         this.devicesArray = [];
 
-        this.deviceService.getDeviceByUserName(this.userDevice).subscribe(data =>{
+        this.deviceService.getDeviceByUserName(userName).subscribe(data =>{
 
             var datasArray = data.device;
 
             for (let datas in datasArray){
                 
-                var deviceObj = new Device(datasArray[datas].name, datasArray[datas].user, datasArray[datas].project, datasArray[datas].variables);
+                var deviceObj = new Device(datasArray[datas]._id,datasArray[datas].name, datasArray[datas].user, datasArray[datas].project,
+                    datasArray[datas].projectId, datasArray[datas].variables);
                 //var deviceObj = new Device(datasArray[datas].name, datasArray[datas].user, datasArray[datas].project, datasArray[datas].variables);
                 this.devicesArray.push(deviceObj);
                 console.log("DEVICE: " + datasArray[datas].project);
@@ -154,13 +180,28 @@ export class DevicesComponent{
             this.userDevice = '';
         }
 
-        this.addDevice(this.nameDevice,this.userDevice,this.nameProject,this.variablesArray);
+        var encodeStringName = this.nameProject.split(' ').join('%20');
+
+        this.projectService.getProjectByName(encodeStringName).subscribe(data =>{
+            this.idProject =  data.project[0]._id;
+
+            //alert(this.idProject + ' ' + encodeStringName);
+            this.addDevice(this.nameDevice,this.userDevice,this.nameProject,this.idProject,this.variablesArray);
+
+        },Error=>{});
+        
+        
+        //this.addDevice(this.nameDevice,this.userDevice,this.nameProject,this.variablesArray);
         
 
     }
 
 
     showDialogAddDevice(){
+        
+        this.nameProject = '';
+        this.nameDevice = '';
+        this.variablesArray = [];
         this.display = true;
     }
 }

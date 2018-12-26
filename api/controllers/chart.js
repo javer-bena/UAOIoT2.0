@@ -56,7 +56,47 @@ function postChart(req, res){
     });
 }
 
+function deleteChartByProject(req,res){
+
+    var project = req.params.project;
+
+    Chart.find({project: project},req.body,(err, chart) =>{
+        if(err){
+            res.status(500).send({ message: "Error"});
+        }else if(!chart){
+            res.status(404).send({ message: "No existe"});
+        }else{
+            Chart.remove((err) =>{
+                if(err){
+                    res.status(500).send({ message: "Error al eliminar"});
+                }else{
+                    res.status(200).send({ message: "Chart eliminada"});
+                }
+            });  
+        }
+    });
+}
+
+function deleteChartById(req,res){
+
+    var chartId = req.params.id;
+
+    Chart.findByIdAndRemove({_id: chartId},req.body,(err,chart)=>{
+        if(err){
+            res.status(500).send({ message: "Error"});
+
+        }else if(!chart){
+            res.status(404).send({ message: "No existe"});
+
+        }else if(!err){
+            res.status(200).send({ message: "Chart eliminada"});
+        }
+    });
+}
+
 module.exports = {
     getChartProject,
-    postChart
+    postChart,
+    deleteChartByProject,
+    deleteChartById
 }

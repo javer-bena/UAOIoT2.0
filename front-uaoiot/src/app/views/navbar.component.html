@@ -1,6 +1,31 @@
-<p-dialog>
+<!--DIALOG CREDENCIALES-->
+<p-dialog header="Tus credenciales" [(visible)]="display"  [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+[width]="600" [minWidth]="500">
+    <span class="credential-title">Token</span>
+    <input #token  id="disabled-input" value={{tokenString}} type="text" size="60" pInputText [disabled]="true" />
+    <button type="button" (click)="copyToClipboard(token)" pButton icon="pi pi-copy" style="font-size: 1em"></button>
+    
+    <p></p>
+
+    <span class="credential-title">Usuario</span>
+    <input id="disabled-input" value={{userNameFromLogin}} type="text" size="59" pInputText [disabled]="true" />
+    <button type="button" (click)="toggleDisabled()" pButton icon="pi pi-copy" style="font-size: 1em"></button>
 
 </p-dialog>
+
+<!--DIALOG CERRAR SESIÓN-->
+<p-dialog header="Cerrar sesión" [(visible)]="displayLogout" [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+[width]="400" [minWidth]="300" >
+
+    <p>¿Estás seguro que deseas cerrar sesión?</p>
+    
+    <p-footer>
+        <a class="btn-flat blue-text" (click)="logout()">Si</a>
+        <a class="btn-flat blue-text" (click)="displayLogout=false" >No</a>
+    </p-footer>
+
+</p-dialog>
+
 
 <nav>
     <div id="nav-elements">
@@ -29,7 +54,13 @@
                 </li>
         
                 <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-                    <a [routerLink]="['/profile']">{{ stringUserName }}</a>
+                    <!-- <a (click)="showCredentials()">{{ stringUserName }}</a>-->
+
+                    <p-menu #menu [popup]="true" [model]="itemsProfile"></p-menu>
+                    <a (click)="menu.toggle($event)">{{ stringUserName }}</a>
+
+                    
+
                 </li>
             </ul>            
 
@@ -63,7 +94,10 @@
                 <ul>
                         
                     <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-                        <a  [routerLink]="['/profile']"> {{getUserName()}}</a>
+                        <!--<a (click)="showCredentials()"> {{getUserName()}}</a>-->
+
+                        <p-menu #menu [popup]="true" [model]="itemsProfile"></p-menu>
+                        <a  (click)="menu.toggle($event)"> {{ stringUserName }}</a>
                         <!--<a (click)="getInfo()" [routerLink]="['/profile']"> {{getUserName()}}</a>-_>
                     </li>
 

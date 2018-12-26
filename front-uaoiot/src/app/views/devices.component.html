@@ -32,9 +32,6 @@
     </div>
 </div>
     
-
-    
-    
     <p-footer>
         <a class="btn-flat red-text" (click)="display=false">CANCELAR</a>
         <a class="btn-flat blue-text" (click)="getDeviceData()">CREAR</a>
@@ -42,34 +39,52 @@
 
 </p-dialog>
 
+<!--DELETE DIALOG-->
+<p-dialog header="Eliminar dispositivo" [(visible)]="displayDelete" [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+[width]="400" [minWidth]="300" >
+
+    <p>¿Estás seguro que deseas eliminar este dispositivo?</p>
+    
+    <p-footer>
+        <a class="btn-flat blue-text" (click)="displayDelete=false" >No</a>
+        <a class="btn-flat blue-text" (click)="deleteDevice()">Si</a>
+    </p-footer>
+
+</p-dialog>
+
+
 <!--*ngFor="let device of devicessArray"-->
 <div id="devices-div">
     <div class="row">
-        <div *ngFor="let device of devicesArray" class="col s4">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">{{device.name}}</span>
+        <div *ngFor="let device of devicesArray; let i = index" class="col s4">
+            <div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{{device.name}}</span>
 
-                    <p>Dispositivo asociado al proyecto <span id="project-span">{{device.project}}</span></p>
-                    
-                    <div id="variables-div">
-                        <p>Variables asociadas</p>
-                        <div id="variables-chips" *ngFor="let variable of device.variables, let i = index">
-                            
-                            <div class="chip">
-                                <span>{{device.variables[i]}}</span>
+                        <p>Dispositivo asociado al proyecto <span id="project-span">{{device.project}}</span></p>
+                        
+                        <div id="variables-div">
+                            <p>Variables asociadas</p>
+                            <div id="variables-chips" *ngFor="let variable of device.variables, let i = index">
+                                
+                                <div class="chip">
+                                    <span>{{device.variables[i]}}</span>
+                                </div>
                             </div>
                         </div>
+                        
+                        
                     </div>
-                    
-                    
-                </div>
-
-                <div class="card-action right-align">
-                    <a pTooltip="Editar" tooltipPosition="bottom"><i class="material-icons">create</i></a>
-                    <a pTooltip="Eliminar" tooltipPosition="bottom"><i class="material-icons">delete</i></a>
+    
+                    <div class="card-action right-align">
+                        <a pTooltip="Editar" tooltipPosition="bottom"><i class="material-icons">create</i></a>
+                        <a pTooltip="Eliminar" tooltipPosition="bottom" (click)="showDialogDeleteDevice(i)"><i class="material-icons">delete</i></a>
+                    </div>
                 </div>
             </div>
+            
+            
         </div>
 
         <div>

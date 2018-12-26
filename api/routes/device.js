@@ -10,6 +10,7 @@ api.get('/deviceuser/:user', DeviceController.getDeviceUser);
 api.get('/deviceproject/:project', DeviceController.getDeviceProject);
 api.post('/device', DeviceController.postDevice);
 api.put('device/:id',DeviceController.updateDevice);
-api.delete('/device/:id',DeviceController.deleteDevice);
+api.delete('/device/:id',DeviceController.deleteDeviceById);
+api.delete('/device/:projectId',DeviceController.deleteDeviceByProject);
 
 module.exports = api;

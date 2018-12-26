@@ -6,6 +6,8 @@ import { DashboardService } from '../services/dashboard.service';
 import { PermissionService } from '../services/permission.service';
 import { Router } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
+import { ChartService } from '../services/chart.service';
+import { DeviceService } from '../services/device.service';
 
 @Component({
     selector: 'project',
@@ -19,11 +21,15 @@ export class ProjectComponent{
     public nameProject:String;
     public userProject:String;
     public display:boolean;
+    public displayDelete:boolean = false;
+    public idProjectToDelete:String;
     public idProject;
 
     constructor(
         private projectService:ProjectService,
         private userLoginService: UserLoginService,
+        private chartService: ChartService,
+        private deviceService: DeviceService,
         private dashboardService: DashboardService,
         private permissionService: PermissionService,
         private router: Router){}
@@ -43,12 +49,11 @@ export class ProjectComponent{
     }
 
     goToDashboard(index){
-        
         this.router.navigate(['dashboard/' + this.projectsArray[index].id]);
     }
 
     /**
-     * 
+     * Método para obtener todos los proyectos de un usuario.
      */
     getAllProjects(userName){
         
@@ -71,7 +76,7 @@ export class ProjectComponent{
     }
 
     /**
-     * 
+     * Método para obtener los datos de un proyecto.
      */
     getProjectData(){
         if(localStorage.getItem('user') != null){
@@ -87,16 +92,39 @@ export class ProjectComponent{
 
     }
     
-    /**
-     * 
-     */
+    
     showDialogAddProject(){
         this.display = true;
     }
 
+    showDialogDeleteProject(index){
+        //alert(this.projectsArray[index].id);
+        this.idProjectToDelete = this.projectsArray[index].id
+        this.displayDelete = true;
+    }
+
     /**
-     * 
+     * Método para eliminar un proyecto y las gráficas y dispoitivos asociados.
      */
+    deleteProject(){
+        this.projectService.deleteProject(this.idProjectToDelete).subscribe(data =>{
+            
+            this.displayDelete = false;
+            alert("Proyecto eliminado exitosamente");
+            
+            this.chartService.deleteChartsByProject(this.idProjectToDelete).subscribe(data => {},Error =>{});
+            this.deviceService.deleteDevicetByProject(this.idProjectToDelete).subscribe(data => {},Error=>{}); 
+            
+            this.getAllProjects(this.userProject);
+
+        },Error=>{
+            this.displayDelete = false;
+            alert("Error al eliminar el proyecto." + Error);
+        });
+
+    }
+
+    
     addProject(name:String,user:String){
         
         //this.projectObj = new Project(name,user);
@@ -122,7 +150,7 @@ export class ProjectComponent{
 
             //alert(permission.topic);
             //this.createNewPermission(permission);
-            this.createDashboard(dashboard);
+            //this.createDashboard(dashboard);
             this.getAllProjects(user);
 
         },Error=>{
