@@ -34,6 +34,6 @@ export class ChartService{
     }
 
     deleteChartsById(chartId){
-        return this._http.delete(this.url + 'api/chart/' + chartId).map(res => res.json());
+        return this._http.delete(this.url + 'api/chartById/' + chartId).map(res => res.json());
     }
 }

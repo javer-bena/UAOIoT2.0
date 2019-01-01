@@ -157,12 +157,15 @@ export class  DashboardComponent{
 
         this.chartService.postChart(chartJson).subscribe(data=>{
             alert('Gráfica creada');
+
+            this.getCharts();
+            this.cd.markForCheck();
+            
         },Error=>{
             alert('Error al crear la gráfica');
         });
 
-        this.getCharts();
-        this.cd.markForCheck();
+        
         //window.location.reload();
         //this.router.navigateByUrl('/dashboard/' + this.projectId, {skipLocationChange: true}).then(()=>
         //this.router.navigate(["DashboardComponent"])); 

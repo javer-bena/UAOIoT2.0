@@ -70,7 +70,7 @@ function deleteChartByProject(req,res){
                 if(err){
                     res.status(500).send({ message: "Error al eliminar"});
                 }else{
-                    res.status(200).send({ message: "Chart eliminada"});
+                    res.status(200).send({ message: "Chart eliminada p"});
                 }
             });  
         }
@@ -81,7 +81,7 @@ function deleteChartById(req,res){
 
     var chartId = req.params.id;
 
-    Chart.findByIdAndRemove({_id: chartId},req.body,(err,chart)=>{
+    Chart.findByIdAndRemove({_id : chartId},req.body,(err,chart) => {
         if(err){
             res.status(500).send({ message: "Error"});
 
@@ -89,7 +89,7 @@ function deleteChartById(req,res){
             res.status(404).send({ message: "No existe"});
 
         }else if(!err){
-            res.status(200).send({ message: "Chart eliminada"});
+            res.status(200).send({ message: "Chart eliminada id", id: chart._id});
         }
     });
 }

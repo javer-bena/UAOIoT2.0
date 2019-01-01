@@ -28,6 +28,7 @@ export class ChartComponent{
     public pruebaData:string;
     public chartsData = [];
     public amountCharts;
+    public projectId; 
 
     constructor(private chartService: ChartService,
         private cd: ChangeDetectorRef){
@@ -91,10 +92,37 @@ export class ChartComponent{
         this.displayDelete = true;
     }
 
+    getAllCharts(){
+
+        this.chartService.getChartByProject("5c170ba3843ab81560300cce").subscribe(data => {
+            
+            this.charts = [];
+            var dataArray = data.chart;
+            
+            for(let data in dataArray){
+                
+                var chartObj = new Charts(dataArray[data]._id,dataArray[data].project,
+                    dataArray[data].user, dataArray[data].type, dataArray[data].datas,
+                    dataArray[data].labels, dataArray[data].title);
+                
+                    this.charts.push(chartObj);
+            }
+
+            this.setArrayChart(this.charts);
+            this.createChart(this.charts);
+
+        },Error=>{
+            alert("Error " + Error);
+        });
+    }
+
     deleteChart(){
+
         this.chartService.deleteChartsById(this.idChartToDelete).subscribe(data=>{
             this.displayDelete = false;
             alert("eliminada");
+            
+            this.getAllCharts();
             
         },Error=>{
             alert("ERROR " + Error);

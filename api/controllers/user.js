@@ -57,54 +57,62 @@ function getUsers(req, res) {
 function postUser(req, res) {
     var user = new User();
     var token = new Token();
-
     var params = req.body;
-
     user.login = params.login;
     user.password = params.password;
-    console.log("HASH USERLOGIN PASS: " + user.password);
-    
-    bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(user.password, salt, (err, hash) => {
-            if(err) throw err;
 
-            user.password = hash;
 
-            console.log("HASH USERLOGIN: " + hash);
+    User.find({ login: user.login},(err,user) => {
+        if(err){
+            res.status(500).send({ message: "Error al comprobar"});
+        }else{
+            if(user){
+                res.status(200).send({ message: 'Este usuario ya existe'});
+            }else{
 
-            let hash256 = crypto.createHash('sha256').update(new Buffer(user.password,'utf8')).digest('hex');
-            //console.log("HASH256 USER: " + hash256);
-
-            token.value = hash;
-            token.user = user.login;
+                bcrypt.genSalt(10, (err, salt) => {
+                    bcrypt.hash(user.password, salt, (err, hash) => {
+                        if(err) throw err;
             
-            user.password = hash256;
+                        user.password = hash;
             
-            user.save((err, userStored) => {
-                if (err) {
-                    res.status(500).send({ message: 'Error al guardar ' + err});
-
-                } else {
-
-                    token.save((err, tokenStored) =>{
-                        if(err){
-                            res.status(500).send({message: 'Error ' + err});
-                        }else{
-                            res.status(200).send({user: userStored, token: tokenStored});
-                        }
-
-                    });
+                        console.log("HASH USERLOGIN: " + hash);
+            
+                        let hash256 = crypto.createHash('sha256').update(new Buffer(user.password,'utf8')).digest('hex');
+                        //console.log("HASH256 USER: " + hash256);
+            
+                        token.value = hash;
+                        token.user = user.login;
+                        
+                        user.password = hash256;
+                        
+                        user.save((err, userStored) => {
+                            if (err) {
+                                res.status(500).send({ message: 'Error al guardar ' + err});
+            
+                            } else {
+            
+                                token.save((err, tokenStored) =>{
+                                    if(err){
+                                        res.status(500).send({message: 'Error ' + err});
+                                    }else{
+                                        res.status(200).send({user: userStored, token: tokenStored});
+                                    }
+            
+                                });
+                                
+                            }
                     
-                }
-        
-            });
+                        });
+                    });
+                });
 
-            
-
-        });
+            }
+        }
     });
-
-
+    //console.log("HASH USERLOGIN PASS: " + user.password);
+    
+    
     
 }
 

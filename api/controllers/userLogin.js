@@ -11,29 +11,42 @@ function postUserLogin(req,res){
     userLogin.user = params.user;
     userLogin.name = params.name;
     userLogin.password = params.password;
-
     console.log("POST USERLOGIN PASS: " + userLogin.password);
 
-    bcrypt.genSalt(10, (err, salt) =>{
-        bcrypt.hash(userLogin.password, salt, (err, hash) =>{
-            if(err) throw err;
+    UserLogin.find({user: userLogin.user},(err, userLogin) => {
 
-            userLogin.password = hash;
+        if(err){
+            res.status(500).send({ message: "Error al comprobar"});
+        }else{
+            if(userLogin){
+                res.status(200).send({ message: "Este usuario ya existe"});
+            }else{
+                
+                bcrypt.genSalt(10, (err, salt) =>{
+                    bcrypt.hash(userLogin.password, salt, (err, hash) =>{
+                        if(err) throw err;
+            
+                        userLogin.password = hash;
+            
+                        userLogin.save((err, userLoginStored) =>{
+                            if(err){
+                                res.status(500).send({ message: 'Error al guardar ' + err});
+                            }else{
+                                
+                                console.log("POST USERLOGIN: " + hash);
+                                res.status(200).send({userLogin: userLoginStored});
+                            }
+                        })
+            
+            
+                    })
+            
+                });
 
-            userLogin.save((err, userLoginStored) =>{
-                if(err){
-                    res.status(500).send({ message: 'Error al guardar ' + err});
-                }else{
-                    
-                    console.log("POST USERLOGIN: " + hash);
-                    res.status(200).send({userLogin: userLoginStored});
-                }
-            })
-
-
-        })
-
-    })
+            }
+        }
+    });
+    
 }
 
 /**

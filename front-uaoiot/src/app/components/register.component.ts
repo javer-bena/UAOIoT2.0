@@ -85,7 +85,10 @@ export class  RegisterComponent{
         })
 
         this.userService.postUser(user).subscribe(data =>{
-            alert("Usuario registrado hash:  " + user.password);
+
+            //alert("Usuario registrado hash:  " + user.password);
+            alert(data.message);
+
         },Error => {
             alert("Algo salio mal");
         });
