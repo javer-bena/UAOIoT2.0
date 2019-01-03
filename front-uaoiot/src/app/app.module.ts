@@ -42,6 +42,7 @@ import {MenuModule} from 'primeng/menu';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {ChipsModule} from 'primeng/chips';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {StepsModule} from 'primeng/steps';
 
 
 import { AuthGuardService } from './services/authGuard.service';
@@ -99,8 +100,8 @@ import { TokenService } from './services/token.service';
     DialogModule,
     AutoCompleteModule,
     ChipsModule,
-    RadioButtonModule
-    
+    RadioButtonModule,
+    StepsModule
 
   ],
   providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,

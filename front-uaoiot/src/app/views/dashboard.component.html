@@ -68,13 +68,31 @@
     
         <div class="col s4">
             <div class="card">
-                <div class="listado-msj">
+                <div id="listado-msj">
                     <h5>Listado de mensajes</h5>
-                    <ul>
+
+                    <p-table [value]="dataToChart">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Dato</th>
+                                <th>Hora</th>
+                                
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-data>
+                            <tr *ngFor="let data of dataToChart">
+                                <td>
+                                    <h6 >{{data}}</h6>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+
+                    <!--<ul>
                         <li>
                             <h6 *ngFor="let data of dataToChart">{{data}}</h6>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
         </div>

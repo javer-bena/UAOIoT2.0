@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms/src/directives';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import {SelectItem} from 'primeng/components/common/api';

@@ -92,7 +92,7 @@ io.sockets.on('connection', function(socket){
 
         optionsMqtt = {
             port: 1883,
-            host: 'mqtt://192.168.0.3',
+            host: 'mqtt://192.168.0.23',
             username: user,
             password: password,
             keepalive: 60,
@@ -104,17 +104,18 @@ io.sockets.on('connection', function(socket){
         };
     
 
-        client = mqtt.connect('mqtt://192.168.0.3',optionsMqtt);
+        client = mqtt.connect('mqtt://192.168.0.23',optionsMqtt);
     
         //SUBSCRIBIRSE AL BROKER DESPUES DE CONECTARSE AL SOCKET
-        client.subscribe("test1", function(){
+        client.subscribe("test2", function(){
             console.log('2 Subscribing to test1');
-    
+
             //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
         });
 
         client.on('message',function(topic,payload,packet){
             console.log('payload from phone: ' + payload);
+
 
             io.sockets.emit('reciveMessage',{'topic':String(topic),
                             'payload':String(payload)});

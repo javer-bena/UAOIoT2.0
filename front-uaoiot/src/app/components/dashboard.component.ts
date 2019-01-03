@@ -37,6 +37,7 @@ export class  DashboardComponent{
     public alive:boolean;
     public messageToSend;
     public dataToChart = [];
+    public lastData;
     public dataChart:String;
 
     //User data to chart
@@ -77,8 +78,10 @@ export class  DashboardComponent{
         }else{
             this.userName = '';
         }
-
-        this.socketService.sendDataMqtt('user6','test1','$2a$10$10TMIWzLv/waT621bFFeC.MuzAONgIaC7C1UTj76ROd/aKWCjqd92');
+        
+        //this.socketService.sendDataMqtt('user1','test1','123456');
+        this.socketService.sendDataMqtt('user4','test2','$2a$10$Cadv4axd9fb./MidU0aGTe72V0FV2/HQHTBtx2qkBxUPNyO52WVm.');
+        //this.socketService.sendDataMqtt('user6','test1','$2a$10$10TMIWzLv/waT621bFFeC.MuzAONgIaC7C1UTj76ROd/aKWCjqd92');
         //this.socketService.onNewMessageListen();
         this.dataToChart = [];
         
@@ -138,21 +141,22 @@ export class  DashboardComponent{
      * @param $event 
      */
     getTypeChart($event){
-        //alert($event);
+        var data = $event
 
-        this.addChart($event,'Chart 2');
+        //alert(data.type);
+        this.addChart(data);
     }
 
     
-    addChart(type:String,title:String,){
+    addChart(data){
 
         const chartJson = {
             project : this.projectId,
             user : this.userName,
-            type : type,
+            type : data.type,
             datas : [10,15,20,25,30],
             labels : ["1","2","3","4","5"],
-            title : title
+            title : data.title
         }
 
         this.chartService.postChart(chartJson).subscribe(data=>{
@@ -173,10 +177,11 @@ export class  DashboardComponent{
     }
 
     getDataToChart(){
-        console.log("ESCUCHANDO SOCKET");
+        alert("ESCUCHANDO SOCKET");
         this.socketService.onNewMessage().subscribe(data =>{
 
             this.dataToChart.push(data.payload);
+            this.lastData = this.dataToChart[this.dataToChart.length - 1];
             console.log("DATA DASHBOARD SOCKET: " + this.dataToChart);
         });
         
@@ -192,7 +197,7 @@ export class  DashboardComponent{
     /**
      */
     getLastData(timeInterval,amountData): void{
-        var obv = Observable.interval(timeInterval)
+        /*var obv = Observable.interval(timeInterval)
                             .startWith(0)
                             .takeWhile(() => this.alive)
                             .switchMap(() => this._messageService.getMessages())
@@ -231,7 +236,7 @@ export class  DashboardComponent{
                 console.log('Error en la busqueda' + errorMsj);
             }
 
-        )
+        )*/
 
     }
     

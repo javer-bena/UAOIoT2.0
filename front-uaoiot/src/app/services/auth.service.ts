@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {Http, Response, Headers} from '@angular/http';
 import { HttpModule } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { map } from 'rxjs/operators/map';
-import {Observable} from 'rxjs/Observable';
+
+import { map } from 'rxjs/operators';
+import {Observable} from 'rxjs/Rx';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { tokenNotExpired } from 'angular2-jwt';

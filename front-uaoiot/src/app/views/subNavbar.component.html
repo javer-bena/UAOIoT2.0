@@ -1,17 +1,56 @@
-<p-dialog header="Selecciona un tipo de gráfica" [(visible)]="display"  [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
-    [width]="400" [minWidth]="300">
+<!--DIALOG STEPS-->
+<p-dialog header={{titleDialog}} [(visible)]="display"  [dismissableMask]="true" [responsive]="true" showEffect="fade" [modal]="true"
+[style]="{width: '500px', height: '200px'}">
 
-    <div class="ui-g-12"><p-radioButton name="group1" value="line" label="Lineas" 
-        [(ngModel)]="typeDataChart" inputId="opt1"></p-radioButton></div>
+    <div id="config-section" >
 
-    <div class="ui-g-12"><p-radioButton name="group1" value="bar" label="Barras" 
-        [(ngModel)]="typeDataChart" inputId="opt2"></p-radioButton></div>
+        <ng-container *ngIf="activeIndex === 0; else second">
+            <div class="center-align" id="type-section" >
+                <div class="row">
+                    <div class="col s6">
+                        <p-radioButton name="group1" value="line" label="Lineas" 
+                        [(ngModel)]="dataToChart.type" inputId="opt1"></p-radioButton>
+                    </div>
+            
+                    <div class="col s6">
+                        <p-radioButton name="group1" value="bar" label="Barras" 
+                        [(ngModel)]="dataToChart.type" inputId="opt2"></p-radioButton>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
 
-        {{typeDataChart}}
+        <ng-template #second>
+            <ng-container *ngIf="activeIndex === 1; else third">
+                <input type="text" pInputText [(ngModel)]="dataToChart.title"/>
+            </ng-container>
+        </ng-template>
 
-    <p-footer>
+        <ng-template #third>
+            <ng-container *ngIf="activeIndex === 2;">
+                <h6>third</h6>
+            </ng-container>
+        </ng-template>
+
+
+    </div>
+    
+
+    <div id="step-section">
+        <div class="p-grid p-align-end vertical-container">
+            <div class="p-col">
+                <p-steps [model]="stepItems" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+            </div>
+        </div>
+    </div>
+
+        <!--{{typeDataChart}}-->
+        
+    <!--<p-footer>
         <a class="btn-flat blue-text" (click)="sendData()">CREAR</a>
-    </p-footer>
+    </p-footer>-->
+
+
 </p-dialog>
 
 <nav>
