@@ -10,26 +10,30 @@
             <div class="card" id="device-card">
 
                 <div id="listen-device-section">
-                    <span>Dispositivo escuchado:</span>
-                    <span id="add-listener-icon"><i class="material-icons add-button">add_circle</i>Agregar dispositivo</span>
-                
-                    
+
+                    <div class="row">
+                        <div class="col s6"><span>Dispositivo escuchado:</span></div>
+                        <div class="col s6"> <p-autoComplete [(ngModel)]="nameDevice" [suggestions]="filteredDevicesArray" (completeMethod)="filterProject($event)"
+                            placeholder="Nombre del dispositivo" [minLength]="1"></p-autoComplete></div>
+                    </div>
+                    <!--<span id="add-listener-icon"><i class="material-icons add-button">add_circle</i>Agregar dispositivo</span>-->       
                 </div>
 
                 <div id="listen-amount-section">
-
-                    <div class="input-field">
-                        <label for="text">Cantidad de datos</label>
-                        <input id="amount_data" type="text" pInputText class="validate">
-                    </div>
+                    
+                        <div class="row">
+                            <div class="col s6"><label for="text">Cantidad de datos:</label></div>
+                            <div class="col s6"><input id="amount_data" type="text" pInputText class="validate"></div>
+                        </div>
+                    
                 </div>
 
                 <div id="listen-delay-section">
-                    <div class="input-field">
-                        <label for="text">Frecuencia de datos (ms)</label>
-                        <input id="delay_data" type="text"pInputText class="validate right-align">
-                        
+                    <div class="row">
+                        <div class="col s6"><label for="text">Frecuencia de datos:</label></div>
+                        <div class="col s6"><input id="delay_data" type="text"pInputText class="validate right-align"></div>
                     </div>
+                    
                 </div>
 
                 <div id="listen-button-section" class="right-align">
@@ -42,22 +46,23 @@
     
         <div class="col s4">
             <div class="card" id="sender-card">
+
                 <div id="sender-device-section">
-                    <span>Dispositivo receptor:</span>
-                    <span><i class="material-icons add-button">add_circle</i>Agregar dispositivo</span>
+                    <div class="row">
+                        <div class="col s6"><span>Dispositivo receptor:</span></div>
+                        <div class="col s6"><span>Agregar dispositivo</span></div>
+                        <!--<i class="material-icons add-button">add_circle</i>-->
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div id="sender-msg-section">
-                        <div class="input-field">
-                            <label for="text">Mensaje a enviar</label>
-                            <input id="send_msg" type="text" pInputText class="validate" name="messageToSend" [(ngModel)]="messageToSend">
-                            
-                        </div>
+
+                <div id="sender-msg-section">
+                    <div class="row">
+                        <div class="col s6"><label for="text">Mensaje a enviar</label></div>
+                        <div class="col s6"><input id="send_msg" type="text" pInputText class="validate" name="messageToSend" [(ngModel)]="messageToSend"></div>
                     </div>
                 </div>
                 
-
                 <div id="send-button-section" class="right-align">
                     <a class="blue darken-1 btn-small" (click)="sendMsg()">Enviar</a>
                 </div>
@@ -67,11 +72,11 @@
         </div>
     
         <div class="col s4">
-            <div class="card">
+            <div class="card" id="msg-card">
                 <div id="listado-msj">
                     <h5>Listado de mensajes</h5>
 
-                    <p-table [value]="dataToChart">
+                    <p-table [value]="dataToChart" [scrollable]="true" scrollHeight="115px">
                         <ng-template pTemplate="header">
                             <tr>
                                 <th>Dato</th>
@@ -80,7 +85,7 @@
                             </tr>
                         </ng-template>
                         <ng-template pTemplate="body" let-data>
-                            <tr *ngFor="let data of dataToChart">
+                            <tr>
                                 <td>
                                     <h6 >{{data}}</h6>
                                 </td>
@@ -100,9 +105,9 @@
 </div>
 
 
-<div class="widgets-section">
+<!--<div class="widgets-section">
     <a type="button" id="add-button" (click)="addWidget(chart)">Agregar</a>
-</div>
+</div>-->
 
 
 <!--<canvas #charts *ngFor="let chart of charts; let i = index" id="charts">{{chart}}</canvas>-->

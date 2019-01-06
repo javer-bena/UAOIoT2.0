@@ -103,9 +103,9 @@ function getDeviceUser(req,res){
  */
 function getDeviceProject(req,res){
 
-    var deviceProject = req.params.project;
+    var deviceProject = req.params.projectId;
 
-    Device.find({project: deviceProject},['user','name','project','projectId','variables'], (err,project) =>{
+    Device.find({projectId: deviceProject},['user','name','project','projectId','variables'], (err,device) =>{
         if(err){
             res.status(500).send({message: "Error " + err});
         }else{

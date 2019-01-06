@@ -19,7 +19,7 @@ function postToken(req,res){
 }
 
 /**
- * Método para consultar los dispositivos de un usuario.
+ *
  * @param {*} req 
  * @param {*} res 
  */

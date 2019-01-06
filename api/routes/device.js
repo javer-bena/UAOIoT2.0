@@ -7,7 +7,7 @@ var api = express.Router();
 api.get('/devices', DeviceController.getDevices);
 api.get('/deviceid/:id',DeviceController.getDeviceId);
 api.get('/deviceuser/:user', DeviceController.getDeviceUser);
-api.get('/deviceproject/:project', DeviceController.getDeviceProject);
+api.get('/deviceproject/:projectId', DeviceController.getDeviceProject);
 api.post('/device', DeviceController.postDevice);
 api.put('device/:id',DeviceController.updateDevice);
 api.delete('/device/:id',DeviceController.deleteDeviceById);

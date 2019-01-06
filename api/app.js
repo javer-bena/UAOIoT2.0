@@ -105,10 +105,12 @@ io.sockets.on('connection', function(socket){
     
 
         client = mqtt.connect('mqtt://192.168.0.23',optionsMqtt);
-    
+        console.log('2 Connect to ' + topic);
         //SUBSCRIBIRSE AL BROKER DESPUES DE CONECTARSE AL SOCKET
-        client.subscribe("test2", function(){
-            console.log('2 Subscribing to test1');
+        client.subscribe(topic, function(){
+
+            
+            console.log('2 Subscribing to ' + topic);
 
             //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
         });

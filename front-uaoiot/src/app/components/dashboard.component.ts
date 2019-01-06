@@ -11,6 +11,9 @@ import { DashboardService } from '../services/dashboard.service';
 import { Router, ActivatedRoute } from '../../../node_modules/@angular/router';
 import { ChartService } from '../services/chart.service';
 import { Charts } from '../models/charts';
+import { DeviceService } from '../services/device.service';
+import { Device } from '../models/device';
+import { TokenService } from '../services/token.service';
 
 
 @Component({
@@ -37,12 +40,14 @@ export class  DashboardComponent{
     public alive:boolean;
     public messageToSend;
     public dataToChart = [];
+    public cols: any[];
     public lastData;
     public dataChart:String;
 
     //User data to chart
     public userName:String;
     public projectName:String;
+    public userToken:String;
     public projectId:String;
     public chartsArray = [];
 
@@ -51,11 +56,20 @@ export class  DashboardComponent{
     public charts = [];
     public numberOfChart:any;
 
+    public devicesArray = [];  
+    public filteredDevicesArray = [];
+    public nameDevice;
+
     parentMMessage = ["4:00 pm","5:00 pm", "6:00 pm"];
 
-    constructor(private _http:Http, private _messageService:MessageService,
-        private componentFactoryResolver: ComponentFactoryResolver, private socketService:SocketService,
-        private chartService:ChartService, private router:Router,
+    constructor(private _http:Http, 
+        private _messageService:MessageService,
+        private componentFactoryResolver: ComponentFactoryResolver, 
+        private socketService:SocketService,
+        private chartService:ChartService,
+        private deviceService:DeviceService,
+        private tokenService:TokenService,
+        private router:Router,
         private cd: ChangeDetectorRef){
 
         this.messages = [];
@@ -65,11 +79,12 @@ export class  DashboardComponent{
     
     ngOnInit(){   
 
+        this.nameDevice = '';
         let link = this.router.url;
         this.projectId = link.replace('/dashboard/','');
 
         this.getCharts();
-        
+        this.getDevices();
         //this.dataChart = this.subNavBarObj.typeDataChart;
         this.projectName = '';
         if(localStorage.getItem('user') != null){
@@ -79,10 +94,16 @@ export class  DashboardComponent{
             this.userName = '';
         }
         
+        this.getToken();
         //this.socketService.sendDataMqtt('user1','test1','123456');
-        this.socketService.sendDataMqtt('user4','test2','$2a$10$Cadv4axd9fb./MidU0aGTe72V0FV2/HQHTBtx2qkBxUPNyO52WVm.');
+        //this.socketService.sendDataMqtt('user4','test2','$2a$10$Cadv4axd9fb./MidU0aGTe72V0FV2/HQHTBtx2qkBxUPNyO52WVm.');
+        
         //this.socketService.sendDataMqtt('user6','test1','$2a$10$10TMIWzLv/waT621bFFeC.MuzAONgIaC7C1UTj76ROd/aKWCjqd92');
         //this.socketService.onNewMessageListen();
+        this.cols = [
+            { field: 'payload', header: 'Dato' }
+        ];
+
         this.dataToChart = [];
         
         //this.getLastData(2000,6);
@@ -107,7 +128,30 @@ export class  DashboardComponent{
         )*/
     }
 
-    
+    /**
+     * Enviar datos para conexión mqtt del usuario.
+     * @param user Usuario que se utiliza para la conexión mqtt.
+     * @param topic Topico para suscribirse al broker.
+     * @param token Token (Password) para la conexión.
+     */
+    sendUserDataMqtt(user,topic,token){
+        this.socketService.sendDataMqtt(user,topic,token);
+        //alert(user + " - " + topic + " - " + token);
+    }
+
+    sendDeviceListenDataMqtt(name,amount,delay){}
+
+    getToken(){
+        this.tokenService.getTokenByUser(this.userName).subscribe(data=>{
+            var resData = data.token[0];
+            this.userToken = resData.value;
+
+            this.sendUserDataMqtt(this.userName,"test2",this.userToken);
+
+        },Error=>{
+            alert("Error " + Error);
+        })
+    }
 
     getCharts(){
         this.chartService.getChartByProject(this.projectId).subscribe(data =>{
@@ -134,6 +178,43 @@ export class  DashboardComponent{
         },Error=>{
             alert(Error);
         });
+    }
+
+    /**
+     * 
+     */
+    getDevices(){
+        this.deviceService.getDeviceByProject(this.projectId).subscribe(data =>{
+
+            this.devicesArray = [];
+            var dataArray = data.device;
+
+            for(let data in dataArray){
+
+                var deviceObj = new Device(dataArray[data]._id,dataArray[data].name,
+                    dataArray[data].user,dataArray[data].project,dataArray[data].projectId, dataArray[data].variables);
+                
+                this.devicesArray.push(deviceObj);
+            }
+
+        },Error=>{
+            alert(Error); 
+        });
+    }
+
+    /**
+     * @param event
+     */
+    filterProject(event){
+        this.filteredDevicesArray = [];
+
+        for(let i = 0; i < this.devicesArray.length; i++){
+            var device = this.devicesArray[i].name;
+
+            if(device.toLowerCase().indexOf(event.query.toLowerCase()) == 0){
+                this.filteredDevicesArray.push(device);
+            }
+        }
     }
 
     /**
@@ -179,7 +260,8 @@ export class  DashboardComponent{
     getDataToChart(){
         alert("ESCUCHANDO SOCKET");
         this.socketService.onNewMessage().subscribe(data =>{
-
+            
+            var msgObj = new Message(data.payload);
             this.dataToChart.push(data.payload);
             this.lastData = this.dataToChart[this.dataToChart.length - 1];
             console.log("DATA DASHBOARD SOCKET: " + this.dataToChart);
