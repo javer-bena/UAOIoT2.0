@@ -28,7 +28,15 @@
 
         <ng-template #third>
             <ng-container *ngIf="activeIndex === 2;">
-                <h6>third</h6>
+                <div class="col s6">
+                    <p-radioButton name="group1" value="allData" label="Todos los datos" 
+                    [(ngModel)]="dataToChart.amount" inputId="opt1"></p-radioButton>
+                </div>
+            
+                <div class="col s6">
+                    <p-radioButton name="group1" value="lastData" label="Último dato" 
+                    [(ngModel)]="dataToChart.amount" inputId="opt2"></p-radioButton>
+                </div>
             </ng-container>
         </ng-template>
 

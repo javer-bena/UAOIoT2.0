@@ -29,7 +29,8 @@ export class  SubNavbar{
     ngOnInit(){
         this.dataToChart = {
             type: "",
-            title: ""
+            title: "",
+
         };
 
         this.titleDialog = "Selecciona un tipo de gráfica";
@@ -69,7 +70,8 @@ export class  SubNavbar{
                     this.activeIndex = 0;
                     this.dataToChart = {
                         type: "",
-                        title: ""
+                        title: "",
+                        amount:""
                     };
                 }
             }

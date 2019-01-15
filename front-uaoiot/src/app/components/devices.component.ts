@@ -3,6 +3,7 @@ import { DeviceService } from '../services/device.service';
 import { ProjectService } from '../services/project.service';
 import { Project } from '../models/project';
 import { Device } from '../models/device';
+import { PermissionService } from '../services/permission.service';
 
 @Component({
     selector: 'devices-view',
@@ -28,7 +29,8 @@ export class DevicesComponent{
 
     constructor(
         private deviceService: DeviceService,
-        private projectService: ProjectService
+        private projectService: ProjectService,
+        private permissionService: PermissionService
     ){}
 
     ngOnInit(){
@@ -113,6 +115,14 @@ export class DevicesComponent{
 
             this.deviceService.postDevice(device).subscribe(data =>{
                 
+                const permission = {
+                    user: user,
+                    topic: name + "_" + user,
+                    permission: 'READWRITE'
+                }
+
+                this.createNewPermission(permission);
+
                 this.getAllDevices(this.userDevice);
 
             },Error=>{
@@ -124,6 +134,14 @@ export class DevicesComponent{
         }
         
         
+    }
+
+    createNewPermission(permission){
+        this.permissionService.postPermission(permission).subscribe(data =>{
+
+        },Error=>{
+
+        });
     }
 
     getAllDevices(userName){

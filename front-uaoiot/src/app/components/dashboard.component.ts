@@ -40,6 +40,7 @@ export class  DashboardComponent{
     public alive:boolean;
     public messageToSend;
     public dataToChart = [];
+    public labelsToChart = [];
     public cols: any[];
     public lastData;
     public dataChart:String;
@@ -135,6 +136,7 @@ export class  DashboardComponent{
      * @param token Token (Password) para la conexión.
      */
     sendUserDataMqtt(user,topic,token){
+
         this.socketService.sendDataMqtt(user,topic,token);
         //alert(user + " - " + topic + " - " + token);
     }
@@ -146,7 +148,7 @@ export class  DashboardComponent{
             var resData = data.token[0];
             this.userToken = resData.value;
 
-            this.sendUserDataMqtt(this.userName,"test2",this.userToken);
+            //this.sendUserDataMqtt(this.userName,this.nameDevice + "_" + this.userName,this.userToken);
 
         },Error=>{
             alert("Error " + Error);
@@ -223,7 +225,6 @@ export class  DashboardComponent{
      */
     getTypeChart($event){
         var data = $event
-
         //alert(data.type);
         this.addChart(data);
     }
@@ -231,41 +232,65 @@ export class  DashboardComponent{
     
     addChart(data){
 
-        const chartJson = {
-            project : this.projectId,
-            user : this.userName,
-            type : data.type,
-            datas : [10,15,20,25,30],
-            labels : ["1","2","3","4","5"],
-            title : data.title
-        }
+        if(this.dataToChart.length == 0){
+            alert("No hay datos para graficar");   
 
-        this.chartService.postChart(chartJson).subscribe(data=>{
-            alert('Gráfica creada');
+        }else{
 
-            this.getCharts();
-            this.cd.markForCheck();
-            
-        },Error=>{
-            alert('Error al crear la gráfica');
-        });
+            if(data.amount === "allData"){
 
+                for (let i = 0; i < this.dataToChart.length; i++) {
+                    this.labelsToChart.push("lbl" + i);
+                }
+    
+                const chartJson = {
+                    project : this.projectId,
+                    user : this.userName,
+                    type : data.type,
+                    datas : this.dataToChart,
+                    labels : this.labelsToChart,
+                    title : data.title
+                }
         
-        //window.location.reload();
-        //this.router.navigateByUrl('/dashboard/' + this.projectId, {skipLocationChange: true}).then(()=>
-        //this.router.navigate(["DashboardComponent"])); 
+                this.chartService.postChart(chartJson).subscribe(data=>{
+                    alert('Gráfica creada');
+        
+                    this.getCharts();
+                    this.cd.markForCheck();
+                    
+                },Error=>{
+                    alert('Error al crear la gráfica');
+                });
+
+            }else{
+
+            }
+            
+        }
 
     }
 
-    getDataToChart(){
-        alert("ESCUCHANDO SOCKET");
-        this.socketService.onNewMessage().subscribe(data =>{
+    listenDevice(){
+        
+        if(this.userName == "" || this.nameDevice == "" || this.userToken == ""){
             
-            var msgObj = new Message(data.payload);
-            this.dataToChart.push(data.payload);
-            this.lastData = this.dataToChart[this.dataToChart.length - 1];
-            console.log("DATA DASHBOARD SOCKET: " + this.dataToChart);
-        });
+            alert("No es posible la conexión. Faltan datos.");
+            
+        }else{
+
+            alert("Escuchando dispositivo");
+
+            this.sendUserDataMqtt(this.userName,this.nameDevice + "_" + this.userName,this.userToken);
+
+            this.socketService.onNewMessage().subscribe(data =>{
+                
+                var msgObj = new Message(data.payload);
+                this.dataToChart.push(data.payload);
+                this.lastData = this.dataToChart[this.dataToChart.length - 1];
+                
+            });
+        }
+        
         
     }  
 
