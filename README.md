@@ -1,7 +1,6 @@
 # UAOIoT2.0
 
 #Requisitos previos
-Versión Angular (5.2.9)
 Versión Angular CLI (7.1.4)
 Versión Node (8.9.4 o superior)
 Versión Git (2.16.2)
