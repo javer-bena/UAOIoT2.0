@@ -1,0 +1,8 @@
+{"_id":{"$oid":"598f3155afe2a8172c062fba"},"login":"user1","password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"}
+{"_id":{"$oid":"598f3156afe2a8172c062fbb"},"login":"user2","password":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"}
+{"_id":{"$oid":"5b0a3d84489945c4c0b9c0d7"},"login":"user3","password":"0cd5af7ba30550668d29a2edb5150fafe9861c8d70bb05f6ccda1818a07c8287"}
+{"_id":{"$oid":"5bbab7a5d96fb322e07bf342"},"login":"user5","password":"f7620067f007a2902be217777d0e7811fadaf8c5307125d1e397b8051c9468dc","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bd66be2cbd5521718ddc52f"},"login":"user6","password":"13cbb4059eaccd1b05bd5071f32fc22bad10c3d0ed55c9e914ea56d2d36c847a","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bdfe561db8a1f248c942139"},"login":"user7","password":"7d2e567db05c6575747916d1e802980b205df563e4e95d5d79ec6465d7825706","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5be0a49f7f3af911504a61b4"},"login":"user10","password":"0bf511bfe5f71b2a50ad57a32919a035498af626e0a7998593dfe58a79bece1f","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5be0a6217f3af911504a61b8"},"login":"user4","password":"84327c6279da5d23de2fe3d31a6762090189d2eaf99c0c9b2fe4aae44c974341","__v":{"$numberInt":"0"}}

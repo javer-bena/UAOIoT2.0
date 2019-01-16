@@ -1,0 +1,524 @@
+{"_id":{"$oid":"598f3316afe2a81bc8417018"},"topic":"test1","user":"user1","payload":"Hola ","clientID":"1502556808091426b40cf8","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:55:50"}
+{"_id":{"$oid":"598f3340afe2a81bc8417019"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:32"}
+{"_id":{"$oid":"598f3342afe2a81bc841701a"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:34"}
+{"_id":{"$oid":"598f3343afe2a81bc841701b"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:35"}
+{"_id":{"$oid":"598f3344afe2a81bc841701c"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:36"}
+{"_id":{"$oid":"598f3345afe2a81bc841701d"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:37"}
+{"_id":{"$oid":"598f3345afe2a81bc841701e"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:37"}
+{"_id":{"$oid":"598f3346afe2a81bc841701f"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:38"}
+{"_id":{"$oid":"598f3346afe2a81bc8417020"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:38"}
+{"_id":{"$oid":"598f3347afe2a81bc8417021"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:39"}
+{"_id":{"$oid":"598f3348afe2a81bc8417022"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:40"}
+{"_id":{"$oid":"598f3348afe2a81bc8417023"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:40"}
+{"_id":{"$oid":"598f3351afe2a81bc8417024"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:49"}
+{"_id":{"$oid":"598f3351afe2a81bc8417025"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:49"}
+{"_id":{"$oid":"598f3352afe2a81bc8417026"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:50"}
+{"_id":{"$oid":"598f3354afe2a81bc8417027"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:52"}
+{"_id":{"$oid":"598f3354afe2a81bc8417028"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1502556832528","qos":{"$numberInt":"0"},"publicationDate":"2017-08-12 11:56:52"}
+{"_id":{"$oid":"59c2dcfbd3cc041fc43a500a"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:26:19"}
+{"_id":{"$oid":"59c2dd0bd3cc041fc43a500d"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:26:35"}
+{"_id":{"$oid":"59c2dd19d3cc041fc43a5010"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS0","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:26:49"}
+{"_id":{"$oid":"59c2dd1dd3cc041fc43a5012"},"topic":"/topic","user":null,"payload":"Hello MQTT 1","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:26:53"}
+{"_id":{"$oid":"59c2dd1dd3cc041fc43a5013"},"topic":"/topic","user":null,"payload":"Hello MQTT 2","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:26:53"}
+{"_id":{"$oid":"59c2dd20d3cc041fc43a5015"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:26:56"}
+{"_id":{"$oid":"59c2dd22d3cc041fc43a5017"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClient","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:26:58"}
+{"_id":{"$oid":"59c2dd27d3cc041fc43a501a"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:27:03"}
+{"_id":{"$oid":"59c2dd29d3cc041fc43a501c"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:05"}
+{"_id":{"$oid":"59c2dd29d3cc041fc43a501d"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:05"}
+{"_id":{"$oid":"59c2dd2cd3cc041fc43a501f"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:08"}
+{"_id":{"$oid":"59c2dd2cd3cc041fc43a5020"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:08"}
+{"_id":{"$oid":"59c2dd2ed3cc041fc43a5022"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:10"}
+{"_id":{"$oid":"59c2dd30d3cc041fc43a5024"},"topic":"topic","user":null,"payload":"Hello1","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:27:12"}
+{"_id":{"$oid":"59c2dd30d3cc041fc43a5025"},"topic":"topic","user":null,"payload":"Hello2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:27:12"}
+{"_id":{"$oid":"59c2dd33d3cc041fc43a5027"},"topic":"topic","user":null,"payload":"Hello","clientID":"publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:27:15"}
+{"_id":{"$oid":"59c2dd47d3cc041fc43a5028"},"topic":"topic","user":null,"payload":"Hello 2","clientID":"publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:27:35"}
+{"_id":{"$oid":"59c2dd4ad3cc041fc43a502a"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:38"}
+{"_id":{"$oid":"59c2dd4cd3cc041fc43a502c"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:40"}
+{"_id":{"$oid":"59c2dd4fd3cc041fc43a502e"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:43"}
+{"_id":{"$oid":"59c2dd4fd3cc041fc43a502f"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-2","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:43"}
+{"_id":{"$oid":"59c2dd4fd3cc041fc43a5030"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-3","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:43"}
+{"_id":{"$oid":"59c2dd51d3cc041fc43a5032"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:45"}
+{"_id":{"$oid":"59c2dd53d3cc041fc43a5034"},"topic":"/topic","user":null,"payload":"Hello world!!","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:47"}
+{"_id":{"$oid":"59c2dd56d3cc041fc43a5036"},"topic":"a/b","user":null,"payload":"Hello world MQTT!!","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:50"}
+{"_id":{"$oid":"59c2dd59d3cc041fc43a5038"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:27:53"}
+{"_id":{"$oid":"59c2dd5cd3cc041fc43a503a"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:27:56"}
+{"_id":{"$oid":"59c2dd5ed3cc041fc43a503c"},"topic":"a/b","user":null,"payload":"Hello world MQTT!!","clientID":"TestClient","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:27:58"}
+{"_id":{"$oid":"59c2dd63d3cc041fc43a503f"},"topic":"topic","user":null,"payload":"Hello","clientID":"clientForPublish","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:28:03"}
+{"_id":{"$oid":"59c2dd65d3cc041fc43a5041"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:28:05"}
+{"_id":{"$oid":"59c2dd67d3cc041fc43a5043"},"topic":"/topic","user":null,"payload":"Hello","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:28:07"}
+{"_id":{"$oid":"59c2dd67d3cc041fc43a5044"},"topic":"/topic","user":null,"payload":"Hello","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:28:07"}
+{"_id":{"$oid":"59c2dd6fd3cc041fc43a504a"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:28:15"}
+{"_id":{"$oid":"59c2dd71d3cc041fc43a504c"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:28:17"}
+{"_id":{"$oid":"59c2dd74d3cc041fc43a504e"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:28:20"}
+{"_id":{"$oid":"59c2dd76d3cc041fc43a5050"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:28:22"}
+{"_id":{"$oid":"59c2dd78d3cc041fc43a5052"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:28:24"}
+{"_id":{"$oid":"59c2dd7bd3cc041fc43a5054"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS0","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:28:27"}
+{"_id":{"$oid":"59c2dd7dd3cc041fc43a5056"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS0","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:28:29"}
+{"_id":{"$oid":"59c2ddc9d3cc0416e002b47a"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:29:45"}
+{"_id":{"$oid":"59c2ddd9d3cc0416e002b47d"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS0","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:01"}
+{"_id":{"$oid":"59c2dde8d3cc0416e002b480"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:16"}
+{"_id":{"$oid":"59c2ddecd3cc0416e002b482"},"topic":"/topic","user":null,"payload":"Hello MQTT 1","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:30:20"}
+{"_id":{"$oid":"59c2ddedd3cc0416e002b483"},"topic":"/topic","user":null,"payload":"Hello MQTT 2","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:30:21"}
+{"_id":{"$oid":"59c2ddefd3cc0416e002b485"},"topic":"topic","user":null,"payload":"Hello1","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:23"}
+{"_id":{"$oid":"59c2ddefd3cc0416e002b486"},"topic":"topic","user":null,"payload":"Hello2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:23"}
+{"_id":{"$oid":"59c2ddf2d3cc0416e002b488"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:26"}
+{"_id":{"$oid":"59c2ddf2d3cc0416e002b489"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:26"}
+{"_id":{"$oid":"59c2ddf4d3cc0416e002b48b"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:30:28"}
+{"_id":{"$oid":"59c2ddf6d3cc0416e002b48d"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:30"}
+{"_id":{"$oid":"59c2ddf6d3cc0416e002b48e"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:30"}
+{"_id":{"$oid":"59c2ddf9d3cc0416e002b490"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:33"}
+{"_id":{"$oid":"59c2ddfed3cc0416e002b493"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClient","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:30:38"}
+{"_id":{"$oid":"59c2de00d3cc0416e002b495"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:40"}
+{"_id":{"$oid":"59c2de02d3cc0416e002b497"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:42"}
+{"_id":{"$oid":"59c2de05d3cc0416e002b499"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:30:45"}
+{"_id":{"$oid":"59c2de07d3cc0416e002b49b"},"topic":"a/b","user":null,"payload":"Hello world MQTT!!","clientID":"TestClient","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:47"}
+{"_id":{"$oid":"59c2de0cd3cc0416e002b49e"},"topic":"topic","user":null,"payload":"Hello","clientID":"clientForPublish","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:30:52"}
+{"_id":{"$oid":"59c2de0ed3cc0416e002b4a0"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:30:54"}
+{"_id":{"$oid":"59c2de11d3cc0416e002b4a2"},"topic":"a/b","user":null,"payload":"Hello world MQTT!!","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:30:57"}
+{"_id":{"$oid":"59c2de14d3cc0416e002b4a4"},"topic":"/topic","user":null,"payload":"Hello","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:00"}
+{"_id":{"$oid":"59c2de14d3cc0416e002b4a5"},"topic":"/topic","user":null,"payload":"Hello","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:00"}
+{"_id":{"$oid":"59c2de16d3cc0416e002b4a7"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:02"}
+{"_id":{"$oid":"59c2de19d3cc0416e002b4a9"},"topic":"/topic","user":null,"payload":"Test my payload","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:05"}
+{"_id":{"$oid":"59c2de1bd3cc0416e002b4ab"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:07"}
+{"_id":{"$oid":"59c2de1bd3cc0416e002b4ac"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-2","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:07"}
+{"_id":{"$oid":"59c2de1bd3cc0416e002b4ad"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!-3","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:07"}
+{"_id":{"$oid":"59c2de1ed3cc0416e002b4af"},"topic":"/topic","user":null,"payload":"Hello MQTT","clientID":"TestClientPUB","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:10"}
+{"_id":{"$oid":"59c2de20d3cc0416e002b4b1"},"topic":"topic","user":null,"payload":"Hello","clientID":"publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:31:12"}
+{"_id":{"$oid":"59c2de34d3cc0416e002b4b2"},"topic":"topic","user":null,"payload":"Hello 2","clientID":"publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:31:32"}
+{"_id":{"$oid":"59c2de37d3cc0416e002b4b4"},"topic":"/topic","user":null,"payload":"Hello world!!","clientID":"TestClient","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:35"}
+{"_id":{"$oid":"59c2de39d3cc0416e002b4b6"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:31:37"}
+{"_id":{"$oid":"59c2de3cd3cc0416e002b4b8"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:40"}
+{"_id":{"$oid":"59c2de3ed3cc0416e002b4ba"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:31:42"}
+{"_id":{"$oid":"59c2de40d3cc0416e002b4bc"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS0","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:44"}
+{"_id":{"$oid":"59c2de43d3cc0416e002b4be"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:47"}
+{"_id":{"$oid":"59c2de45d3cc0416e002b4c0"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:49"}
+{"_id":{"$oid":"59c2de47d3cc0416e002b4c2"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS0","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:31:51"}
+{"_id":{"$oid":"59c2de4ad3cc0416e002b4c4"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS2","clientID":"Publisher","qos":{"$numberInt":"2"},"publicationDate":"2017-09-20 16:31:54"}
+{"_id":{"$oid":"59c2de4cd3cc0416e002b4c6"},"topic":"/topic","user":null,"payload":"Hello world MQTT QoS1","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:31:56"}
+{"_id":{"$oid":"59c2de56d3cc0416e002b4cb"},"topic":"/topic","user":null,"payload":"message","clientID":"secondTestClient","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:32:06"}
+{"_id":{"$oid":"59c2de5ed3cc0416e002b4cf"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:32:14"}
+{"_id":{"$oid":"59c2de63d3cc0416e002b4d2"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:32:19"}
+{"_id":{"$oid":"59c2de67d3cc0416e002b4d4"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!","clientID":"SubPub","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:23"}
+{"_id":{"$oid":"59c2de69d3cc0416e002b4d6"},"topic":"/topic","user":null,"payload":"Hello world MQTT!!","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:25"}
+{"_id":{"$oid":"59c2de6ed3cc0416e002b4dd"},"topic":"/news","user":null,"payload":"Hello","clientID":"Publisher","qos":{"$numberInt":"1"},"publicationDate":"2017-09-20 16:32:30"}
+{"_id":{"$oid":"59c2de6ed3cc0416e002b4de"},"topic":"/news","user":null,"payload":"Hello","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:30"}
+{"_id":{"$oid":"59c2de6ed3cc0416e002b4e0"},"topic":"/topic","user":null,"payload":"Hello","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:30"}
+{"_id":{"$oid":"59c2de6fd3cc0416e002b4e4"},"topic":"/news","user":"FakeCLI","payload":"Hello","clientID":"FAKE_123","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:31"}
+{"_id":{"$oid":"59c2de6fd3cc0416e002b4e7"},"topic":"/news","user":null,"payload":"Hello","clientID":"Publisher","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:31"}
+{"_id":{"$oid":"59c2de70d3cc0416e002b4ec"},"topic":"/news","user":"FakeCLI","payload":"Hello","clientID":"FAKE_123","qos":{"$numberInt":"0"},"publicationDate":"2017-09-20 16:32:32"}
+{"_id":{"$oid":"59c66fa06cda8e180c63dae2"},"topic":"test2","user":"user2","payload":"ogf","clientID":"prueba1506176885521","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:28:48"}
+{"_id":{"$oid":"59c66fa36cda8e180c63dae3"},"topic":"test2","user":"user2","payload":"on","clientID":"prueba1506176885521","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:28:51"}
+{"_id":{"$oid":"59c66fc26cda8e180c63dae4"},"topic":"test2","user":"user2","payload":"ogf","clientID":"prueba1506176885521","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:29:22"}
+{"_id":{"$oid":"59c66fc46cda8e180c63dae5"},"topic":"test2","user":"user2","payload":"on","clientID":"prueba1506176885521","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:29:24"}
+{"_id":{"$oid":"59c670016cda8e180c63dae6"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1506177015845","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:25"}
+{"_id":{"$oid":"59c670026cda8e180c63dae7"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1506176884237","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:26"}
+{"_id":{"$oid":"59c670036cda8e180c63dae8"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1506177015845","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:27"}
+{"_id":{"$oid":"59c670046cda8e180c63dae9"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1506177015845","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:28"}
+{"_id":{"$oid":"59c670066cda8e180c63daea"},"topic":"test1","user":"user1","payload":"ogf","clientID":"prueba1506177015845","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:30"}
+{"_id":{"$oid":"59c670066cda8e180c63daeb"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1506177015845","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:30"}
+{"_id":{"$oid":"59c6700a6cda8e180c63daec"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1506176884237","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:34"}
+{"_id":{"$oid":"59c6700e6cda8e180c63daed"},"topic":"test1","user":"user1","payload":"on","clientID":"prueba1506176884237","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:38"}
+{"_id":{"$oid":"59c670136cda8e180c63daee"},"topic":"test1","user":"user1","payload":"Hola","clientID":"prueba1506176884237","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:30:43"}
+{"_id":{"$oid":"59c6717b6cda8e180c63daef"},"topic":"test1","user":"user1","payload":"Hello","clientID":"prueba1506177391245","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:36:43"}
+{"_id":{"$oid":"59c671a56cda8e180c63daf0"},"topic":"test1","user":"user1","payload":"Hehdjdje","clientID":"prueba1506177391245","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:37:25"}
+{"_id":{"$oid":"59c672636cda8e180c63daf1"},"topic":"test1","user":"user1","payload":"Hehdjdje","clientID":"prueba1506177391245","qos":{"$numberInt":"0"},"publicationDate":"2017-09-23 09:40:35"}
+{"_id":{"$oid":"5a653d2c8630901f5cd7c759"},"topic":"test1","user":"user1","payload":"Hola ","clientID":"1516584190206426b40cf8","qos":{"$numberInt":"0"},"publicationDate":"2018-01-21 20:23:56"}
+{"_id":{"$oid":"5acabb80d7cb0d23c8a9399a"},"topic":"test1","user":"user1","payload":"Prueba front","clientID":"1523235624284bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-08 20:01:52"}
+{"_id":{"$oid":"5add2d9f2012a72090cfcb87"},"topic":"test1","user":"user1","payload":"Galaxy j7 prime","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 19:49:35"}
+{"_id":{"$oid":"5add2eea2012a72090cfcb88"},"topic":"test1","user":"user1","payload":"Mensaje angular","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 19:55:06"}
+{"_id":{"$oid":"5add2f032012a72090cfcb89"},"topic":"test1","user":"user1","payload":"Mensaje prueba","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 19:55:31"}
+{"_id":{"$oid":"5add2f042012a72090cfcb8a"},"topic":"test1","user":"user1","payload":"Mensaje prueba","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 19:55:32"}
+{"_id":{"$oid":"5add2f0b2012a72090cfcb8b"},"topic":"test1","user":"user1","payload":"Mensaje prueba 2","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 19:55:39"}
+{"_id":{"$oid":"5add30622012a72090cfcb8c"},"topic":"test1","user":"user1","payload":"Mensaje prueba 3","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 20:01:22"}
+{"_id":{"$oid":"5add306b2012a72090cfcb8d"},"topic":"test1","user":"user1","payload":"Mensaje prueba 4","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 20:01:31"}
+{"_id":{"$oid":"5add306c2012a72090cfcb8e"},"topic":"test1","user":"user1","payload":"Mensaje prueba 4","clientID":"1524443029033bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-04-22 20:01:32"}
+{"_id":{"$oid":"5b0a3f06cbe91f0d4cada3ba"},"topic":"test3","user":"user3","payload":"1233","clientID":"1527397870401bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-05-27 00:15:49"}
+{"_id":{"$oid":"5b0a3f19cbe91f0d4cada3bb"},"topic":"test3","user":"user3","payload":"14","clientID":"1527397870401bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-05-27 00:16:09"}
+{"_id":{"$oid":"5ba7fa75ef0929196428b9ef"},"topic":"test1","user":"user1","payload":"14","clientID":"1537735143596bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-23 15:41:25"}
+{"_id":{"$oid":"5ba7fa76ef0929196428b9f0"},"topic":"test1","user":"user1","payload":"14","clientID":"1537735143596bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-23 15:41:26"}
+{"_id":{"$oid":"5ba7fd7cef0929196428b9f1"},"topic":"test1","user":"user1","payload":"10","clientID":"1537735341945bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-23 15:54:20"}
+{"_id":{"$oid":"5bad91ceabc3b22a84bb4924"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_be436997","qos":{"$numberInt":"0"},"publicationDate":"2018-09-27 21:28:30"}
+{"_id":{"$oid":"5bad91faabc3b22a84bb4925"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_be436997","qos":{"$numberInt":"0"},"publicationDate":"2018-09-27 21:29:14"}
+{"_id":{"$oid":"5bad9216abc3b22a84bb4926"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_be436997","qos":{"$numberInt":"0"},"publicationDate":"2018-09-27 21:29:42"}
+{"_id":{"$oid":"5bafa2bf07170c1ab48c33a6"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_d29d98dc","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 11:05:19"}
+{"_id":{"$oid":"5bb02013b44f9801b899eb94"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_b4f71c3c","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:00:03"}
+{"_id":{"$oid":"5bb020bcb44f9801b899eb95"},"topic":"test1","user":"user1","payload":"12","clientID":"1538269336370bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:02:52"}
+{"_id":{"$oid":"5bb020fdb44f9801b899eb96"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_3a6b9acb","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:03:57"}
+{"_id":{"$oid":"5bb02101b44f9801b899eb97"},"topic":"test1","user":"user1","payload":"12","clientID":"1538269336370bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:04:01"}
+{"_id":{"$oid":"5bb02107b44f9801b899eb98"},"topic":"test1","user":"user1","payload":"17","clientID":"1538269336370bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:04:07"}
+{"_id":{"$oid":"5bb0213eb44f9801b899eb99"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_f908a856","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:05:02"}
+{"_id":{"$oid":"5bb02140b44f9801b899eb9a"},"topic":"test1","user":"user1","payload":"18","clientID":"1538269336370bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:05:04"}
+{"_id":{"$oid":"5bb021fdb44f9801b899eb9b"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_b727da82","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:08:13"}
+{"_id":{"$oid":"5bb022f0b44f9801b899eb9c"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_9d06d291","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:12:16"}
+{"_id":{"$oid":"5bb02320b44f9801b899eb9d"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_f83a38b5","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:13:04"}
+{"_id":{"$oid":"5bb02347b44f9801b899eb9e"},"topic":"test1","user":"user1","payload":"5","clientID":"1538269993519bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:13:43"}
+{"_id":{"$oid":"5bb0235cb44f9801b899eb9f"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_01f6a297","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:14:04"}
+{"_id":{"$oid":"5bb023d7b44f9801b899eba0"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_cfe8d37d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:16:07"}
+{"_id":{"$oid":"5bb023ddb44f9801b899eba1"},"topic":"test1","user":"user1","payload":"5","clientID":"1538269993519bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:16:13"}
+{"_id":{"$oid":"5bb023f0b44f9801b899eba2"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_b2aae8d0","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:16:32"}
+{"_id":{"$oid":"5bb023f0b44f9801b899eba3"},"topic":"test1","user":"user1","payload":"5","clientID":"1538269993519bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:16:32"}
+{"_id":{"$oid":"5bb023f3b44f9801b899eba4"},"topic":"test1","user":"user1","payload":"5","clientID":"1538269993519bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:16:35"}
+{"_id":{"$oid":"5bb023f7b44f9801b899eba5"},"topic":"test1","user":"user1","payload":"81i3","clientID":"1538269993519bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:16:39"}
+{"_id":{"$oid":"5bb02461b44f9801b899eba6"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_c76af0a4","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:18:25"}
+{"_id":{"$oid":"5bb025d5b44f9801b899eba7"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_c76af0a4","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:24:37"}
+{"_id":{"$oid":"5bb0266eb44f9801b899eba8"},"topic":"test1","user":"user1","payload":"167","clientID":"1538270797457bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:27:10"}
+{"_id":{"$oid":"5bb026d7b44f9801b899eba9"},"topic":"test1","user":"user1","payload":"16","clientID":"1538270797457bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:28:55"}
+{"_id":{"$oid":"5bb027b2b44f9801b899ebaa"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_ce759a98","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:32:34"}
+{"_id":{"$oid":"5bb027b9b44f9801b899ebab"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_ce759a98","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:32:41"}
+{"_id":{"$oid":"5bb02918b44f9801b899ebac"},"topic":"test1","user":"user1","payload":"78","clientID":"1538270934394bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:38:32"}
+{"_id":{"$oid":"5bb02927b44f9801b899ebad"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_8a7abb39","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:38:47"}
+{"_id":{"$oid":"5bb02991b44f9801b899ebae"},"topic":"test1","user":"user1","payload":"76","clientID":"1538270934394bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:40:33"}
+{"_id":{"$oid":"5bb0299ab44f9801b899ebaf"},"topic":"test1","user":"user1","payload":"15","clientID":"mqttjs_08014a2a","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:40:42"}
+{"_id":{"$oid":"5bb029d6b44f9801b899ebb0"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_8cacfe28","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:41:42"}
+{"_id":{"$oid":"5bb029eab44f9801b899ebb1"},"topic":"test1","user":"user1","payload":"75","clientID":"1538270934394bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:42:02"}
+{"_id":{"$oid":"5bb02a2eb44f9801b899ebb2"},"topic":"test1","user":"user1","payload":"7345","clientID":"1538270934394bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:43:10"}
+{"_id":{"$oid":"5bb02a33b44f9801b899ebb3"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_4edd808b","qos":{"$numberInt":"0"},"publicationDate":"2018-09-29 20:43:15"}
+{"_id":{"$oid":"5bb12935955f9226345fe72b"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_cb8b6a94","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 14:51:17"}
+{"_id":{"$oid":"5bb12ad9955f9226345fe72c"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_59c3c036","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 14:58:17"}
+{"_id":{"$oid":"5bb12d47955f9226345fe72d"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_85899c8d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:08:39"}
+{"_id":{"$oid":"5bb12d7a955f9226345fe72e"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_85899c8d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:09:30"}
+{"_id":{"$oid":"5bb12dae955f9226345fe72f"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_020a350b","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:10:22"}
+{"_id":{"$oid":"5bb12eb7955f9226345fe730"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_020a350b","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:14:47"}
+{"_id":{"$oid":"5bb12fac955f9226345fe731"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_9c78ff90","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:18:52"}
+{"_id":{"$oid":"5bb1313a955f9226345fe732"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_9c78ff90","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:25:30"}
+{"_id":{"$oid":"5bb1314c955f9226345fe733"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_68da505a","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:25:48"}
+{"_id":{"$oid":"5bb131b7955f9226345fe734"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_0867cebc","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:27:35"}
+{"_id":{"$oid":"5bb131cd955f9226345fe735"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_3c141b80","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 15:27:57"}
+{"_id":{"$oid":"5bb13cfb955f9226345fe736"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_8dc0e250","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:15:39"}
+{"_id":{"$oid":"5bb13f07955f9226345fe737"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_86ad8015","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:24:23"}
+{"_id":{"$oid":"5bb13f3e955f9226345fe738"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_c6d78783","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:25:18"}
+{"_id":{"$oid":"5bb13f6a955f9226345fe739"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_c6d78783","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:26:02"}
+{"_id":{"$oid":"5bb13fe2955f9226345fe73a"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_434a63ee","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:28:02"}
+{"_id":{"$oid":"5bb1403a955f9226345fe73b"},"topic":"test1","user":"user1","payload":"13","clientID":"mqttjs_434a63ee","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:29:30"}
+{"_id":{"$oid":"5bb14120955f9226345fe73c"},"topic":"test1","user":"user1","payload":"","clientID":"mqttjs_434a63ee","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:33:20"}
+{"_id":{"$oid":"5bb14171955f9226345fe73d"},"topic":"test1","user":"user1","payload":"","clientID":"mqttjs_d079e28e","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:34:41"}
+{"_id":{"$oid":"5bb141a0955f9226345fe73e"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_d079e28e","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:35:28"}
+{"_id":{"$oid":"5bb141ee955f9226345fe73f"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_6598c101","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:36:46"}
+{"_id":{"$oid":"5bb14223955f9226345fe740"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_28aeb949","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:37:39"}
+{"_id":{"$oid":"5bb14294955f9226345fe741"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_28aeb949","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:39:32"}
+{"_id":{"$oid":"5bb14295955f9226345fe742"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_28aeb949","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:39:33"}
+{"_id":{"$oid":"5bb14296955f9226345fe743"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_28aeb949","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:39:34"}
+{"_id":{"$oid":"5bb14297955f9226345fe744"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_28aeb949","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:39:35"}
+{"_id":{"$oid":"5bb142d7955f9226345fe745"},"topic":"test1","user":"user1","payload":"1737","clientID":"1538343601375bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 16:40:39"}
+{"_id":{"$oid":"5bb14ba4955f92057818a4c5"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_c75f9963","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:18:12"}
+{"_id":{"$oid":"5bb14bca955f92057818a4c6"},"topic":"test1","user":"user1","payload":"134","clientID":"1538345639312bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:18:50"}
+{"_id":{"$oid":"5bb14bf7955f92057818a4c7"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_c75f9963","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:19:35"}
+{"_id":{"$oid":"5bb14ded955f92057818a4c8"},"topic":"test1","user":"user1","payload":"76","clientID":"1538345639312bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:27:57"}
+{"_id":{"$oid":"5bb14e20955f92057818a4c9"},"topic":"test1","user":"user1","payload":"76","clientID":"1538345639312bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:28:48"}
+{"_id":{"$oid":"5bb14e22955f92057818a4ca"},"topic":"test1","user":"user1","payload":"76","clientID":"1538345639312bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:28:50"}
+{"_id":{"$oid":"5bb14e25955f92057818a4cb"},"topic":"test1","user":"user1","payload":"756","clientID":"1538345639312bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:28:53"}
+{"_id":{"$oid":"5bb14e2d955f92057818a4cc"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_d0435219","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:29:01"}
+{"_id":{"$oid":"5bb14e45955f92057818a4cd"},"topic":"test1","user":"user1","payload":"8ueue","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:29:25"}
+{"_id":{"$oid":"5bb14e92955f92057818a4ce"},"topic":"test1","user":"user1","payload":"898","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:30:42"}
+{"_id":{"$oid":"5bb14e99955f92057818a4cf"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_d0435219","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:30:49"}
+{"_id":{"$oid":"5bb1504f955f92057818a4d0"},"topic":"test1","user":"user1","payload":"73773","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:38:07"}
+{"_id":{"$oid":"5bb1506e955f92057818a4d1"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_6d5e5ca5","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:38:38"}
+{"_id":{"$oid":"5bb1507a955f92057818a4d2"},"topic":"test1","user":"user1","payload":"73773","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:38:50"}
+{"_id":{"$oid":"5bb15087955f92057818a4d3"},"topic":"test1","user":"user1","payload":"56","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:39:03"}
+{"_id":{"$oid":"5bb150af955f92057818a4d4"},"topic":"test1","user":"user1","payload":"78","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:39:43"}
+{"_id":{"$oid":"5bb150be955f92057818a4d5"},"topic":"test1","user":"user1","payload":"78","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:39:58"}
+{"_id":{"$oid":"5bb150c1955f92057818a4d6"},"topic":"test1","user":"user1","payload":"78","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:40:01"}
+{"_id":{"$oid":"5bb150e8955f92057818a4d7"},"topic":"test1","user":"user1","payload":"79","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:40:40"}
+{"_id":{"$oid":"5bb150f3955f92057818a4d8"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_b5df9604","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:40:51"}
+{"_id":{"$oid":"5bb150f8955f92057818a4d9"},"topic":"test1","user":"user1","payload":"79","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:40:56"}
+{"_id":{"$oid":"5bb15147955f92057818a4da"},"topic":"test1","user":"user1","payload":"76","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:42:15"}
+{"_id":{"$oid":"5bb1514d955f92057818a4db"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_9a4a0a6d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:42:21"}
+{"_id":{"$oid":"5bb15154955f92057818a4dc"},"topic":"test1","user":"user1","payload":"76","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:42:28"}
+{"_id":{"$oid":"5bb151a5955f92057818a4dd"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_9a4a0a6d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:43:49"}
+{"_id":{"$oid":"5bb151b8955f92057818a4de"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_9a4a0a6d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:44:08"}
+{"_id":{"$oid":"5bb151b9955f92057818a4df"},"topic":"test1","user":"user1","payload":"74","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:44:09"}
+{"_id":{"$oid":"5bb151b9955f92057818a4e0"},"topic":"test1","user":"user1","payload":"74","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:44:09"}
+{"_id":{"$oid":"5bb151c2955f92057818a4e1"},"topic":"test1","user":"user1","payload":"74","clientID":"1538346530816bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:44:18"}
+{"_id":{"$oid":"5bb151db955f92057818a4e2"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_9a4a0a6d","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:44:43"}
+{"_id":{"$oid":"5bb15220955f92057818a4e3"},"topic":"test1","user":"user1","payload":"67","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:45:52"}
+{"_id":{"$oid":"5bb15276955f92057818a4e4"},"topic":"test1","user":"user1","payload":"67","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:47:18"}
+{"_id":{"$oid":"5bb152d5955f92057818a4e5"},"topic":"test1","user":"user1","payload":"67","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:48:53"}
+{"_id":{"$oid":"5bb152dc955f92057818a4e6"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_642851a6","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:49:00"}
+{"_id":{"$oid":"5bb152e9955f92057818a4e7"},"topic":"test1","user":"user1","payload":"67","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:49:13"}
+{"_id":{"$oid":"5bb15334955f92057818a4e8"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_642851a6","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:50:28"}
+{"_id":{"$oid":"5bb153c2955f92057818a4e9"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_45c9d3f8","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:52:50"}
+{"_id":{"$oid":"5bb153d3955f92057818a4ea"},"topic":"test1","user":"user1","payload":"3","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:53:07"}
+{"_id":{"$oid":"5bb153d9955f92057818a4eb"},"topic":"test1","user":"user1","payload":"678","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:53:13"}
+{"_id":{"$oid":"5bb154d2955f92057818a4ec"},"topic":"test1","user":"user1","payload":"678","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:57:22"}
+{"_id":{"$oid":"5bb154d7955f92057818a4ed"},"topic":"test1","user":"user1","payload":"10","clientID":"mqttjs_f22843aa","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:57:27"}
+{"_id":{"$oid":"5bb154e0955f92057818a4ee"},"topic":"test1","user":"user1","payload":"86","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:57:36"}
+{"_id":{"$oid":"5bb154e9955f92057818a4ef"},"topic":"test1","user":"user1","payload":"23","clientID":"1538347497104bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-09-30 17:57:45"}
+{"_id":{"$oid":"5bba5e3cef09291c0ccf9163"},"topic":"test1","user":"user1","payload":"148","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:27:56"}
+{"_id":{"$oid":"5bba5e70ef09291c0ccf9164"},"topic":"test1","user":"user1","payload":"1","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:28:48"}
+{"_id":{"$oid":"5bba5e72ef09291c0ccf9165"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:28:50"}
+{"_id":{"$oid":"5bba5e74ef09291c0ccf9166"},"topic":"test1","user":"user1","payload":"1","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:28:52"}
+{"_id":{"$oid":"5bba5e76ef09291c0ccf9167"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:28:54"}
+{"_id":{"$oid":"5bba5e7bef09291c0ccf9168"},"topic":"test1","user":"user1","payload":"1","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:28:59"}
+{"_id":{"$oid":"5bba5e7def09291c0ccf9169"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1538940405345","qos":{"$numberInt":"0"},"publicationDate":"2018-10-07 14:29:01"}
+{"_id":{"$oid":"5bcd33d083ff7213f014c980"},"topic":"test1","user":"user1","payload":"1","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:20:00"}
+{"_id":{"$oid":"5bcd33f783ff7213f014c981"},"topic":"test1","user":"user1","payload":"1","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:20:39"}
+{"_id":{"$oid":"5bcd342e83ff7213f014c982"},"topic":"test1","user":"user1","payload":"45","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:21:34"}
+{"_id":{"$oid":"5bcd34e383ff7213f014c983"},"topic":"test1","user":"user1","payload":"12","clientID":"mqttjs_4397e68f","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:24:35"}
+{"_id":{"$oid":"5bcd34fe83ff7213f014c984"},"topic":"test1","user":"user1","payload":"455","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:25:02"}
+{"_id":{"$oid":"5bcd352583ff7213f014c985"},"topic":"test1","user":"user1","payload":"4","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:25:41"}
+{"_id":{"$oid":"5bcd353083ff7213f014c986"},"topic":"test1","user":"user1","payload":"46","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:25:52"}
+{"_id":{"$oid":"5bcd353583ff7213f014c987"},"topic":"test1","user":"user1","payload":"5","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:25:57"}
+{"_id":{"$oid":"5bcd353e83ff7213f014c988"},"topic":"test1","user":"user1","payload":"78","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:26:06"}
+{"_id":{"$oid":"5bcd35dc83ff7213f014c989"},"topic":"test1","user":"user1","payload":"77","clientID":"1540174335646bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:28:44"}
+{"_id":{"$oid":"5bcd35e883ff7213f014c98a"},"topic":"test1","user":"user1","payload":"6","clientID":"mqttjs_bf2b655e","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:28:56"}
+{"_id":{"$oid":"5bcd365883ff7213f014c98b"},"topic":"test1","user":"user1","payload":"6","clientID":"mqttjs_10a1308e","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:30:48"}
+{"_id":{"$oid":"5bcd383583ff7213f014c98c"},"topic":"test1","user":"user1","payload":"64","clientID":"mqttjs_306767aa","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:38:45"}
+{"_id":{"$oid":"5bcd3a1d83ff7213f014c98d"},"topic":"test1","user":"user1","payload":"8","clientID":"mqttjs_cce5be63","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:46:53"}
+{"_id":{"$oid":"5bcd3a6083ff7213f014c98e"},"topic":"test1","user":"user1","payload":"887","clientID":"mqttjs_3a24d471","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:48:00"}
+{"_id":{"$oid":"5bcd3ae783ff7213f014c98f"},"topic":"test1","user":"user1","payload":"67","clientID":"1540176561366bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:50:15"}
+{"_id":{"$oid":"5bcd3afd83ff7213f014c990"},"topic":"test1","user":"user1","payload":"6","clientID":"1540176561366bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:50:37"}
+{"_id":{"$oid":"5bcd3b0c83ff7213f014c991"},"topic":"test1","user":"user1","payload":"6888","clientID":"1540176561366bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:50:52"}
+{"_id":{"$oid":"5bcd3b1583ff7213f014c992"},"topic":"test1","user":"user1","payload":"6","clientID":"1540176561366bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 21:51:01"}
+{"_id":{"$oid":"5bcd45ed83ff72187cb1e745"},"topic":"test1","user":"user1","payload":"34","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:37:17"}
+{"_id":{"$oid":"5bcd461683ff72187cb1e746"},"topic":"test1","user":"user1","payload":"7","clientID":"mqttjs_a11c610b","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:37:58"}
+{"_id":{"$oid":"5bcd462283ff72187cb1e747"},"topic":"test1","user":"user1","payload":"34","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:38:10"}
+{"_id":{"$oid":"5bcd477a83ff72187cb1e748"},"topic":"test1","user":"user1","payload":"3","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:43:54"}
+{"_id":{"$oid":"5bcd47ea83ff72187cb1e749"},"topic":"test1","user":"user1","payload":"3","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:45:46"}
+{"_id":{"$oid":"5bcd480883ff72187cb1e74a"},"topic":"test1","user":"user1","payload":"4","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:46:16"}
+{"_id":{"$oid":"5bcd480b83ff72187cb1e74b"},"topic":"test1","user":"user1","payload":"47","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:46:19"}
+{"_id":{"$oid":"5bcd480d83ff72187cb1e74c"},"topic":"test1","user":"user1","payload":"4799","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:46:21"}
+{"_id":{"$oid":"5bcd48f383ff72187cb1e74d"},"topic":"test1","user":"user1","payload":"47","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:50:11"}
+{"_id":{"$oid":"5bcd48f983ff72187cb1e74e"},"topic":"test1","user":"user1","payload":"47","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:50:17"}
+{"_id":{"$oid":"5bcd4afd83ff72187cb1e74f"},"topic":"test1","user":"user1","payload":"6","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 22:58:53"}
+{"_id":{"$oid":"5bcd4bd583ff72187cb1e750"},"topic":"test1","user":"user1","payload":"7","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:02:29"}
+{"_id":{"$oid":"5bcd4bf083ff72187cb1e751"},"topic":"test1","user":"user1","payload":"8","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:02:56"}
+{"_id":{"$oid":"5bcd4d9a83ff72187cb1e752"},"topic":"test1","user":"user1","payload":"u","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:10:02"}
+{"_id":{"$oid":"5bcd4da083ff72187cb1e753"},"topic":"test1","user":"user1","payload":"5","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:10:08"}
+{"_id":{"$oid":"5bcd4deb83ff72187cb1e754"},"topic":"test1","user":"user1","payload":"5","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:11:23"}
+{"_id":{"$oid":"5bcd55a583ff72187cb1e755"},"topic":"test1","user":"user1","payload":"7","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:44:21"}
+{"_id":{"$oid":"5bcd55e683ff72187cb1e756"},"topic":"test1","user":"user1","payload":"7","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:45:26"}
+{"_id":{"$oid":"5bcd55eb83ff72187cb1e757"},"topic":"test1","user":"user1","payload":"9","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:45:31"}
+{"_id":{"$oid":"5bcd562283ff72187cb1e758"},"topic":"test1","user":"user1","payload":"0","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:46:26"}
+{"_id":{"$oid":"5bcd562683ff72187cb1e759"},"topic":"test1","user":"user1","payload":"67","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:46:30"}
+{"_id":{"$oid":"5bcd562a83ff72187cb1e75a"},"topic":"test1","user":"user1","payload":"2","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:46:34"}
+{"_id":{"$oid":"5bcd571d83ff72187cb1e75b"},"topic":"test1","user":"user1","payload":"7","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:50:37"}
+{"_id":{"$oid":"5bcd572783ff72187cb1e75c"},"topic":"test1","user":"user1","payload":"78","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:50:47"}
+{"_id":{"$oid":"5bcd572c83ff72187cb1e75d"},"topic":"test1","user":"user1","payload":"9","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:50:52"}
+{"_id":{"$oid":"5bcd57d683ff72187cb1e75e"},"topic":"test1","user":"user1","payload":"97","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:53:42"}
+{"_id":{"$oid":"5bcd58a283ff72187cb1e75f"},"topic":"test1","user":"user1","payload":"5","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:57:06"}
+{"_id":{"$oid":"5bcd58a883ff72187cb1e760"},"topic":"test1","user":"user1","payload":"57","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-21 23:57:12"}
+{"_id":{"$oid":"5bcd5a2783ff72187cb1e761"},"topic":"test1","user":"user1","payload":"57","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:03:35"}
+{"_id":{"$oid":"5bcd5a3183ff72187cb1e762"},"topic":"test1","user":"user1","payload":"59","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:03:45"}
+{"_id":{"$oid":"5bcd5b0d83ff72187cb1e763"},"topic":"test1","user":"user1","payload":"59","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:25"}
+{"_id":{"$oid":"5bcd5b1483ff72187cb1e764"},"topic":"test1","user":"user1","payload":"5","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:32"}
+{"_id":{"$oid":"5bcd5b1783ff72187cb1e765"},"topic":"test1","user":"user1","payload":"9","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:35"}
+{"_id":{"$oid":"5bcd5b2183ff72187cb1e766"},"topic":"test1","user":"user1","payload":"98","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:45"}
+{"_id":{"$oid":"5bcd5b2583ff72187cb1e767"},"topic":"test1","user":"user1","payload":"986","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:49"}
+{"_id":{"$oid":"5bcd5b2983ff72187cb1e768"},"topic":"test1","user":"user1","payload":"0","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:53"}
+{"_id":{"$oid":"5bcd5b2c83ff72187cb1e769"},"topic":"test1","user":"user1","payload":"062","clientID":"1540178684369bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:07:56"}
+{"_id":{"$oid":"5bcd5f1283ff72187cb1e76a"},"topic":"test1","user":"user1","payload":"7","clientID":"mqttjs_02597cff","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:24:34"}
+{"_id":{"$oid":"5bcd5f5d83ff72187cb1e76b"},"topic":"test1","user":"user1","payload":"6","clientID":"1540185892327bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:25:49"}
+{"_id":{"$oid":"5bcd5f6383ff72187cb1e76c"},"topic":"test1","user":"user1","payload":"68","clientID":"1540185892327bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:25:55"}
+{"_id":{"$oid":"5bcd5f6a83ff72187cb1e76d"},"topic":"test1","user":"user1","payload":"79","clientID":"mqttjs_02597cff","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:26:02"}
+{"_id":{"$oid":"5bcd5fb583ff72187cb1e76e"},"topic":"test1","user":"user1","payload":"79","clientID":"mqttjs_bc823e09","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:27:17"}
+{"_id":{"$oid":"5bcd5fc783ff72187cb1e76f"},"topic":"test1","user":"user1","payload":"790","clientID":"mqttjs_bc823e09","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:27:35"}
+{"_id":{"$oid":"5bcd603283ff72187cb1e770"},"topic":"test1","user":"user1","payload":"68","clientID":"1540185892327bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:29:22"}
+{"_id":{"$oid":"5bcd603f83ff72187cb1e771"},"topic":"test1","user":"user1","payload":"790","clientID":"mqttjs_bc823e09","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:29:35"}
+{"_id":{"$oid":"5bcd614583ff72187cb1e772"},"topic":"test1","user":"user1","payload":"98","clientID":"mqttjs_bc823e09","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:33:57"}
+{"_id":{"$oid":"5bcd616583ff72187cb1e773"},"topic":"test1","user":"user1","payload":"98","clientID":"mqttjs_bc823e09","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 00:34:29"}
+{"_id":{"$oid":"5bce77fba67d6c214cf52586"},"topic":"test1","user":"user1","payload":"7","clientID":"mqttjs_35b5d110","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:23:07"}
+{"_id":{"$oid":"5bce796ba67d6c214cf52587"},"topic":"test1","user":"user1","payload":"78","clientID":"mqttjs_35b5d110","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:29:15"}
+{"_id":{"$oid":"5bce7988a67d6c214cf52588"},"topic":"test1","user":"user1","payload":"67","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:29:44"}
+{"_id":{"$oid":"5bce7990a67d6c214cf52589"},"topic":"test1","user":"user1","payload":"67","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:29:52"}
+{"_id":{"$oid":"5bce7996a67d6c214cf5258a"},"topic":"test1","user":"user1","payload":"676","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:29:58"}
+{"_id":{"$oid":"5bce79c6a67d6c214cf5258b"},"topic":"test1","user":"user1","payload":"676","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:30:46"}
+{"_id":{"$oid":"5bce79fea67d6c214cf5258c"},"topic":"test1","user":"user1","payload":"89","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:31:42"}
+{"_id":{"$oid":"5bce7a59a67d6c214cf5258d"},"topic":"test1","user":"user1","payload":"89","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:33:13"}
+{"_id":{"$oid":"5bce7a5ea67d6c214cf5258e"},"topic":"test1","user":"user1","payload":"7","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:33:18"}
+{"_id":{"$oid":"5bce7b85a67d6c214cf5258f"},"topic":"test1","user":"user1","payload":"77","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:38:13"}
+{"_id":{"$oid":"5bce7b8aa67d6c214cf52590"},"topic":"test1","user":"user1","payload":"77","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:38:18"}
+{"_id":{"$oid":"5bce7b96a67d6c214cf52591"},"topic":"test1","user":"user1","payload":"89","clientID":"mqttjs_77651f8b","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:38:30"}
+{"_id":{"$oid":"5bce7bada67d6c214cf52592"},"topic":"test1","user":"user1","payload":"8","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:38:53"}
+{"_id":{"$oid":"5bce7bd3a67d6c214cf52593"},"topic":"test1","user":"user1","payload":"3","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:39:31"}
+{"_id":{"$oid":"5bce7bd8a67d6c214cf52594"},"topic":"test1","user":"user1","payload":"89","clientID":"mqttjs_9e50b089","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:39:36"}
+{"_id":{"$oid":"5bce7c32a67d6c214cf52595"},"topic":"test1","user":"user1","payload":"34","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:41:06"}
+{"_id":{"$oid":"5bce7c39a67d6c214cf52596"},"topic":"test1","user":"user1","payload":"87","clientID":"mqttjs_3f5655ab","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:41:13"}
+{"_id":{"$oid":"5bce7cdca67d6c214cf52597"},"topic":"test1","user":"user1","payload":"343","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:43:56"}
+{"_id":{"$oid":"5bce7ce9a67d6c214cf52598"},"topic":"test1","user":"user1","payload":"12","clientID":"mqttjs_b5d29572","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:44:09"}
+{"_id":{"$oid":"5bce7e79a67d6c214cf52599"},"topic":"test1","user":"user1","payload":"12","clientID":"mqttjs_d2eedcc6","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:50:49"}
+{"_id":{"$oid":"5bce7ec8a67d6c214cf5259a"},"topic":"test1","user":"user1","payload":"send56","clientID":"mqttjs_d2eedcc6","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:52:08"}
+{"_id":{"$oid":"5bce7ed5a67d6c214cf5259b"},"topic":"test1","user":"user1","payload":"send57","clientID":"mqttjs_d2eedcc6","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:52:21"}
+{"_id":{"$oid":"5bce7edea67d6c214cf5259c"},"topic":"test1","user":"user1","payload":"send59","clientID":"mqttjs_d2eedcc6","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:52:30"}
+{"_id":{"$oid":"5bce7f4ea67d6c214cf5259d"},"topic":"test1","user":"user1","payload":"send55","clientID":"mqttjs_169e8fcb","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 20:54:22"}
+{"_id":{"$oid":"5bce80d3a67d6c214cf5259e"},"topic":"test1","user":"user1","payload":"68","clientID":"mqttjs_befe3cb5","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:00:51"}
+{"_id":{"$oid":"5bce80e0a67d6c214cf5259f"},"topic":"test1","user":"user1","payload":"64","clientID":"mqttjs_befe3cb5","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:01:04"}
+{"_id":{"$oid":"5bce80f0a67d6c214cf525a0"},"topic":"test1","user":"user1","payload":"64","clientID":"mqttjs_befe3cb5","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:01:20"}
+{"_id":{"$oid":"5bce82b0a67d6c214cf525a1"},"topic":"test1","user":"user1","payload":"54","clientID":"mqttjs_df4e75c3","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:08:48"}
+{"_id":{"$oid":"5bce82c3a67d6c214cf525a2"},"topic":"test1","user":"user1","payload":"6","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:09:07"}
+{"_id":{"$oid":"5bce831ea67d6c214cf525a3"},"topic":"test1","user":"user1","payload":"7","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:10:38"}
+{"_id":{"$oid":"5bce832ca67d6c214cf525a4"},"topic":"test1","user":"user1","payload":"8","clientID":"mqttjs_14438fca","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:10:52"}
+{"_id":{"$oid":"5bce833ba67d6c214cf525a5"},"topic":"test1","user":"user1","payload":"90","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:11:07"}
+{"_id":{"$oid":"5bce8345a67d6c214cf525a6"},"topic":"test1","user":"user1","payload":"97","clientID":"mqttjs_14438fca","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:11:17"}
+{"_id":{"$oid":"5bce838fa67d6c214cf525a7"},"topic":"test1","user":"user1","payload":"90","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:12:31"}
+{"_id":{"$oid":"5bce8396a67d6c214cf525a8"},"topic":"test1","user":"user1","payload":"9","clientID":"mqttjs_4be31883","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:12:38"}
+{"_id":{"$oid":"5bce8409a67d6c214cf525a9"},"topic":"test1","user":"user1","payload":"90","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:14:33"}
+{"_id":{"$oid":"5bce840da67d6c214cf525aa"},"topic":"test1","user":"user1","payload":"9","clientID":"mqttjs_e5b41cd0","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:14:37"}
+{"_id":{"$oid":"5bce84c4a67d6c214cf525ab"},"topic":"test1","user":"user1","payload":"45","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:17:40"}
+{"_id":{"$oid":"5bce84daa67d6c214cf525ac"},"topic":"test2","user":"user1","payload":"78","clientID":"mqttjs_2d13b3a2","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:18:02"}
+{"_id":{"$oid":"5bce850ca67d6c214cf525ad"},"topic":"test1","user":"user1","payload":"45","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:18:52"}
+{"_id":{"$oid":"5bce8513a67d6c214cf525ae"},"topic":"test1","user":"user1","payload":"45\n\n\n\n\n\n6","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:18:59"}
+{"_id":{"$oid":"5bce851aa67d6c214cf525af"},"topic":"test1","user":"user1","payload":"78","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:19:06"}
+{"_id":{"$oid":"5bce8535a67d6c214cf525b0"},"topic":"test1","user":"user1","payload":"78","clientID":"1540256992565bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:19:33"}
+{"_id":{"$oid":"5bce853fa67d6c214cf525b1"},"topic":"test2","user":"user1","payload":"89","clientID":"mqttjs_97587bfd","qos":{"$numberInt":"0"},"publicationDate":"2018-10-22 21:19:43"}
+{"_id":{"$oid":"5bd3208aabc3b21eacd3f4cf"},"topic":"test2","user":"user1","payload":"10","clientID":"mqttjs_93bd6097","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:11:22"}
+{"_id":{"$oid":"5bd3230babc3b21eacd3f4d0"},"topic":"test2","user":"user1","payload":"67","clientID":"mqttjs_93bd6097","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:22:03"}
+{"_id":{"$oid":"5bd32339abc3b21eacd3f4d1"},"topic":"test2","user":"user1","payload":"80","clientID":"mqttjs_93bd6097","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:22:49"}
+{"_id":{"$oid":"5bd3246eabc3b21eacd3f4d2"},"topic":"test2","user":"user1","payload":"187","clientID":"mqttjs_93bd6097","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:27:58"}
+{"_id":{"$oid":"5bd324b6abc3b21eacd3f4d3"},"topic":"test2","user":"user1","payload":"77","clientID":"mqttjs_93bd6097","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:29:10"}
+{"_id":{"$oid":"5bd324c4abc3b21eacd3f4d4"},"topic":"test2","user":"user1","payload":"45432","clientID":"mqttjs_93bd6097","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:29:24"}
+{"_id":{"$oid":"5bd32913abc3b22598fd05c6"},"topic":"test2","user":"user1","payload":"5644324","clientID":"mqttjs_e46834e7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:47:47"}
+{"_id":{"$oid":"5bd32be0abc3b22598fd05c7"},"topic":"test2","user":"user1","payload":"4665","clientID":"mqttjs_e46834e7","qos":{"$numberInt":"0"},"publicationDate":"2018-10-26 09:59:44"}
+{"_id":{"$oid":"5bde51a4ad5a991b7c6923f8"},"topic":"test1","user":"user1","payload":"1","clientID":"phoneivan1541296497167","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:55:48"}
+{"_id":{"$oid":"5bde51a7ad5a991b7c6923f9"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1541296497167","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:55:51"}
+{"_id":{"$oid":"5bde51b1ad5a991b7c6923fa"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1541296497167","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:56:01"}
+{"_id":{"$oid":"5bde51b8ad5a991b7c6923fb"},"topic":"test1","user":"user1","payload":"67","clientID":"phoneivan1541296497167","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:56:08"}
+{"_id":{"$oid":"5bde51ccad5a991b7c6923fc"},"topic":"test1","user":"user1","payload":"67","clientID":"phoneivan1541296497167","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:56:28"}
+{"_id":{"$oid":"5bde51ddad5a991b7c6923fd"},"topic":"test1","user":"user1","payload":"678","clientID":"phoneivan1541296497167","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:56:45"}
+{"_id":{"$oid":"5bde5269ad5a991b7c6923fe"},"topic":"test1","user":"user1","payload":"678","clientID":"phoneivan1541296717198","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:59:05"}
+{"_id":{"$oid":"5bde5270ad5a991b7c6923ff"},"topic":"test1","user":"user1","payload":"1","clientID":"phoneivan1541296717198","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:59:12"}
+{"_id":{"$oid":"5bde5272ad5a991b7c692400"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1541296717198","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:59:14"}
+{"_id":{"$oid":"5bde527aad5a991b7c692401"},"topic":"test1","user":"user1","payload":"73","clientID":"phoneivan1541296717198","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 20:59:22"}
+{"_id":{"$oid":"5bde52b8ad5a991b7c692402"},"topic":"test1","user":"user1","payload":"65","clientID":"1541292606665bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-03 21:00:24"}
+{"_id":{"$oid":"5be766002e8d131d4cb06d4e"},"topic":"test1","user":"user4","payload":"67","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:13:04"}
+{"_id":{"$oid":"5be766c92e8d131d4cb06d4f"},"topic":"test1","user":"user6","payload":"90","clientID":"mqttjs_ef8819dd","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:16:25"}
+{"_id":{"$oid":"5be766d92e8d131d4cb06d50"},"topic":"test1","user":"user4","payload":"78","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:16:41"}
+{"_id":{"$oid":"5be767012e8d131d4cb06d51"},"topic":"test1","user":"user4","payload":"6","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:17:21"}
+{"_id":{"$oid":"5be767052e8d131d4cb06d52"},"topic":"test1","user":"user4","payload":"67","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:17:25"}
+{"_id":{"$oid":"5be767222e8d131d4cb06d53"},"topic":"test1","user":"user4","payload":"67","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:17:54"}
+{"_id":{"$oid":"5be767b02e8d131d4cb06d54"},"topic":"test1","user":"user4","payload":"4","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:20:16"}
+{"_id":{"$oid":"5be767d42e8d131d4cb06d55"},"topic":"test1","user":"user4","payload":"47","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:20:52"}
+{"_id":{"$oid":"5be767e22e8d131d4cb06d56"},"topic":"test1","user":"user4","payload":"7","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:06"}
+{"_id":{"$oid":"5be767e62e8d131d4cb06d57"},"topic":"test1","user":"user4","payload":"78","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:10"}
+{"_id":{"$oid":"5be767e92e8d131d4cb06d58"},"topic":"test1","user":"user4","payload":"788","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:13"}
+{"_id":{"$oid":"5be767ee2e8d131d4cb06d59"},"topic":"test1","user":"user4","payload":"1","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:18"}
+{"_id":{"$oid":"5be767f92e8d131d4cb06d5a"},"topic":"test1","user":"user4","payload":"14","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:29"}
+{"_id":{"$oid":"5be768012e8d131d4cb06d5b"},"topic":"test1","user":"user4","payload":"14","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:37"}
+{"_id":{"$oid":"5be768032e8d131d4cb06d5c"},"topic":"test1","user":"user4","payload":"14","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:21:39"}
+{"_id":{"$oid":"5be7682c2e8d131d4cb06d5d"},"topic":"test1","user":"user4","payload":"6","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:22:20"}
+{"_id":{"$oid":"5be768cd2e8d131d4cb06d5e"},"topic":"test1","user":"user4","payload":"4","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:01"}
+{"_id":{"$oid":"5be768d02e8d131d4cb06d5f"},"topic":"test1","user":"user4","payload":"4","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:04"}
+{"_id":{"$oid":"5be768d42e8d131d4cb06d60"},"topic":"test1","user":"user4","payload":"47","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:08"}
+{"_id":{"$oid":"5be768e62e8d131d4cb06d61"},"topic":"test1","user":"user4","payload":"47","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:26"}
+{"_id":{"$oid":"5be768e92e8d131d4cb06d62"},"topic":"test1","user":"user4","payload":"8","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:29"}
+{"_id":{"$oid":"5be768ed2e8d131d4cb06d63"},"topic":"test1","user":"user4","payload":"9012","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:33"}
+{"_id":{"$oid":"5be768f32e8d131d4cb06d64"},"topic":"test1","user":"user4","payload":"7","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:25:39"}
+{"_id":{"$oid":"5be769112e8d131d4cb06d65"},"topic":"test1","user":"user4","payload":"7","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:26:09"}
+{"_id":{"$oid":"5be769152e8d131d4cb06d66"},"topic":"test1","user":"user4","payload":"78","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:26:13"}
+{"_id":{"$oid":"5be7692f2e8d131d4cb06d67"},"topic":"test1","user":"user4","payload":"1","clientID":"1541891538819bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2018-11-10 18:26:39"}
+{"_id":{"$oid":"5c2afb45f6cbf802dc4fea22"},"topic":"test1","user":"user1","payload":"[1,23,45,56,98,]","clientID":"1546320640073bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:31:49"}
+{"_id":{"$oid":"5c2afb59f6cbf802dc4fea23"},"topic":"test1","user":"user1","payload":"[1,23,45,56,98,78,98,08]","clientID":"1546320640073bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:32:09"}
+{"_id":{"$oid":"5c2afbbcf6cbf802dc4fea24"},"topic":"test1","user":"user1","payload":"temp","clientID":"phoneivan1546320746149","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:33:48"}
+{"_id":{"$oid":"5c2afbbef6cbf802dc4fea25"},"topic":"test1","user":"user1","payload":"hum","clientID":"phoneivan1546320746149","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:33:50"}
+{"_id":{"$oid":"5c2afbbff6cbf802dc4fea26"},"topic":"test1","user":"user1","payload":"calor","clientID":"phoneivan1546320746149","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:33:51"}
+{"_id":{"$oid":"5c2afbc8f6cbf802dc4fea27"},"topic":"test1","user":"user1","payload":"1","clientID":"phoneivan1546320746149","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:34:00"}
+{"_id":{"$oid":"5c2afbcaf6cbf802dc4fea28"},"topic":"test1","user":"user1","payload":"0","clientID":"phoneivan1546320746149","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:34:02"}
+{"_id":{"$oid":"5c2afbe8f6cbf802dc4fea29"},"topic":"test1","user":"user1","payload":"[1,34,78,8,78,67]","clientID":"phoneivan1546320746149","qos":{"$numberInt":"0"},"publicationDate":"2019-01-01 00:34:32"}
+{"_id":{"$oid":"5c2d8b6427b92b0d00f515d5"},"topic":"test1","user":"user1","payload":"6","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:11:15"}
+{"_id":{"$oid":"5c2d8b6927b92b0d00f515d6"},"topic":"test2","user":"user1","payload":"6","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:11:21"}
+{"_id":{"$oid":"5c2d8c2727b92b0d00f515d7"},"topic":"test1","user":"user1","payload":"6","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:14:31"}
+{"_id":{"$oid":"5c2d8c2f27b92b0d00f515d8"},"topic":"test2","user":"user1","payload":"6","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:14:39"}
+{"_id":{"$oid":"5c2d8c3327b92b0d00f515d9"},"topic":"test2","user":"user1","payload":"66","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:14:43"}
+{"_id":{"$oid":"5c2d8d0027b92b0d00f515da"},"topic":"test1","user":"user1","payload":"66","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:18:08"}
+{"_id":{"$oid":"5c2d8d0b27b92b0d00f515db"},"topic":"test1","user":"user1","payload":"65","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:18:19"}
+{"_id":{"$oid":"5c2d8d1427b92b0d00f515dc"},"topic":"test1","user":"user1","payload":"65","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:18:28"}
+{"_id":{"$oid":"5c2d8d1927b92b0d00f515dd"},"topic":"test1","user":"user1","payload":"6590","clientID":"1546488608527bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:18:33"}
+{"_id":{"$oid":"5c2d955227b92b1b4820aad8"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:53:38"}
+{"_id":{"$oid":"5c2d955627b92b1b4820aad9"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:53:42"}
+{"_id":{"$oid":"5c2d955827b92b1b4820aada"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:53:44"}
+{"_id":{"$oid":"5c2d956427b92b1b4820aadb"},"topic":"test1","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:53:56"}
+{"_id":{"$oid":"5c2d956c27b92b1b4820aadc"},"topic":"test1","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:54:04"}
+{"_id":{"$oid":"5c2d958027b92b1b4820aadd"},"topic":"test1","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:54:24"}
+{"_id":{"$oid":"5c2d958827b92b1b4820aade"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:54:32"}
+{"_id":{"$oid":"5c2d958f27b92b1b4820aadf"},"topic":"test2","user":"user1","payload":"78","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:54:39"}
+{"_id":{"$oid":"5c2d95bd27b92b1b4820aae0"},"topic":"test2","user":"user1","payload":"78","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:55:25"}
+{"_id":{"$oid":"5c2d95c427b92b1b4820aae1"},"topic":"test2","user":"user1","payload":"12","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:55:32"}
+{"_id":{"$oid":"5c2d95c727b92b1b4820aae2"},"topic":"test2","user":"user1","payload":"16","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:55:35"}
+{"_id":{"$oid":"5c2d95d227b92b1b4820aae3"},"topic":"test2","user":"user1","payload":"1","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:55:46"}
+{"_id":{"$oid":"5c2d96a427b92b1b4820aae4"},"topic":"test2","user":"user1","payload":"14","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-02 23:59:16"}
+{"_id":{"$oid":"5c2d97f727b92b1b4820aae5"},"topic":"test2","user":"user1","payload":"14","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:04:55"}
+{"_id":{"$oid":"5c2d97fc27b92b1b4820aae6"},"topic":"test2","user":"user1","payload":"1465","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:05:00"}
+{"_id":{"$oid":"5c2d980827b92b1b4820aae7"},"topic":"test2","user":"user1","payload":"16","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:05:12"}
+{"_id":{"$oid":"5c2d981e27b92b1b4820aae8"},"topic":"test2","user":"user1","payload":"16","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:05:34"}
+{"_id":{"$oid":"5c2d98dd27b92b1b4820aae9"},"topic":"test2","user":"user1","payload":"16","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:08:45"}
+{"_id":{"$oid":"5c2d98e027b92b1b4820aaea"},"topic":"test2","user":"user1","payload":"166","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:08:48"}
+{"_id":{"$oid":"5c2d98f427b92b1b4820aaeb"},"topic":"test2","user":"user1","payload":"166","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:09:08"}
+{"_id":{"$oid":"5c2d991127b92b1b4820aaec"},"topic":"test2","user":"user1","payload":"166","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:09:37"}
+{"_id":{"$oid":"5c2d991727b92b1b4820aaed"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:09:43"}
+{"_id":{"$oid":"5c2d995827b92b1b4820aaee"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:10:48"}
+{"_id":{"$oid":"5c2d995e27b92b1b4820aaef"},"topic":"test2","user":"user1","payload":"78","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:10:54"}
+{"_id":{"$oid":"5c2d99e727b92b1b4820aaf0"},"topic":"test2","user":"user1","payload":"78","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:13:11"}
+{"_id":{"$oid":"5c2d99eb27b92b1b4820aaf1"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:13:15"}
+{"_id":{"$oid":"5c2d9a2527b92b1b4820aaf2"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:14:13"}
+{"_id":{"$oid":"5c2d9a2727b92b1b4820aaf3"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:14:15"}
+{"_id":{"$oid":"5c2d9a3a27b92b1b4820aaf4"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:14:34"}
+{"_id":{"$oid":"5c2d9a6f27b92b1b4820aaf5"},"topic":"test2","user":"user1","payload":"5","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:15:27"}
+{"_id":{"$oid":"5c2d9a7327b92b1b4820aaf6"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:15:31"}
+{"_id":{"$oid":"5c2d9a9327b92b1b4820aaf7"},"topic":"test2","user":"user1","payload":"7","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:16:03"}
+{"_id":{"$oid":"5c2d9a9727b92b1b4820aaf8"},"topic":"test2","user":"user1","payload":"6","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:16:07"}
+{"_id":{"$oid":"5c2d9acf27b92b1b4820aaf9"},"topic":"test2","user":"user1","payload":"6","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:17:03"}
+{"_id":{"$oid":"5c2d9ad227b92b1b4820aafa"},"topic":"test2","user":"user1","payload":"68","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:17:06"}
+{"_id":{"$oid":"5c2d9ad927b92b1b4820aafb"},"topic":"test2","user":"user1","payload":"688","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:17:13"}
+{"_id":{"$oid":"5c2d9ae527b92b1b4820aafc"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:17:25"}
+{"_id":{"$oid":"5c2d9b7c27b92b1b4820aafd"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:19:56"}
+{"_id":{"$oid":"5c2d9b7f27b92b1b4820aafe"},"topic":"test2","user":"user1","payload":"6","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:19:59"}
+{"_id":{"$oid":"5c2d9b8a27b92b1b4820aaff"},"topic":"test2","user":"user1","payload":"68","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:20:10"}
+{"_id":{"$oid":"5c2d9d3f27b92b1b4820ab00"},"topic":"test2","user":"user1","payload":"68","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:27:27"}
+{"_id":{"$oid":"5c2d9d4227b92b1b4820ab01"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:27:30"}
+{"_id":{"$oid":"5c2d9d7727b92b1b4820ab02"},"topic":"test2","user":"user1","payload":"34","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:28:23"}
+{"_id":{"$oid":"5c2d9d7927b92b1b4820ab03"},"topic":"test2","user":"user1","payload":"56","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:28:25"}
+{"_id":{"$oid":"5c2d9fc327b92b1b4820ab04"},"topic":"test2","user":"user1","payload":"23","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:38:11"}
+{"_id":{"$oid":"5c2d9fc827b92b1b4820ab05"},"topic":"test2","user":"user1","payload":"23","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:38:16"}
+{"_id":{"$oid":"5c2d9fd927b92b1b4820ab06"},"topic":"test2","user":"user1","payload":"235","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:38:33"}
+{"_id":{"$oid":"5c2da08827b92b1b4820ab07"},"topic":"test2","user":"user1","payload":"235","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:41:28"}
+{"_id":{"$oid":"5c2da0a527b92b1b4820ab08"},"topic":"test2","user":"user1","payload":"235","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:41:57"}
+{"_id":{"$oid":"5c2da0a727b92b1b4820ab09"},"topic":"test2","user":"user1","payload":"2","clientID":"1546489105491bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:41:59"}
+{"_id":{"$oid":"5c2da47227b92b1b4820ab0a"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:58:10"}
+{"_id":{"$oid":"5c2da47927b92b1b4820ab0b"},"topic":"test2","user":"user1","payload":"121","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:58:17"}
+{"_id":{"$oid":"5c2da4ac27b92b1b4820ab0c"},"topic":"test2","user":"user1","payload":"121","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:59:08"}
+{"_id":{"$oid":"5c2da4b127b92b1b4820ab0d"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:59:13"}
+{"_id":{"$oid":"5c2da4ca27b92b1b4820ab0e"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:59:38"}
+{"_id":{"$oid":"5c2da4cc27b92b1b4820ab0f"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:59:40"}
+{"_id":{"$oid":"5c2da4d327b92b1b4820ab10"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 00:59:47"}
+{"_id":{"$oid":"5c2da4f327b92b1b4820ab11"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 01:00:19"}
+{"_id":{"$oid":"5c2da4f627b92b1b4820ab12"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 01:00:22"}
+{"_id":{"$oid":"5c2da4fd27b92b1b4820ab13"},"topic":"test2","user":"user1","payload":"12","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 01:00:29"}
+{"_id":{"$oid":"5c2da50227b92b1b4820ab14"},"topic":"test2","user":"user1","payload":"56","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 01:00:34"}
+{"_id":{"$oid":"5c2da51e27b92b1b4820ab15"},"topic":"test2","user":"user1","payload":"56","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 01:01:02"}
+{"_id":{"$oid":"5c2da52127b92b1b4820ab16"},"topic":"test2","user":"user1","payload":"4","clientID":"1546495044282bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-03 01:01:05"}
+{"_id":{"$oid":"5c3180f47a32ef2710684f68"},"topic":"test2","user":"user1","payload":"[1,34,7]","clientID":"1546747598891bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:15:48"}
+{"_id":{"$oid":"5c31813f7a32ef2710684f69"},"topic":"test2","user":"user1","payload":"[1,34,7]","clientID":"1546747598891bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:17:03"}
+{"_id":{"$oid":"5c31814b7a32ef2710684f6a"},"topic":"test2","user":"user1","payload":"[1,34,47]","clientID":"1546747598891bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:17:15"}
+{"_id":{"$oid":"5c3186a87a32ef2710684f6b"},"topic":"test2","user":"user1","payload":"1","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:40:08"}
+{"_id":{"$oid":"5c3186ad7a32ef2710684f6c"},"topic":"test2","user":"user1","payload":"1","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:40:13"}
+{"_id":{"$oid":"5c3186b17a32ef2710684f6d"},"topic":"test2","user":"user1","payload":"16","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:40:17"}
+{"_id":{"$oid":"5c3186f87a32ef2710684f6e"},"topic":"test2","user":"user1","payload":"16","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:41:28"}
+{"_id":{"$oid":"5c31870f7a32ef2710684f6f"},"topic":"test2","user":"user1","payload":"16","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:41:51"}
+{"_id":{"$oid":"5c3187127a32ef2710684f70"},"topic":"test2","user":"user1","payload":"13","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:41:54"}
+{"_id":{"$oid":"5c31873f7a32ef2710684f71"},"topic":"test2","user":"user1","payload":"1","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:42:39"}
+{"_id":{"$oid":"5c3187e37a32ef2710684f72"},"topic":"test2","user":"user1","payload":"18","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:45:23"}
+{"_id":{"$oid":"5c31885c7a32ef2710684f73"},"topic":"test2","user":"user1","payload":"18","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:47:24"}
+{"_id":{"$oid":"5c3188657a32ef2710684f74"},"topic":"test2","user":"user1","payload":"15","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:47:33"}
+{"_id":{"$oid":"5c31886a7a32ef2710684f75"},"topic":"test2","user":"user1","payload":"156","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:47:38"}
+{"_id":{"$oid":"5c318aa47a32ef2710684f76"},"topic":"test2","user":"user1","payload":"6","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:57:08"}
+{"_id":{"$oid":"5c318aa57a32ef2710684f77"},"topic":"test2","user":"user1","payload":"6","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:57:09"}
+{"_id":{"$oid":"5c318ab77a32ef2710684f78"},"topic":"test2","user":"user1","payload":"7","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-05 23:57:27"}
+{"_id":{"$oid":"5c318ba27a32ef2710684f79"},"topic":"test2","user":"user1","payload":"7","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:01:22"}
+{"_id":{"$oid":"5c318ba67a32ef2710684f7a"},"topic":"test2","user":"user1","payload":"7","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:01:26"}
+{"_id":{"$oid":"5c318bd17a32ef2710684f7b"},"topic":"test2","user":"user1","payload":"5","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:02:09"}
+{"_id":{"$oid":"5c318bd57a32ef2710684f7c"},"topic":"test2","user":"user1","payload":"5","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:02:13"}
+{"_id":{"$oid":"5c318bd87a32ef2710684f7d"},"topic":"test2","user":"user1","payload":"56","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:02:16"}
+{"_id":{"$oid":"5c318c817a32ef2710684f7e"},"topic":"test2","user":"user1","payload":"56","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:05:05"}
+{"_id":{"$oid":"5c318c837a32ef2710684f7f"},"topic":"test2","user":"user1","payload":"5","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:05:07"}
+{"_id":{"$oid":"5c318c867a32ef2710684f80"},"topic":"test2","user":"user1","payload":"57","clientID":"1546748391981bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:05:10"}
+{"_id":{"$oid":"5c31970d7a32ef2710684f81"},"topic":"test2","user":"user1","payload":"3","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:50:05"}
+{"_id":{"$oid":"5c3197107a32ef2710684f82"},"topic":"test2","user":"user1","payload":"3","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:50:08"}
+{"_id":{"$oid":"5c3197167a32ef2710684f83"},"topic":"test2","user":"user1","payload":"356","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:50:14"}
+{"_id":{"$oid":"5c3197347a32ef2710684f84"},"topic":"test2","user":"user1","payload":"7","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:50:44"}
+{"_id":{"$oid":"5c31973a7a32ef2710684f85"},"topic":"test2","user":"user1","payload":"75","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:50:50"}
+{"_id":{"$oid":"5c31975e7a32ef2710684f86"},"topic":"test2","user":"user1","payload":"75","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:51:26"}
+{"_id":{"$oid":"5c31977d7a32ef2710684f87"},"topic":"test2","user":"user1","payload":"75","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:51:57"}
+{"_id":{"$oid":"5c3197957a32ef2710684f88"},"topic":"test2","user":"user1","payload":"75","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:52:21"}
+{"_id":{"$oid":"5c3197997a32ef2710684f89"},"topic":"test2","user":"user1","payload":"6","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:52:25"}
+{"_id":{"$oid":"5c3198687a32ef2710684f8a"},"topic":"test2","user":"user1","payload":"6","clientID":"1546753758420bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:55:52"}
+{"_id":{"$oid":"5c3198697a32ef2710684f8b"},"topic":"test2","user":"user1","payload":"7","clientID":"1546754086696bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:55:53"}
+{"_id":{"$oid":"5c3198ec7a32ef2710684f8c"},"topic":"test2","user":"user1","payload":"4","clientID":"1546754086696bb462e7f7","qos":{"$numberInt":"0"},"publicationDate":"2019-01-06 00:58:04"}

@@ -1,0 +1,11 @@
+{"_id":{"$oid":"598f3157afe2a8172c062fbd"},"user":"user1","topic":"test1","permission":"READWRITE"}
+{"_id":{"$oid":"598f3157afe2a8172c062fbe"},"user":"user1","topic":"test2","permission":"READWRITE"}
+{"_id":{"$oid":"598f3157afe2a8172c062fbf"},"user":"user2","topic":"test2","permission":"READWRITE"}
+{"_id":{"$oid":"5b0a3eec489945c4c0b9c146"},"user":"user3","topic":"test3","permission":"READWRITE"}
+{"_id":{"$oid":"5bbab7a5d96fb322e07bf344"},"user":"user5","topic":"test1","permission":"READWRITE","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bd66be3cbd5521718ddc531"},"user":"user6","topic":"test1","permission":"READWRITE","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bdfe562db8a1f248c94213b"},"user":"user7","topic":"test1","permission":"READWRITE","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5be0a49f7f3af911504a61b6"},"user":"user10","topic":"test1","permission":"READWRITE","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5be0a6227f3af911504a61ba"},"user":"user4","topic":"test1","permission":"READWRITE","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5c2aeaac8d0d07195c5e309a"},"user":"user4","topic":"test2","permission":"READWRITE","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5c3d43e4e1a9cb1b2c7d0fd8"},"user":"user4","topic":"disp_user4","permission":"READWRITE","__v":{"$numberInt":"0"}}

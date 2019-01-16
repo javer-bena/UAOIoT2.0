@@ -1,0 +1,1 @@
+{"_id":{"$oid":"5c2c4e51c8de8218940bd785"},"datas":[{"$numberInt":"10"},{"$numberInt":"15"},{"$numberInt":"20"},{"$numberInt":"25"},{"$numberInt":"30"}],"labels":["1","2","3","4","5"],"project":"5c170ba3843ab81560300cce","user":"user4","type":"line","title":"Chart 2","__v":{"$numberInt":"0"}}

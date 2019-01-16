@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5b81b539f7fc0b103c0f9022"},"user":"admin","name":"Zeida Maria Solarte","password":"$2a$10$VBUYmQMcr7rVhbar6Ikfk.nwPzu9q2bdowV9KY83Bny7Bxn81OU.O","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bbab7a5d96fb322e07bf343"},"user":"user5","name":"Ivan Mosquera","password":"$2a$10$mJgMfL9ZAg4Yo/1RVb2FIeDATx8BK2XAVnnHFxaDmatKmamZRNfMi","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bd66be2cbd5521718ddc530"},"user":"user6","name":"Ivan","password":"$2a$10$arHNypIG0cuut3BqsXsUHOpy2w8DO34uU9gjbCPY.mL0dwzfBTpg2","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5bdfe561db8a1f248c94213a"},"user":"user7","name":"Prueba","password":"$2a$10$F3itQKstgDbjWDHQeLKzAuHj.Wba4SdGgkr9Uo1Z7SesSbbKOjNQe","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5be0a49f7f3af911504a61b3"},"user":"user10","name":"ivan","password":"$2a$10$PmgzFwj1QsXx68ixcbIaFOJ1yJBYZ4uMurqndMqjhXL4K9A1c21RK","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5be0a6217f3af911504a61b7"},"user":"user4","name":"Ivan Mosquera","password":"$2a$10$pNn/UKfFfkfyjNRRl0Oxu.xjqG7WhVC.PZ9cn5whxxDmIvNAoLlmS","__v":{"$numberInt":"0"}}

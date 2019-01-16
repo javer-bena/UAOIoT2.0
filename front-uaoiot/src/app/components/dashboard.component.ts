@@ -38,6 +38,7 @@ export class  DashboardComponent{
     public post;
     public loaderChart;
     public alive:boolean;
+    public listenChecked:boolean = true;
     public messageToSend;
     public dataToChart = [];
     public labelsToChart = [];
@@ -271,25 +272,34 @@ export class  DashboardComponent{
     }
 
     listenDevice(){
+
+        if(!this.listenChecked){
+            if(this.userName == "" || this.nameDevice == "" || this.userToken == ""){
+            
+                this.listenChecked = true;
+                alert("No es posible la conexión. Faltan datos.");
+                
+            }else{
+    
+                alert("Escuchando dispositivo");
+    
+                this.sendUserDataMqtt(this.userName,this.nameDevice + "_" + this.userName,this.userToken);
+    
+                this.socketService.onNewMessage().subscribe(data =>{
+                    
+                    var msgObj = new Message(data.payload);
+                    this.dataToChart.push(data.payload);
+                    this.lastData = this.dataToChart[this.dataToChart.length - 1];
+                    
+                });
+            }
         
-        if(this.userName == "" || this.nameDevice == "" || this.userToken == ""){
-            
-            alert("No es posible la conexión. Faltan datos.");
-            
         }else{
-
-            alert("Escuchando dispositivo");
-
-            this.sendUserDataMqtt(this.userName,this.nameDevice + "_" + this.userName,this.userToken);
-
-            this.socketService.onNewMessage().subscribe(data =>{
-                
-                var msgObj = new Message(data.payload);
-                this.dataToChart.push(data.payload);
-                this.lastData = this.dataToChart[this.dataToChart.length - 1];
-                
-            });
+            //TODO: Desconectar conexión
+            alert("Desconectado");
         }
+        
+        
         
         
     }  

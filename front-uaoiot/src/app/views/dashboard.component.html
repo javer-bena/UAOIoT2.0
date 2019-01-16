@@ -37,7 +37,9 @@
                 </div>
 
                 <div id="listen-button-section" class="right-align">
-                    <a class="blue darken-1 btn-small" (click)="listenDevice()">Escuchar</a>
+
+                    <p-toggleButton (click)="listenDevice()" [(ngModel)]="listenChecked" onLabel="Escuchar" offLabel="Desconectar" ></p-toggleButton>
+                    <!--<a class="blue darken-1 btn-small" (click)="listenDevice()">Escuchar</a>-->
                 </div>
                 
             </div>
