@@ -35,6 +35,15 @@ export class ProjectService{
         .map(res => res.json());
     }
 
+    updateProject(project, idProject){
+        let json = JSON.stringify(project);
+        let headers = new Headers();
+        
+        headers.append('Content-Type','application/json');
+        
+        return this._http.put(this.url + 'api/project/' + idProject, json, {headers: headers}).map(res => res.json());
+    }
+
     deleteProject(idProject){
         return this._http.delete(this.url + 'api/project/' + idProject).map(res => res.json());
     }

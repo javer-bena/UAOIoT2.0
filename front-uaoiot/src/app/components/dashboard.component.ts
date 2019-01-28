@@ -61,6 +61,8 @@ export class  DashboardComponent{
     public devicesArray = [];  
     public filteredDevicesArray = [];
     public nameDevice;
+    public deviceVariables = [];
+    public multivariables:boolean = false;
 
     parentMMessage = ["4:00 pm","5:00 pm", "6:00 pm"];
 
@@ -208,7 +210,7 @@ export class  DashboardComponent{
     /**
      * @param event
      */
-    filterProject(event){
+    filterDevice(event){
         this.filteredDevicesArray = [];
 
         for(let i = 0; i < this.devicesArray.length; i++){
@@ -240,15 +242,42 @@ export class  DashboardComponent{
 
             if(data.amount === "allData"){
 
+                var datasets = [];
+                var attr;
+                
+                if(this.multivariables){
+
+                    for(let i = 0; i < this.dataToChart.length; i++){
+                        attr = {
+                            data: this.dataToChart[i],
+                            borderColor: "#"+ i+1 + "fbf9f",
+                            fill: false
+                        }
+
+                        datasets.push(attr);
+                    }
+
+                }else{
+                    attr = {
+                        data: this.dataToChart,
+                        borderColor: "#3cba9f",
+                        fill: false
+                    }
+
+                    datasets.push(attr);
+                    
+                }
+
                 for (let i = 0; i < this.dataToChart.length; i++) {
                     this.labelsToChart.push("lbl" + i);
                 }
+
     
                 const chartJson = {
                     project : this.projectId,
                     user : this.userName,
                     type : data.type,
-                    datas : this.dataToChart,
+                    datas : datasets,
                     labels : this.labelsToChart,
                     title : data.title
                 }
@@ -271,6 +300,18 @@ export class  DashboardComponent{
 
     }
 
+    getDeviceVariables(nameDevice:String){
+        
+        for(let i = 0; i < this.devicesArray.length; i++){
+
+            if(nameDevice === this.devicesArray[i].name){
+                this.deviceVariables = this.devicesArray[i].variables
+            }
+        }
+
+        return this.deviceVariables;
+    }
+
     listenDevice(){
 
         if(!this.listenChecked){
@@ -283,13 +324,41 @@ export class  DashboardComponent{
     
                 alert("Escuchando dispositivo");
     
-                this.sendUserDataMqtt(this.userName,this.nameDevice + "_" + this.userName,this.userToken);
-    
+                //this.sendUserDataMqtt(this.userName,this.nameDevice + "_" + this.userName,this.userToken);
+                this.sendUserDataMqtt(this.userName,"test2",this.userToken);
+
                 this.socketService.onNewMessage().subscribe(data =>{
                     
                     var msgObj = new Message(data.payload);
-                    this.dataToChart.push(data.payload);
-                    this.lastData = this.dataToChart[this.dataToChart.length - 1];
+                    var variables = this.getDeviceVariables(this.nameDevice);
+                    var dataToShow = [];
+
+                    if(data.payload.indexOf('[') > -1){
+                        
+                        if(variables.length > 1){
+                            this.multivariables = true;
+                        }else{
+                            this.multivariables = false;
+                        }
+                        
+                        var dataToArray = JSON.parse(data.payload);
+
+                        for(let i = 0; i < variables.length; i++){
+                            
+                            //alert(dataToArray);
+                            dataToShow.push(dataToArray[i]);
+                            
+                        }
+
+                        //alert(dataToShow);
+                        this.dataToChart.push(dataToShow);
+                        //this.lastData = this.dataToChart[this.dataToChart.length - 1];
+
+                    }else{
+                        this.multivariables = false;
+                        this.dataToChart.push(data.payload);
+                        this.lastData = this.dataToChart[this.dataToChart.length - 1];
+                    }
                     
                 });
             }
@@ -307,7 +376,7 @@ export class  DashboardComponent{
     sendMsg(){
         
         this.socketService.sendMessage(this.messageToSend);
-        alert("Mensaje enviado con exitosamente");
+        alert("Mensaje enviado exitosamente");
         //alert("Mensage: " + this.messageToSend);
         this.messageToSend = '';
     }

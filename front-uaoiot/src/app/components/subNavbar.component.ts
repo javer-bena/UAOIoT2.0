@@ -30,7 +30,7 @@ export class  SubNavbar{
         this.dataToChart = {
             type: "",
             title: "",
-
+            amount:""
         };
 
         this.titleDialog = "Selecciona un tipo de gráfica";

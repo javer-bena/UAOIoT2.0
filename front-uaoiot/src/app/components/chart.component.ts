@@ -50,16 +50,18 @@ export class ChartComponent{
     createChart(array){   
 
         for(var i = 0; i < array.length; i++){
+            
             this.chart = new Chart('canvas' + i,{
                 type:'line',
                 data: {
                     labels: array[i].labels,
-                    datasets:[{
+                    datasets:array[i].datas
+                    /*datasets:[{
                         label: 'Data Dataset',
                         data: array[i].datas,
                         borderColor:"#3cba9f",
                         fill: false
-                    },]
+                    },]*/
                 },
                 options:{
                     title: {

@@ -13,7 +13,7 @@
 
                     <div class="row">
                         <div class="col s6"><span>Dispositivo escuchado:</span></div>
-                        <div class="col s6"> <p-autoComplete [(ngModel)]="nameDevice" [suggestions]="filteredDevicesArray" (completeMethod)="filterProject($event)"
+                        <div class="col s6"> <p-autoComplete [(ngModel)]="nameDevice" [suggestions]="filteredDevicesArray" (completeMethod)="filterDevice($event)"
                             placeholder="Nombre del dispositivo" [minLength]="1"></p-autoComplete></div>
                     </div>
                     <!--<span id="add-listener-icon"><i class="material-icons add-button">add_circle</i>Agregar dispositivo</span>-->       

@@ -22,7 +22,9 @@ export class ProjectComponent{
     public userProject:String;
     public display:boolean;
     public displayDelete:boolean = false;
+    public displayUpdate:boolean = false;
     public idProjectToDelete:String;
+    public idProjectToUpdate:String;
     public idProject;
 
     constructor(
@@ -99,8 +101,33 @@ export class ProjectComponent{
 
     showDialogDeleteProject(index){
         //alert(this.projectsArray[index].id);
-        this.idProjectToDelete = this.projectsArray[index].id
+        this.idProjectToDelete = this.projectsArray[index].id;
         this.displayDelete = true;
+    }
+
+    showDialogUpdateProject(index){
+        //alert(this.projectsArray[index].id);
+        this.idProjectToUpdate = this.projectsArray[index].id;
+        this.displayUpdate = true;
+        this.nameProject = this.projectsArray[index].name;
+    }
+
+    updateProject(){
+        const projectJson = {
+            name: this.nameProject,
+            user: this.userProject
+        };
+
+        this.projectService.updateProject(projectJson,this.idProjectToUpdate).subscribe(data=>{
+
+            //TODO: Update permission.
+            this.getAllProjects(this.userProject);
+            this.displayUpdate = false;
+
+        },Error=>{
+
+        });
+
     }
 
     /**
