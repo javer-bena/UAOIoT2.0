@@ -15,6 +15,7 @@
                     <div class="col s6">
                         <p-radioButton name="group1" value="bar" label="Barras" 
                         [(ngModel)]="dataToChart.type" inputId="opt2"></p-radioButton>
+                        
                     </div>
                 </div>
             </div>
@@ -27,17 +28,34 @@
         </ng-template>
 
         <ng-template #third>
-            <ng-container *ngIf="activeIndex === 2;">
-                <div class="col s6">
+            <ng-container *ngIf="activeIndex === 2; else four">
+
+                <p>Variables</p>
+                <div class="co s4">
+                    <div *ngFor="let device of deviceVariables; let i = index">
+                            <p-radioButton name="group1" value="data" label={{device}} 
+                            [(ngModel)]="variablesData" inputId="opt2"></p-radioButton>
+
+                            <p-colorPicker id="" [(ngModel)]="colors[i]"></p-colorPicker>
+                    </div>
+                </div>
+
+            </ng-container>
+        </ng-template>
+
+        <ng-template #four>
+            <ng-container *ngIf="activeIndex === 3;">
+                <div class="col s4">
                     <p-radioButton name="group1" value="allData" label="Todos los datos" 
                     [(ngModel)]="dataToChart.amount" inputId="opt1"></p-radioButton>
                 </div>
-            
-                <div class="col s6">
+        
+                <div class="col s4">
                     <p-radioButton name="group1" value="lastData" label="Último dato" 
                     [(ngModel)]="dataToChart.amount" inputId="opt2"></p-radioButton>
                 </div>
-            </ng-container>
+
+            </ng-container>  
         </ng-template>
 
 
@@ -62,6 +80,11 @@
 </p-dialog>
 
 <nav>
+
+    <div class="chip">
+        <span>{{nameProject}}</span>
+    </div>
+    
     <div id="buttons" >
         <ul class="center-align">
             <li><a id="chart-button" class="btn-floating blue darken-1" pTooltip="Graficar" 

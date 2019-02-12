@@ -1,5 +1,5 @@
 <div> 
-    <sub-navbar (subNavbarEvent)="getTypeChart($event)"></sub-navbar>
+    <sub-navbar (subNavbarEvent)="getTypeChart($event)" [deviceVariables]="deviceVariables"></sub-navbar>
 </div>
 
 <!--<span>JSON CHART: {{dataChart}}</span>-->
@@ -45,6 +45,35 @@
             </div>
 
         </div>
+
+        <div class="col s4">
+            <div class="card" id="msg-card">
+                <div id="listado-msj">
+                    <p-table [value]="dataToChart" [scrollable]="true" scrollHeight="115px">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Dato</th>
+                                <!--<th>Hora</th>-->
+                                
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-data>
+                            <tr>
+                                <td>
+                                    <h6 >{{data}}</h6>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+
+                    <!--<ul>
+                        <li>
+                            <h6 *ngFor="let data of dataToChart">{{data}}</h6>
+                        </li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
     
         <div class="col s4">
             <div class="card" id="sender-card">
@@ -73,36 +102,7 @@
             </div>
         </div>
     
-        <div class="col s4">
-            <div class="card" id="msg-card">
-                <div id="listado-msj">
-                    <h5>Listado de mensajes</h5>
-
-                    <p-table [value]="dataToChart" [scrollable]="true" scrollHeight="115px">
-                        <ng-template pTemplate="header">
-                            <tr>
-                                <th>Dato</th>
-                                <th>Hora</th>
-                                
-                            </tr>
-                        </ng-template>
-                        <ng-template pTemplate="body" let-data>
-                            <tr>
-                                <td>
-                                    <h6 >{{data}}</h6>
-                                </td>
-                            </tr>
-                        </ng-template>
-                    </p-table>
-
-                    <!--<ul>
-                        <li>
-                            <h6 *ngFor="let data of dataToChart">{{data}}</h6>
-                        </li>
-                    </ul>-->
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
 

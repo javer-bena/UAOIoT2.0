@@ -2,11 +2,15 @@
 
 var Acls = require('../models/acls');
 
-
+/**
+ * Función para obtener la informción de los permisos por su id.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 function getAcls(req, res) {
     var aclsId = req.params.id;
 
-    User.findById(aclsId, (err, acls) => {
+    Acls.findById(aclsId, (err, acls) => {
         if (err) {
             res.status(500).send({ message: "Error" });
         } else {
@@ -21,6 +25,11 @@ function getAcls(req, res) {
 
 }
 
+/**
+ * Función para obtener todos los permisos.
+ * @param {Request} req 
+ * @param {Response} res 
+ */
 function getAclss(req, res) {
 
     Acls.find({}, (err, aclss) => {
@@ -38,6 +47,11 @@ function getAclss(req, res) {
 
 }
 
+/**
+ * Función para crear un permiso.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function postAcls(req, res) {
     var acls = new Acls();
     var params = req.body;
@@ -57,7 +71,11 @@ function postAcls(req, res) {
     });
 }
 
-
+/**
+ * Función para actualizar un permiso.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function updateAcls(req, res) {
     var aclsId = req.params.id;
     var update = req.body;
@@ -71,6 +89,11 @@ function updateAcls(req, res) {
     });
 }
 
+/**
+ * Función para eliminar un permiso.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteAcls(req, res) {
     var aclsId = req.params.id;
 

@@ -3,7 +3,7 @@
 var Dashboard = require('../models/dashboard');
 
 /**
- * 
+ * Método para obtener un dashboard por su id.
  * @param {*} req 
  * @param {*} res 
  */
@@ -115,7 +115,11 @@ function updateDashboard(req, res){
     });
 }
 
-
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteDashboard(req,res){
 
     var dashboardId = req.params.id;

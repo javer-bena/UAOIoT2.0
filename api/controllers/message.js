@@ -2,6 +2,11 @@
 
 var Message = require('../models/message');
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function getMessage(req, res) {
     var messageId = req.params.id
 
@@ -19,6 +24,11 @@ function getMessage(req, res) {
     })
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function getMessages(req, res) {
 
     Message.find({}, (err, messages) => {
@@ -34,6 +44,11 @@ function getMessages(req, res) {
     });
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function postMessage(req, res) {
     var message = new message();
     var params = req.body;
@@ -56,6 +71,11 @@ function postMessage(req, res) {
     });
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function updateMessage(req, res) {
     var messageId = req.params.id;
     var update = req.body;
@@ -69,6 +89,11 @@ function updateMessage(req, res) {
     });
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteMessage(req, res) {
     var messageId = req.params.id;
 

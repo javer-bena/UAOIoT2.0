@@ -97,7 +97,7 @@ function getDeviceUser(req,res){
 }
 
 /**
- * 
+ * Método para obtener todos los dispositivos de un proyecto.
  * @param {*} req 
  * @param {*} res 
  */
@@ -121,7 +121,7 @@ function getDeviceProject(req,res){
 }
 
 /**
- * 
+ * Método para crear un dispositivo.
  * @param {*} req 
  * @param {*} res 
  */
@@ -144,6 +144,11 @@ function postDevice(req, res){
     });
 }
 
+/**
+ * Método para actualizar los datos de un dispositivo.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function updateDevice(req, res){
     var deviceId = req.params.id;
     var update = req.body;
@@ -157,6 +162,11 @@ function updateDevice(req, res){
     });
 }
 
+/**
+ * Método para eliminar los dispositivos de un proyecto.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteDeviceByProject(req,res){
 
     var project = req.params.projectId;
@@ -180,6 +190,11 @@ function deleteDeviceByProject(req,res){
     });
 }
 
+/**
+ * Método para eliminar un proyecto por su id.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteDeviceById(req,res){
 
     var deviceId = req.params.id;

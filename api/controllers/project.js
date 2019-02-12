@@ -2,7 +2,6 @@
 
 var Project = require('../models/project');
 
-
 /**
  * Método para consultar un proyecto por su ID.
  * @param {*} req 
@@ -51,7 +50,11 @@ function getProjectUser(req,res){
     })
 }
 
-
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function getProjectName(req,res){
     
     var projectName = req.params.name;
@@ -71,7 +74,11 @@ function getProjectName(req,res){
     })
 }
 
-
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function postProject(req, res){
     var project = new Project();
     var params = req.body;
@@ -91,6 +98,11 @@ function postProject(req, res){
     });
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function updateProject(req, res){
     var projectId = req.params.id;
     var update = req.body;
@@ -99,11 +111,17 @@ function updateProject(req, res){
         if(err){
             res.status(500).send({ message: 'Error al actualizar'});
         }else{
+            
             res.status(200).send({ projectUpdate });
         }
     });
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteProject(req,res){
 
     var projectId = req.params.id;
@@ -132,6 +150,11 @@ function deleteProject(req,res){
     });
 }
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteProjectByUser(req,res){
 
     var userProject = req.params.user;

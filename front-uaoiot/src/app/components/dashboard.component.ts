@@ -247,15 +247,70 @@ export class  DashboardComponent{
                 
                 if(this.multivariables){
 
-                    for(let i = 0; i < this.dataToChart.length; i++){
+                    var dataset = [];
+                    var tempArray = [];
+                    var i = 0;
+                    var lengthDataArray = this.dataToChart.length;
+                    
+                    for(let j = 0; j < lengthDataArray; j++){
+                        
+                        if(j > 0 && i > 0 && tempArray.length == 0 ){
+
+                            tempArray.push(this.dataToChart[0][i]);
+                            
+                        }/*else if(j > 0 && i > 0 && tempArray.length == 1){
+                            tempArray.push(this.dataToChart[1][i]);
+
+                        }*/else{
+                            
+                            tempArray.push(this.dataToChart[j][i]);
+                        }
+                        //tempArray.push(this.dataToChart[0][i]);
+                        
+                        console.log("DRAW: " + j +" - " + i + " " + tempArray + " len: " + tempArray.length);
+
+                        if(tempArray.length == lengthDataArray){
+                            
+                            j = 0;
+                            i++;
+                            lengthDataArray++;
+                            dataset.push(tempArray);
+                            //console.log("DRAW IF: " + this.dataToChart[0][i]);
+                            tempArray = [];
+                            //tempArray.push(this.dataToChart[0][i]);
+                            //continue;
+                        }
+                        
+                    }
+                    
+                    //dataset.push(tempArray);
+                    console.log("DRAW DATASET: " + dataset + " - " + tempArray);
+
+                    for(var i = 0; i < dataset.length; i++){
                         attr = {
-                            data: this.dataToChart[i],
-                            borderColor: "#"+ i+1 + "fbf9f",
+                            data: dataset[i],
+                            borderColor: data.colors[i],
                             fill: false
                         }
-
                         datasets.push(attr);
                     }
+                    //while(){}
+
+                    /*for(let j = 0; j < this.dataToChart.length  ; j++){
+                        for(let i = 0; i < j + 1; i++){
+
+                            //console.log("DRAW C: " + this.dataToChart[j]);
+
+                            console.log("DRAW: " + j +" - " + i + " " + this.dataToChart[j][i]);
+                            
+                            attr = {
+                                data: this.dataToChart[j],
+                                borderColor: data.colors[j],
+                                fill: false
+                            }
+                            datasets.push(attr);
+                        }
+                    }*/
 
                 }else{
                     attr = {
@@ -310,9 +365,12 @@ export class  DashboardComponent{
         }
 
         return this.deviceVariables;
+
     }
 
     listenDevice(){
+
+        this.getDeviceVariables(this.nameDevice);
 
         if(!this.listenChecked){
             if(this.userName == "" || this.nameDevice == "" || this.userToken == ""){

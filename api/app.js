@@ -3,9 +3,6 @@
 var express = require('express');
 var app = express();
 var path = require("path");
-//var favicon = require("serve-favicon");
-//var logger = require('morgan');
-//var cookieParser = require('cookie-parser');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var passport = require('passport');
@@ -42,21 +39,11 @@ var optionsMqtt = {};
 };*/
 
 var io = require('socket.io').listen(5000);
-//var io = require('socket.io').connect();
-//ip UAO
-//ip casa
-//var client = mqtt.connect('mqtt://192.168.0.7');
-
 app.use(cors());
-//app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//app.use(cookieParser());
-
 app.use(passport.initialize());
 app.use(passport.session());
-//app.use('./', routesApi);
-
 app.use((req, res, next) => {
     res.header('Acces-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'X-API-KEY,Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method');
@@ -102,8 +89,9 @@ io.sockets.on('connection', function(socket){
             clean: true,
             encoding: 'utf8'
         };
-    
+        
 
+        
         client = mqtt.connect('mqtt://192.168.0.23',optionsMqtt);
         console.log('2 Connect to ' + topic);
         //SUBSCRIBIRSE AL BROKER DESPUES DE CONECTARSE AL SOCKET
@@ -115,9 +103,9 @@ io.sockets.on('connection', function(socket){
             //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
         });
 
+
         client.on('message',function(topic,payload,packet){
             console.log('payload from phone: ' + payload);
-
 
             io.sockets.emit('reciveMessage',{'topic':String(topic),
                             'payload':String(payload)});

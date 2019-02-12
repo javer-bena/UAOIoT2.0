@@ -30,7 +30,7 @@ function getChartProject(req,res){
 }
 
 /**
- * 
+ * Método para crear un doumento de una gráfica.
  * @param {*} req 
  * @param {*} res 
  */
@@ -56,6 +56,11 @@ function postChart(req, res){
     });
 }
 
+/**
+ * Método para eliminar todas las gráficas de un proyecto.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteChartByProject(req,res){
 
     var project = req.params.project;
@@ -77,6 +82,11 @@ function deleteChartByProject(req,res){
     });
 }
 
+/**
+ * Método para eliminar una gráfica por su id.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function deleteChartById(req,res){
 
     var chartId = req.params.id;

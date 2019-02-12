@@ -44,6 +44,7 @@ import {ChipsModule} from 'primeng/chips';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {StepsModule} from 'primeng/steps';
 import {ToggleButtonModule} from 'primeng/togglebutton';
+import {ColorPickerModule} from 'primeng/colorpicker';
 
 
 import { AuthGuardService } from './services/authGuard.service';
@@ -103,7 +104,8 @@ import { TokenService } from './services/token.service';
     ChipsModule,
     RadioButtonModule,
     StepsModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    ColorPickerModule
 
   ],
   providers: [appRoutingProvider,AuthService, ValidateService, AuthGuardService,

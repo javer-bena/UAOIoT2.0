@@ -25,6 +25,10 @@ export class ProjectService{
         return this._http.get(this.url + 'api/projectUser/' + userName).map(res => res.json());
     }
 
+    getProjectById(idProject){
+        return this._http.get(this.url + 'api/projectId/' + idProject).map(res => res.json());
+    }
+
     postProject(project){
         let json = JSON.stringify(project);
         let headers = new Headers();

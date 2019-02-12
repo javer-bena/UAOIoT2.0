@@ -2,6 +2,11 @@
 
 var Token = require('../models/token');
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
 function postToken(req,res){
     var token = new Token();
     var params = req.body;

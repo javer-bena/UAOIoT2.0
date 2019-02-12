@@ -3,6 +3,11 @@
 var UserLogin = require('../models/userLogin');
 var bcrypt = require("bcryptjs");
 
+/**
+ * Método para crear un usuerio para el login.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function postUserLogin(req,res){
 
     var userLogin = new UserLogin();
@@ -71,6 +76,11 @@ function getUsers(req, res) {
 
 }
 
+/**
+ * Método para obtener el usuari por su nombre.
+ * @param {*} req 
+ * @param {*} res 
+ */
 function getUserByName(req,res){
     
     var userName = req.params.user;
