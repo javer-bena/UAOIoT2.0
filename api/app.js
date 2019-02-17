@@ -103,7 +103,6 @@ io.sockets.on('connection', function(socket){
             //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
         });
 
-
         client.on('message',function(topic,payload,packet){
             console.log('payload from phone: ' + payload);
 

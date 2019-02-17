@@ -250,30 +250,32 @@ export class  DashboardComponent{
                     var dataset = [];
                     var tempArray = [];
                     var i = 0;
+                    var j = 0;
                     var lengthDataArray = this.dataToChart.length;
                     
-                    for(let j = 0; j < lengthDataArray; j++){
+                    for(j = 0; j < lengthDataArray; j++){
                         
-                        if(j > 0 && i > 0 && tempArray.length == 0 ){
+                        /*if(j > 0 && i > 0 && tempArray.length == 0 ){
 
                             tempArray.push(this.dataToChart[0][i]);
                             
-                        }/*else if(j > 0 && i > 0 && tempArray.length == 1){
-                            tempArray.push(this.dataToChart[1][i]);
-
-                        }*/else{
+                        }else{
                             
                             tempArray.push(this.dataToChart[j][i]);
-                        }
-                        //tempArray.push(this.dataToChart[0][i]);
+                        }*/
+                        tempArray.push(this.dataToChart[j][i]);
                         
-                        console.log("DRAW: " + j +" - " + i + " " + tempArray + " len: " + tempArray.length);
+                        //console.log("DRAW: " + j +" - " + i + " " + tempArray + " len: " + tempArray.length);
+
+                        if(tempArray.length == 1 && j==1 && i==1){
+                            tempArray.splice(0,0,this.dataToChart[0][i]);
+                        }
 
                         if(tempArray.length == lengthDataArray){
                             
                             j = 0;
                             i++;
-                            lengthDataArray++;
+                            //lengthDataArray++;
                             dataset.push(tempArray);
                             //console.log("DRAW IF: " + this.dataToChart[0][i]);
                             tempArray = [];
@@ -284,9 +286,10 @@ export class  DashboardComponent{
                     }
                     
                     //dataset.push(tempArray);
-                    console.log("DRAW DATASET: " + dataset + " - " + tempArray);
+                    //console.log("DRAW DATASET: " + dataset + " - " + tempArray);
 
                     for(var i = 0; i < dataset.length; i++){
+                        console.log("DRAW DATASET: " + data.colors[i]);
                         attr = {
                             data: dataset[i],
                             borderColor: data.colors[i],
