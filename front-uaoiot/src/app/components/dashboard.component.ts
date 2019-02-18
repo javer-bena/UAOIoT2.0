@@ -45,7 +45,7 @@ export class  DashboardComponent{
     public cols: any[];
     public lastData;
     public dataChart:String;
-
+    public datesToChart = ["1","2","5","4"];
     //User data to chart
     public userName:String;
     public projectName:String;
@@ -336,7 +336,7 @@ export class  DashboardComponent{
                     user : this.userName,
                     type : data.type,
                     datas : datasets,
-                    labels : this.labelsToChart,
+                    labels : this.datesToChart,
                     title : data.title
                 }
         
@@ -371,6 +371,20 @@ export class  DashboardComponent{
 
     }
 
+    /**
+     * 
+     */
+    getCurrentDate():string{
+        
+        var dateObj = new Date();
+        var dateStr = dateObj.getHours() + ":" + dateObj.getMinutes() + ":" + dateObj.getMilliseconds();
+
+        return dateStr;
+    }
+
+    /**
+     * 
+     */
     listenDevice(){
 
         this.getDeviceVariables(this.nameDevice);
@@ -390,7 +404,7 @@ export class  DashboardComponent{
 
                 this.socketService.onNewMessage().subscribe(data =>{
                     
-                    var msgObj = new Message(data.payload);
+                    var msgObj = new Message(data.payload,this.getCurrentDate());
                     var variables = this.getDeviceVariables(this.nameDevice);
                     var dataToShow = [];
 
@@ -412,12 +426,15 @@ export class  DashboardComponent{
                         }
 
                         //alert(dataToShow);
-                        this.dataToChart.push(dataToShow);
+                        this.dataToChart.push(new Message(dataToShow,this.getCurrentDate()));
+                        this.datesToChart.push(this.getCurrentDate());
                         //this.lastData = this.dataToChart[this.dataToChart.length - 1];
 
                     }else{
                         this.multivariables = false;
-                        this.dataToChart.push(data.payload);
+                        this.dataToChart.push(msgObj);
+                        this.datesToChart.push(msgObj.date);
+                        //this.dataToChart.push(data.payload);
                         this.lastData = this.dataToChart[this.dataToChart.length - 1];
                     }
                     

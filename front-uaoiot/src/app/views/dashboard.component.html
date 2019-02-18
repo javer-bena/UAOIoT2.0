@@ -50,19 +50,35 @@
             <div class="card" id="msg-card">
                 <div id="listado-msj">
                     <p-table [value]="dataToChart" [scrollable]="true" scrollHeight="115px">
+
                         <ng-template pTemplate="header">
                             <tr>
-                                <th>Dato</th>
-                                <!--<th>Hora</th>-->
+                                <th>
+                                    <div class="actions-table">
+                                        <span>Dato</span>
+                                        
+                                    
+                                    </div>
+                                    
+                                </th>
+
+                                <th>Hora</th>
                                 
                             </tr>
                         </ng-template>
+
                         <ng-template pTemplate="body" let-data>
                             <tr>
                                 <td>
-                                    <h6 >{{data}}</h6>
+                                    <h6 >{{data.payload}}</h6>
                                 </td>
+                                
+                                <td>
+                                    <h6>{{data.date}}</h6>
+                                </td>
+                                
                             </tr>
+
                         </ng-template>
                     </p-table>
 
@@ -71,6 +87,12 @@
                             <h6 *ngFor="let data of dataToChart">{{data}}</h6>
                         </li>
                     </ul>-->
+                </div>
+
+                <div id="action-button-section" class="right-align">
+
+                    <p-toggleButton [(ngModel)]="listenChecked" onLabel="Limpiar" offLabel="Desconectar" ></p-toggleButton>
+                        <!--<a class="blue darken-1 btn-small" (click)="listenDevice()">Escuchar</a>-->
                 </div>
             </div>
         </div>
@@ -112,8 +134,12 @@
 </div>-->
 
 
+<div id="charts-section">
+    <h6>Gráficas</h6>
+    <chart></chart>
+</div>
 <!--<canvas #charts *ngFor="let chart of charts; let i = index" id="charts">{{chart}}</canvas>-->
-<chart></chart>
+
 <!--<chart [chartDataMessage]="parentMMessage"></chart>-->
 
 <!--<div class="listado-msj">
