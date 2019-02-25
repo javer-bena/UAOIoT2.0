@@ -12,10 +12,16 @@ export class SocketService{
     private listMessage = [];
 
     constructor(){
-        this.socket = io('http://localhost:5000');
+        //this.socket = io('http://localhost:5000');
         this.listMessage = [];
     }
 
+    initSocket(){
+        this.socket = io('http://localhost:5000');
+
+    }
+
+    
     onNewMessageListen(){
 
         var list = [];
@@ -31,10 +37,25 @@ export class SocketService{
 
     }
 
+    // HANDLER
+    onNewMessage():Observable<Message> {
+        return Observable.create(observer => {
+            
+            this.socket.on('reciveMessage', msg => {
+                console.log("MSG OBSERVER SOCKET: " + msg);
+                observer.next(msg);
+            });
+        });
+    }
+
     //
     sendDataMqtt(userName:String,topic:String,password:String){
 
         this.socket.emit('sendData',{user: userName, topic: topic, password: password});
+    }
+
+    sendDisconnect(){
+        this.socket.emit('disconnect',{payload:''});
     }
 
     // EMITTER
@@ -44,14 +65,6 @@ export class SocketService{
         
     }
 
-    // HANDLER
-    onNewMessage():Observable<Message> {
-        return Observable.create(observer => {
-            this.socket.on('reciveMessage', msg => {
-                console.log("MSG OBSERVER SOCKET: " + msg);
-                observer.next(msg);
-            });
-        });
-    }
+    
 
 }

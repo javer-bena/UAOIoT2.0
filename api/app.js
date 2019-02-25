@@ -103,18 +103,20 @@ io.sockets.on('connection', function(socket){
             //ENVIAR MENSAJE ENVIADO POR EL DISPOSITIVO A ANGULAR DEL MISMO TOPICO 
         });
 
-        
 
         client.on('message',function(topic,payload,packet){
             console.log('payload from phone: ' + payload);
 
             io.sockets.emit('reciveMessage',{'topic':String(topic),
                             'payload':String(payload)});
-            console.log("EMITE RECIVEMESSAGE TO ANGULAR");
+
+            //console.log("Listen: " + )
+            //console.log("EMITE RECIVEMESSAGE TO ANGULAR");
             //io.sockets.emit('reciveMessage',{msg: payload});
         });
 
 
+    
         //MENSAJE ENVIADO DESDE ANGULAR
         socket.on('sendMessage', function (data) {
 
@@ -126,6 +128,18 @@ io.sockets.on('connection', function(socket){
                 
             });
             
+        });
+
+        socket.on('disconnect',function(data){
+            console.log("DISCONNECT");
+
+            
+
+            socket.removeAllListeners('message');
+            socket.removeAllListeners('reciveMessage');
+            
+            socket.removeAllListeners('disconnect');
+            io.removeAllListeners('connection');
         });
 
     });

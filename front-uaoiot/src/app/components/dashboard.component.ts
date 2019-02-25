@@ -45,7 +45,7 @@ export class  DashboardComponent{
     public cols: any[];
     public lastData;
     public dataChart:String;
-    public datesToChart = ["1","2","5","4"];
+    public datesToChart = [];
     //User data to chart
     public userName:String;
     public projectName:String;
@@ -87,8 +87,10 @@ export class  DashboardComponent{
         let link = this.router.url;
         this.projectId = link.replace('/dashboard/','');
 
+        this.socketService.initSocket();
         this.getCharts();
         this.getDevices();
+
         //this.dataChart = this.subNavBarObj.typeDataChart;
         this.projectName = '';
         if(localStorage.getItem('user') != null){
@@ -100,7 +102,7 @@ export class  DashboardComponent{
         
         this.getToken();
         //this.socketService.sendDataMqtt('user1','test1','123456');
-        //this.socketService.sendDataMqtt('user4','test2','$2a$10$Cadv4axd9fb./MidU0aGTe72V0FV2/HQHTBtx2qkBxUPNyO52WVm.');
+        this.socketService.sendDataMqtt('user4','test2','$2a$10$Cadv4axd9fb./MidU0aGTe72V0FV2/HQHTBtx2qkBxUPNyO52WVm.');
         
         //this.socketService.sendDataMqtt('user6','test1','$2a$10$10TMIWzLv/waT621bFFeC.MuzAONgIaC7C1UTj76ROd/aKWCjqd92');
         //this.socketService.onNewMessageListen();
@@ -247,49 +249,38 @@ export class  DashboardComponent{
                 
                 if(this.multivariables){
 
+                    var dataPayload = [];
                     var dataset = [];
                     var tempArray = [];
                     var i = 0;
                     var j = 0;
-                    var lengthDataArray = this.dataToChart.length;
-                    
-                    for(j = 0; j < lengthDataArray; j++){
-                        
-                        /*if(j > 0 && i > 0 && tempArray.length == 0 ){
 
-                            tempArray.push(this.dataToChart[0][i]);
-                            
-                        }else{
-                            
-                            tempArray.push(this.dataToChart[j][i]);
-                        }*/
-                        tempArray.push(this.dataToChart[j][i]);
+                    for(let k = 0; k < this.dataToChart.length; k++){
                         
-                        //console.log("DRAW: " + j +" - " + i + " " + tempArray + " len: " + tempArray.length);
+                        dataPayload.push(this.dataToChart[k].payload)
+                        
+                    }
 
+                    for(j = 0; j < dataPayload.length; j++){
+                        
+                        tempArray.push(dataPayload[j][i]);
+                        
                         if(tempArray.length == 1 && j==1 && i==1){
-                            tempArray.splice(0,0,this.dataToChart[0][i]);
+                            tempArray.splice(0,0,dataPayload[0][i]);
                         }
 
-                        if(tempArray.length == lengthDataArray){
-                            
+                        if(tempArray.length == dataPayload.length){
                             j = 0;
                             i++;
-                            //lengthDataArray++;
                             dataset.push(tempArray);
-                            //console.log("DRAW IF: " + this.dataToChart[0][i]);
                             tempArray = [];
-                            //tempArray.push(this.dataToChart[0][i]);
-                            //continue;
                         }
                         
                     }
                     
-                    //dataset.push(tempArray);
-                    //console.log("DRAW DATASET: " + dataset + " - " + tempArray);
 
                     for(var i = 0; i < dataset.length; i++){
-                        console.log("DRAW DATASET: " + data.colors[i]);
+                        
                         attr = {
                             data: dataset[i],
                             borderColor: data.colors[i],
@@ -297,38 +288,29 @@ export class  DashboardComponent{
                         }
                         datasets.push(attr);
                     }
-                    //while(){}
-
-                    /*for(let j = 0; j < this.dataToChart.length  ; j++){
-                        for(let i = 0; i < j + 1; i++){
-
-                            //console.log("DRAW C: " + this.dataToChart[j]);
-
-                            console.log("DRAW: " + j +" - " + i + " " + this.dataToChart[j][i]);
-                            
-                            attr = {
-                                data: this.dataToChart[j],
-                                borderColor: data.colors[j],
-                                fill: false
-                            }
-                            datasets.push(attr);
-                        }
-                    }*/
 
                 }else{
+
+                    var dataset = [];
+
+                    for(let i = 0; i < this.dataToChart.length; i++){
+                        dataset.push(this.dataToChart[i].payload);
+                    }
+
                     attr = {
-                        data: this.dataToChart,
-                        borderColor: "#3cba9f",
+                        data: dataset,
+                        borderColor: data.colors[0],
                         fill: false
                     }
 
+                    
                     datasets.push(attr);
                     
                 }
 
-                for (let i = 0; i < this.dataToChart.length; i++) {
+                /*for (let i = 0; i < this.dataToChart.length; i++) {
                     this.labelsToChart.push("lbl" + i);
-                }
+                }*/
 
     
                 const chartJson = {
@@ -404,6 +386,7 @@ export class  DashboardComponent{
 
                 this.socketService.onNewMessage().subscribe(data =>{
                     
+                    //console.log("LISTEN data: " + data.payload);
                     var msgObj = new Message(data.payload,this.getCurrentDate());
                     var variables = this.getDeviceVariables(this.nameDevice);
                     var dataToShow = [];
@@ -417,7 +400,8 @@ export class  DashboardComponent{
                         }
                         
                         var dataToArray = JSON.parse(data.payload);
-
+                        console.log("LISTEN dataArray: " + data.payload);
+                        
                         for(let i = 0; i < variables.length; i++){
                             
                             //alert(dataToArray);
@@ -443,7 +427,9 @@ export class  DashboardComponent{
         
         }else{
             //TODO: Desconectar conexión
+            this.socketService.sendDisconnect();
             alert("Desconectado");
+
         }
         
         
